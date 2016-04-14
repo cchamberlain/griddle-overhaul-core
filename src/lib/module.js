@@ -1,6 +1,6 @@
 import * as reducers from './reducers';
 import * as states from './initialStates/index';
-import GriddleReducer from './reducers/griddle-reducer';
+import GriddleReducer from './reducers/griddle-overhaul-reducer';
 import * as GriddleActions from './actions/local-actions';
 import * as GriddleHelpers from './helpers';
 
