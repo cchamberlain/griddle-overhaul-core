@@ -15,8 +15,6 @@
     "prerelease-doc": "npm run doc",
     "release-doc": "git subtree push --prefix doc origin gh-pages",
     "postrelease-doc": "git commit -am \"doc-release\" && git push --follow-tags",
-
-
     "test": "./node_modules/.bin/karma start --browsers PhantomJS",
     "start": "./node_modules/.bin/webpack --config webpack-dist.config.js --watch",
     "test-debug": "./node_modules/.bin/karma start --browsers Chrome",
@@ -54,6 +52,7 @@
     "webpack-dev-server": "*"
   },
   "dependencies": {
+    "esdoc-es7-plugin": "0.0.3",
     "immutable": "^3.7.2",
     "lodash.assign": "^3.2.0",
     "lodash.pick": "^3.1.0",
