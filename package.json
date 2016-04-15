@@ -59,5 +59,8 @@
     "lodash.pick": "^3.1.0",
     "max-safe-integer": "^1.0.0"
   },
-  "repository": "https://github.com/cchamberlain/griddle-overhaul-core"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cchamberlain/griddle-overhaul-core.git"
+  }
 }
