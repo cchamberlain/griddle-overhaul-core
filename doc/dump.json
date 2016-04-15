@@ -1,0 +1,3872 @@
+[
+  {
+    "__docId__": 0,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/actions/local-actions.js",
+    "memberof": null,
+    "longname": "lib/actions/local-actions.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import * as types from '../constants/action-types'\r\n\r\nexport const initializeGrid = properties => ({ type: types.GRIDDLE_INITIALIZED, properties })\r\nexport const removeGrid = () => ({ type: types.GRIDDLE_REMOVED })\r\nexport const loadData = (data, properties) => ({ type: types.GRIDDLE_LOADED_DATA, data })\r\nexport const filterData = filter => ({ type: types.GRIDDLE_FILTERED, filter })\r\nexport const filterDataByColumn = (filter, column) => ({ type: types.GRIDDLE_FILTERED_BY_COLUMN, filter, column })\r\nexport const setPageSize = pageSize => ({ type: types.GRIDDLE_SET_PAGE_SIZE, pageSize })\r\nexport const sort = column => ({ type: types.GRIDDLE_SORT, sortColumns: [column] })\r\nexport const addSortColumn = column => ({ type: types.GRIDDLE_ADD_SORT_COLUMN, sortColumn: column })\r\nexport const loadNext = () => ({ type: types.GRIDDLE_NEXT_PAGE })\r\nexport const loadPrevious = () => ({ type: types.GRIDDLE_PREVIOUS_PAGE })\r\nexport const loadPage = number => ({ type: types.GRIDDLE_GET_PAGE, pageNumber: number })\r\nexport const toggleColumn = columnId => ({ type: types.GRIDDLE_TOGGLE_COLUMN, columnId })\r\n"
+  },
+  {
+    "__docId__": 1,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "initializeGrid",
+    "memberof": "lib/actions/local-actions.js",
+    "longname": "lib/actions/local-actions.js~initializeGrid",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/actions/local-actions.js",
+    "importStyle": "{initializeGrid}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 2,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "removeGrid",
+    "memberof": "lib/actions/local-actions.js",
+    "longname": "lib/actions/local-actions.js~removeGrid",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/actions/local-actions.js",
+    "importStyle": "{removeGrid}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 3,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "loadData",
+    "memberof": "lib/actions/local-actions.js",
+    "longname": "lib/actions/local-actions.js~loadData",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/actions/local-actions.js",
+    "importStyle": "{loadData}",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 4,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "filterData",
+    "memberof": "lib/actions/local-actions.js",
+    "longname": "lib/actions/local-actions.js~filterData",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/actions/local-actions.js",
+    "importStyle": "{filterData}",
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 5,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "filterDataByColumn",
+    "memberof": "lib/actions/local-actions.js",
+    "longname": "lib/actions/local-actions.js~filterDataByColumn",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/actions/local-actions.js",
+    "importStyle": "{filterDataByColumn}",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 6,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "setPageSize",
+    "memberof": "lib/actions/local-actions.js",
+    "longname": "lib/actions/local-actions.js~setPageSize",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/actions/local-actions.js",
+    "importStyle": "{setPageSize}",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 7,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "sort",
+    "memberof": "lib/actions/local-actions.js",
+    "longname": "lib/actions/local-actions.js~sort",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/actions/local-actions.js",
+    "importStyle": "{sort}",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 8,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "addSortColumn",
+    "memberof": "lib/actions/local-actions.js",
+    "longname": "lib/actions/local-actions.js~addSortColumn",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/actions/local-actions.js",
+    "importStyle": "{addSortColumn}",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 9,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "loadNext",
+    "memberof": "lib/actions/local-actions.js",
+    "longname": "lib/actions/local-actions.js~loadNext",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/actions/local-actions.js",
+    "importStyle": "{loadNext}",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 10,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "loadPrevious",
+    "memberof": "lib/actions/local-actions.js",
+    "longname": "lib/actions/local-actions.js~loadPrevious",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/actions/local-actions.js",
+    "importStyle": "{loadPrevious}",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 11,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "loadPage",
+    "memberof": "lib/actions/local-actions.js",
+    "longname": "lib/actions/local-actions.js~loadPage",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/actions/local-actions.js",
+    "importStyle": "{loadPage}",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 12,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "toggleColumn",
+    "memberof": "lib/actions/local-actions.js",
+    "longname": "lib/actions/local-actions.js~toggleColumn",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/actions/local-actions.js",
+    "importStyle": "{toggleColumn}",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 13,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/constants/action-types.js",
+    "memberof": null,
+    "longname": "lib/constants/action-types.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "\r\n/*\r\n  It should be noted that the action types that are like\r\n  GRIDDLE_FILTER mean that the operation has started.\r\n  Past tense action types mean that the operation\r\n  has completed.\r\n*/\r\n\r\nexport const GRIDDLE_FILTER = 'GRIDDLE_FILTER';\r\nexport const GRIDDLE_FILTERED = 'GRIDDLE_FILTERED';\r\nexport const GRIDDLE_FILTER_BY_COLUMN = 'GRIDDLE_FILTER_BY_COLUMN';\r\nexport const GRIDDLE_FILTERED_BY_COLUMN = 'GRIDDLE_FILTERED_BY_COLUMN';\r\nexport const GRIDDLE_FILTER_BY_ADDITIONAL_COLUMN = 'GRIDDLE_FILTER_BY_ADDITIONAL_COLUMN';\r\nexport const GRIDDLE_FILTERED_BY_ADDITIONAL_COLUMN = 'GRIDDLE_FILTERED_BY_ADDITIONAL_COLUMN';\r\nexport const GRIDDLE_FILTER_REMOVED = 'GRIDDLE_FILTER_REMOVED';\r\nexport const GRIDDLE_SORT = 'GRIDDLE_SORT';\r\nexport const GRIDDLE_SORTED = 'GRIDDLE_SORTED';\r\nexport const GRIDDLE_SORT_ADDITIONAL = 'GRIDDLE_SORT_ADDITIONAL';\r\nexport const GRIDDLE_SORTED_ADDITIONAL = 'GRIDDLE_SORTED_ADDITIONAL';\r\nexport const GRIDDLE_LOAD_DATA = 'GRIDDLE_LOAD_DATA';\r\nexport const GRIDDLE_LOADED_DATA = 'GRIDDLE_LOADED_DATA';\r\nexport const GRIDDLE_NEXT_PAGE = 'GRIDDLE_NEXT_PAGE';\r\nexport const GRIDDLE_PREVIOUS_PAGE = 'GRIDDLE_PREVIOUS_PAGE';\r\nexport const GRIDDLE_GET_PAGE = 'GRIDDLE_GET_PAGE';\r\nexport const GRIDDLE_PAGE_LOADED = 'GRIDDLE_PAGE_LOADED';\r\nexport const GRIDDLE_SET_PAGE_SIZE = 'GRIDDLE_SET_PAGE_SIZE';\r\nexport const GRIDDLE_INITIALIZE = 'GRIDDLE_INITIALIZE';\r\nexport const GRIDDLE_INITIALIZED = 'GRIDDLE_INITIALIZED';\r\nexport const GRIDDLE_REMOVED = 'GRIDDLE_REMOVED';\r\nexport const GRIDDLE_TOGGLE_COLUMN = 'GRIDDLE_TOGGLE_COLUMN';\r\nexport const GRIDDLE_ROW_TOGGLED = 'GRIDDLE_ROW_TOGGLED';\r\nexport const GRIDDLE_ROW_SELECTION_TOGGLED = 'GRIDDLE_ROW_SELECTION_TOGGLED';"
+  },
+  {
+    "__docId__": 14,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_FILTER",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_FILTER",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_FILTER}",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 15,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_FILTERED",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_FILTERED",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_FILTERED}",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 16,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_FILTER_BY_COLUMN",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_FILTER_BY_COLUMN",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_FILTER_BY_COLUMN}",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 17,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_FILTERED_BY_COLUMN",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_FILTERED_BY_COLUMN",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_FILTERED_BY_COLUMN}",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 18,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_FILTER_BY_ADDITIONAL_COLUMN",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_FILTER_BY_ADDITIONAL_COLUMN",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_FILTER_BY_ADDITIONAL_COLUMN}",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 19,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_FILTERED_BY_ADDITIONAL_COLUMN",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_FILTERED_BY_ADDITIONAL_COLUMN",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_FILTERED_BY_ADDITIONAL_COLUMN}",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 20,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_FILTER_REMOVED",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_FILTER_REMOVED",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_FILTER_REMOVED}",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 21,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_SORT",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_SORT",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_SORT}",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 22,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_SORTED",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_SORTED",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_SORTED}",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 23,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_SORT_ADDITIONAL",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_SORT_ADDITIONAL",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_SORT_ADDITIONAL}",
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 24,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_SORTED_ADDITIONAL",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_SORTED_ADDITIONAL",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_SORTED_ADDITIONAL}",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 25,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_LOAD_DATA",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_LOAD_DATA",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_LOAD_DATA}",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 26,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_LOADED_DATA",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_LOADED_DATA",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_LOADED_DATA}",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 27,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_NEXT_PAGE",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_NEXT_PAGE",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_NEXT_PAGE}",
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 28,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_PREVIOUS_PAGE",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_PREVIOUS_PAGE",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_PREVIOUS_PAGE}",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 29,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_GET_PAGE",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_GET_PAGE",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_GET_PAGE}",
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 30,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_PAGE_LOADED",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_PAGE_LOADED",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_PAGE_LOADED}",
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 31,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_SET_PAGE_SIZE",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_SET_PAGE_SIZE",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_SET_PAGE_SIZE}",
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 32,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_INITIALIZE",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_INITIALIZE",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_INITIALIZE}",
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 33,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_INITIALIZED",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_INITIALIZED",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_INITIALIZED}",
+    "description": null,
+    "lineNumber": 28,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 34,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_REMOVED",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_REMOVED",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_REMOVED}",
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 35,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_TOGGLE_COLUMN",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_TOGGLE_COLUMN",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_TOGGLE_COLUMN}",
+    "description": null,
+    "lineNumber": 30,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 36,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_ROW_TOGGLED",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_ROW_TOGGLED",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_ROW_TOGGLED}",
+    "description": null,
+    "lineNumber": 31,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 37,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_ROW_SELECTION_TOGGLED",
+    "memberof": "lib/constants/action-types.js",
+    "longname": "lib/constants/action-types.js~GRIDDLE_ROW_SELECTION_TOGGLED",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/constants/action-types.js",
+    "importStyle": "{GRIDDLE_ROW_SELECTION_TOGGLED}",
+    "description": null,
+    "lineNumber": 32,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 38,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/helpers/data-helpers.js",
+    "memberof": null,
+    "longname": "lib/helpers/data-helpers.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import MAX_SAFE_INTEGER from 'max-safe-integer';\r\nimport Immutable from 'immutable';\r\nimport extend from 'lodash.assign';\r\nexport function getVisibleData(state) {\r\n  const data =  state.get('data');\r\n\r\n  const columns = getDataColumns(state, data);\r\n  return getVisibleDataColumns(data, columns);\r\n}\r\n\r\nexport function updateVisibleData(state) {\r\n  return state\r\n    .set('visibleData', getVisibleData(state));\r\n}\r\n\r\n//why? Assuming this is carry-over from old flux?\r\nexport function getState(state) {\r\n  return state;\r\n}\r\n\r\nexport function getPageProperties(state) {\r\n  return state.get('pageProperties');\r\n}\r\n\r\nexport function addKeyToRows(data) {\r\n  let key = 0;\r\n  const getKey = (() => key++);\r\n\r\n  return data.map(row => row.set('griddleKey', getKey()));\r\n}\r\n\r\nexport function getPageCount(total, pageSize) {\r\n  const calc = total / pageSize;\r\n  return calc > Math.floor(calc) ? Math.floor(calc) + 1 : Math.floor(calc);\r\n}\r\n\r\nexport function getColumnTitles(state) {\r\n  if(state.get('renderProperties') && state.get('renderProperties').get('columnProperties').size !== 0) {\r\n    return state\r\n      .get('renderProperties')\r\n      .get('columnProperties')\r\n      .filter(column => !!column.get('displayName'))\r\n      .map(column => {\r\n        let col = {};\r\n        col[column.get('id')] = column.get('displayName');\r\n        return col;\r\n      }).toJSON();\r\n  }\r\n\r\n  return {};\r\n}\r\n\r\nexport function getColumnProperties(state) {\r\n  if(state.get('renderProperties') && state.get('renderProperties').get('columnProperties') && state.get('renderProperties').get('columnProperties').size !== 0) {\r\n    return state\r\n      .get('renderProperties')\r\n      .get('columnProperties').toJSON();\r\n  }\r\n\r\n  return {};\r\n}\r\n\r\n//TODO: Determine if this should stay here\r\nexport function getAllPossibleColumns(state) {\r\n  if(state.get('data').size === 0) {\r\n    return new Immutable.fromJS([]);\r\n  }\r\n\r\n  return state.get('data').get(0).keySeq();\r\n}\r\n\r\n//From Immutable docs - https://github.com/facebook/immutable-js/wiki/Predicates\r\nfunction keyInArray(keys) {\r\n  var keySet = Immutable.Set(keys);\r\n  return function (v, k) {\r\n\r\n    return keySet.has(k);\r\n  }\r\n}\r\n\r\nexport function getVisibleDataColumns(data, columns) {\r\n  if (data.size < 1) {\r\n    return data;\r\n  }\r\n\r\n  const dataColumns = data.get(0).keySeq().toArray();\r\n  const metadataColumns = dataColumns.filter(item => columns.indexOf(item) < 0);\r\n\r\n  //if columns are specified but aren't in the data\r\n  //make it up (as null). We will append this column\r\n  //to the resultant data\r\n  const magicColumns = columns\r\n    .filter(item => dataColumns.indexOf(item) < 0)\r\n    .reduce((original, item) => { original[item] = null; return original}, {})\r\n\r\n  //combine the metadata and the \"magic\" columns\r\n  const extra = data.map((d, i) => new Immutable.Map(\r\n    extend(magicColumns, {__metadata: d.filter(keyInArray(metadataColumns)).set('index', i)})\r\n  ));\r\n\r\n  const result = data.map(d => d.filter(keyInArray(columns)));\r\n\r\n  return result.mergeDeep(extra)\r\n    .map(item => item.sortBy((val, key) => columns.indexOf(key) > -1 ? columns.indexOf(key) :  MAX_SAFE_INTEGER ));\r\n}\r\n\r\nexport function getDataColumns(state, data) {\r\n  const renderProperties = state.get('renderProperties');\r\n  if(renderProperties && renderProperties.get('columnProperties') && renderProperties.get('columnProperties').size !== 0) {\r\n    const keys = state\r\n      .getIn(['renderProperties', 'columnProperties'])\r\n      .sortBy(col => col.get('order')||MAX_SAFE_INTEGER)\r\n      .keySeq()\r\n      .toJSON();\r\n\r\n    return keys;\r\n  }\r\n\r\n  return getAllPossibleColumns(state).toJSON();\r\n}\r\n"
+  },
+  {
+    "__docId__": 39,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getVisibleData",
+    "memberof": "lib/helpers/data-helpers.js",
+    "longname": "lib/helpers/data-helpers.js~getVisibleData",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/data-helpers.js",
+    "importStyle": "{getVisibleData}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 40,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "updateVisibleData",
+    "memberof": "lib/helpers/data-helpers.js",
+    "longname": "lib/helpers/data-helpers.js~updateVisibleData",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/data-helpers.js",
+    "importStyle": "{updateVisibleData}",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 41,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getState",
+    "memberof": "lib/helpers/data-helpers.js",
+    "longname": "lib/helpers/data-helpers.js~getState",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/data-helpers.js",
+    "importStyle": "{getState}",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 42,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getPageProperties",
+    "memberof": "lib/helpers/data-helpers.js",
+    "longname": "lib/helpers/data-helpers.js~getPageProperties",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/data-helpers.js",
+    "importStyle": "{getPageProperties}",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 43,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "addKeyToRows",
+    "memberof": "lib/helpers/data-helpers.js",
+    "longname": "lib/helpers/data-helpers.js~addKeyToRows",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/data-helpers.js",
+    "importStyle": "{addKeyToRows}",
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 44,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getPageCount",
+    "memberof": "lib/helpers/data-helpers.js",
+    "longname": "lib/helpers/data-helpers.js~getPageCount",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/data-helpers.js",
+    "importStyle": "{getPageCount}",
+    "description": null,
+    "lineNumber": 32,
+    "undocument": true,
+    "params": [
+      {
+        "name": "total",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "pageSize",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 45,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getColumnTitles",
+    "memberof": "lib/helpers/data-helpers.js",
+    "longname": "lib/helpers/data-helpers.js~getColumnTitles",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/data-helpers.js",
+    "importStyle": "{getColumnTitles}",
+    "description": null,
+    "lineNumber": 37,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 46,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getColumnProperties",
+    "memberof": "lib/helpers/data-helpers.js",
+    "longname": "lib/helpers/data-helpers.js~getColumnProperties",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/data-helpers.js",
+    "importStyle": "{getColumnProperties}",
+    "description": null,
+    "lineNumber": 53,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 47,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getAllPossibleColumns",
+    "memberof": "lib/helpers/data-helpers.js",
+    "longname": "lib/helpers/data-helpers.js~getAllPossibleColumns",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/data-helpers.js",
+    "importStyle": "{getAllPossibleColumns}",
+    "description": null,
+    "lineNumber": 64,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 48,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "keyInArray",
+    "memberof": "lib/helpers/data-helpers.js",
+    "longname": "lib/helpers/data-helpers.js~keyInArray",
+    "access": null,
+    "export": false,
+    "importPath": "griddle-overhaul-core/lib/helpers/data-helpers.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 73,
+    "undocument": true,
+    "params": [
+      {
+        "name": "keys",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 49,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getVisibleDataColumns",
+    "memberof": "lib/helpers/data-helpers.js",
+    "longname": "lib/helpers/data-helpers.js~getVisibleDataColumns",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/data-helpers.js",
+    "importStyle": "{getVisibleDataColumns}",
+    "description": null,
+    "lineNumber": 81,
+    "undocument": true,
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "columns",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 50,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getDataColumns",
+    "memberof": "lib/helpers/data-helpers.js",
+    "longname": "lib/helpers/data-helpers.js~getDataColumns",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/data-helpers.js",
+    "importStyle": "{getDataColumns}",
+    "description": null,
+    "lineNumber": 107,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 51,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/helpers/index.js",
+    "memberof": null,
+    "longname": "lib/helpers/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import * as data from './data-helpers';\r\nimport * as local from './local-helpers';\r\n\r\nexport { data as data }\r\nexport { local as local }\r\n"
+  },
+  {
+    "__docId__": 52,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/helpers/local-helpers.js",
+    "memberof": null,
+    "longname": "lib/helpers/local-helpers.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import {\r\n  getPageCount,\r\n  getDataColumns,\r\n  getVisibleDataColumns,\r\n  addKeyToRows\r\n} from './data-helpers';\r\nimport Immutable from 'immutable';\r\n\r\nexport { addKeyToRows as addKeyToRows };\r\nexport { getPageCount as getPageCount };\r\n\r\nexport function getVisibleData(state) {\r\n\r\n  //get the max page / current page and the current page of data\r\n  const pageSize = state.getIn(['pageProperties', 'pageSize']);\r\n  const currentPage = state.getIn(['pageProperties', 'currentPage']);\r\n\r\n  const data =  getDataSet(state)\r\n    .skip(pageSize * (currentPage-1)).take(pageSize);\r\n\r\n  const columns = getDataColumns(state, data);\r\n  return getVisibleDataColumns(data, columns);\r\n}\r\n\r\nexport function hasNext(state) {\r\n  return state.getIn(['pageProperties', 'currentPage']) <\r\n    state.getIn(['pageProperties', 'maxPage']);\r\n}\r\n\r\nexport function hasPrevious(state) {\r\n  return state.getIn(['pageProperties', 'currentPage']) > 1;\r\n}\r\n\r\nexport function getDataSet(state) {\r\n  let data = null;\r\n\r\n  //filtered data\r\n  if(state.get('filter') && state.get('filter') !== '') {\r\n    data = filterData(state.get('data'), state.get('filter'));\r\n  }\r\n\r\n  //full data\r\n  data = data || state.get('data');\r\n\r\n  //filter data by columns\r\n  if(state.get('columnFilters') && state.get('columnFilters').size > 0) {\r\n    data = filterDataByColumns(data, state.get('columnFilters'));\r\n  }\r\n\r\n  return data;\r\n}\r\n\r\nexport function filterData(data, filter) {\r\n    return data.filter(row  => {\r\n      return Object.keys(row.toJSON())\r\n        .some(key => {\r\n          return row.get(key) && row.get(key).toString().toLowerCase().indexOf(filter.toLowerCase()) > -1\r\n        })\r\n      })\r\n}\r\n\r\nexport function filterDataByColumns(data, filters) {\r\n  //filters is an immutable list\r\n  //go through the list and apply the filter to the data based on the filter\r\n  return filters.reduce((previous, current) => {\r\n    const { column, filter } = current;\r\n\r\n    return previous.filter(row => row.get(column) &&\r\n      row.get(column)\r\n        .toString()\r\n        .toLowerCase()\r\n        .indexOf(filter.toLowerCase()) > -1)\r\n  }, data)\r\n}\r\n\r\nexport function dateSort(data, column, sortAscending = true) {\r\n  return data.sort(\r\n    (original, newRecord) => {\r\n      original = (!!original.get(column) && new Date(original.get(column))) || null;\r\n      newRecord = (!!newRecord.get(column) && new Date(newRecord.get(column))) || null;\r\n      if(original.getTime() === newRecord.getTime()) {\r\n        return 0;\r\n      } else if (original > newRecord) {\r\n        return sortAscending ?  1 : -1;\r\n      } else {\r\n        return sortAscending ? -1 : 1;\r\n      }\r\n    })\r\n}\r\n\r\nexport function defaultSort(data, column, sortAscending = true) {\r\n  return data.sort(\r\n    (original, newRecord) => {\r\n      original = (!!original.get(column) && original.get(column)) || \"\";\r\n      newRecord = (!!newRecord.get(column) && newRecord.get(column)) || \"\";\r\n\r\n      //TODO: This is about the most cheezy sorting check ever.\r\n      //Make it be able to sort for dates / monetary / regex / whatever\r\n      if(original === newRecord) {\r\n        return 0;\r\n      } else if (original > newRecord) {\r\n        return sortAscending ? 1 : -1;\r\n      }\r\n      else {\r\n        return sortAscending ? -1 : 1;\r\n      }\r\n    });\r\n}\r\n\r\nexport function sortTypes(type) {\r\n  return {\r\n    \"default\": defaultSort,\r\n    \"date\": dateSort,\r\n  }\r\n}\r\n\r\nexport function getSortByType(type, helpers) {\r\n  const sortType = ((helpers && helpers.sortTypes)||sortTypes)();\r\n  return sortType.hasOwnProperty(type) ? sortType[type] : defaultSort\r\n}\r\n\r\nexport function getSortedData(data, columns, helpers, sortAscending = true, sortType = \"default\") {\r\n  return getSortByType(sortType, helpers)(data, columns[0], sortAscending, helpers);\r\n}\r\n\r\n//TODO: Consider renaming sortAscending here to sortDescending\r\nexport function updateSortColumns(state, columns, sortAscending = null) {\r\n  if(columns.length === 0) { return state; }\r\n\r\n  const shouldSortAscending = sortAscending !== null ?\r\n    sortAscending :\r\n    !(state.getIn(['pageProperties', 'sortAscending']) === true &&\r\n      state.getIn(['pageProperties', 'sortColumns'])[0] === columns[0]);\r\n\r\n  return state.setIn(['pageProperties', 'sortAscending'], shouldSortAscending)\r\n              .setIn(['pageProperties', 'sortColumns'], columns);\r\n}\r\n\r\nexport function sortDataByColumns(state, helpers) {\r\n  if(!state.get('data')) { return state; }\r\n\r\n  //TODO: Clean this up\r\n  const allColumnProperties = state.getIn(['renderProperties', 'columnProperties']);\r\n  const sortColumns = state.getIn(['pageProperties', 'sortColumns']);\r\n  //TODO: Make sort for more than just the first column\r\n  const columnProperties = sortColumns && sortColumns.length > 0 ?\r\n    allColumnProperties.get(sortColumns[0]) :\r\n    null;\r\n\r\n  const sortType = (columnProperties && columnProperties.get('sortType')) || null;\r\n  let sorted = state.set(\r\n    'data',\r\n    (helpers && helpers.getSortedData||getSortedData)(\r\n      state.get('data'),\r\n      sortColumns,\r\n      helpers,\r\n      state.getIn(['pageProperties', 'sortAscending']),\r\n      sortType\r\n    )\r\n  );\r\n\r\n  //if filter is set we need to filter\r\n  //TODO: filter the data when it's being sorted\r\n  if(!!state.get('filter')) {\r\n    sorted = filter(sorted, sorted.get('filter'));\r\n  }\r\n\r\n  return sorted;\r\n}\r\n\r\nexport function getDataSetSize(state) {\r\n  return getDataSet(state).size;\r\n}\r\n\r\nexport function getPage(state, pageNumber) {\r\n  const maxPage = getPageCount(\r\n    getDataSetSize(state),\r\n    state.getIn(['pageProperties', 'pageSize']));\r\n\r\n  if(pageNumber >= 1 && pageNumber <= maxPage) {\r\n    return state\r\n        .setIn(['pageProperties', 'currentPage'], pageNumber)\r\n        .setIn(['pageProperties', 'maxPage'], maxPage);\r\n  }\r\n\r\n  return state;\r\n}\r\n"
+  },
+  {
+    "__docId__": 53,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getVisibleData",
+    "memberof": "lib/helpers/local-helpers.js",
+    "longname": "lib/helpers/local-helpers.js~getVisibleData",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/local-helpers.js",
+    "importStyle": "{getVisibleData}",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 54,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "hasNext",
+    "memberof": "lib/helpers/local-helpers.js",
+    "longname": "lib/helpers/local-helpers.js~hasNext",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/local-helpers.js",
+    "importStyle": "{hasNext}",
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 55,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "hasPrevious",
+    "memberof": "lib/helpers/local-helpers.js",
+    "longname": "lib/helpers/local-helpers.js~hasPrevious",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/local-helpers.js",
+    "importStyle": "{hasPrevious}",
+    "description": null,
+    "lineNumber": 30,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 56,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getDataSet",
+    "memberof": "lib/helpers/local-helpers.js",
+    "longname": "lib/helpers/local-helpers.js~getDataSet",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/local-helpers.js",
+    "importStyle": "{getDataSet}",
+    "description": null,
+    "lineNumber": 34,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 57,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "filterData",
+    "memberof": "lib/helpers/local-helpers.js",
+    "longname": "lib/helpers/local-helpers.js~filterData",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/local-helpers.js",
+    "importStyle": "{filterData}",
+    "description": null,
+    "lineNumber": 53,
+    "undocument": true,
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "filter",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 58,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "filterDataByColumns",
+    "memberof": "lib/helpers/local-helpers.js",
+    "longname": "lib/helpers/local-helpers.js~filterDataByColumns",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/local-helpers.js",
+    "importStyle": "{filterDataByColumns}",
+    "description": null,
+    "lineNumber": 62,
+    "undocument": true,
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "filters",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 59,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "dateSort",
+    "memberof": "lib/helpers/local-helpers.js",
+    "longname": "lib/helpers/local-helpers.js~dateSort",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/local-helpers.js",
+    "importStyle": "{dateSort}",
+    "description": null,
+    "lineNumber": 76,
+    "undocument": true,
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "column",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "sortAscending",
+        "optional": true,
+        "types": [
+          "boolean"
+        ],
+        "defaultRaw": true,
+        "defaultValue": "true"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 60,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "defaultSort",
+    "memberof": "lib/helpers/local-helpers.js",
+    "longname": "lib/helpers/local-helpers.js~defaultSort",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/local-helpers.js",
+    "importStyle": "{defaultSort}",
+    "description": null,
+    "lineNumber": 91,
+    "undocument": true,
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "column",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "sortAscending",
+        "optional": true,
+        "types": [
+          "boolean"
+        ],
+        "defaultRaw": true,
+        "defaultValue": "true"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 61,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "sortTypes",
+    "memberof": "lib/helpers/local-helpers.js",
+    "longname": "lib/helpers/local-helpers.js~sortTypes",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/local-helpers.js",
+    "importStyle": "{sortTypes}",
+    "description": null,
+    "lineNumber": 110,
+    "undocument": true,
+    "params": [
+      {
+        "name": "type",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 62,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getSortByType",
+    "memberof": "lib/helpers/local-helpers.js",
+    "longname": "lib/helpers/local-helpers.js~getSortByType",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/local-helpers.js",
+    "importStyle": "{getSortByType}",
+    "description": null,
+    "lineNumber": 117,
+    "undocument": true,
+    "params": [
+      {
+        "name": "type",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 63,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getSortedData",
+    "memberof": "lib/helpers/local-helpers.js",
+    "longname": "lib/helpers/local-helpers.js~getSortedData",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/local-helpers.js",
+    "importStyle": "{getSortedData}",
+    "description": null,
+    "lineNumber": 122,
+    "undocument": true,
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "columns",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "sortAscending",
+        "optional": true,
+        "types": [
+          "boolean"
+        ],
+        "defaultRaw": true,
+        "defaultValue": "true"
+      },
+      {
+        "name": "sortType",
+        "optional": true,
+        "types": [
+          "string"
+        ],
+        "defaultRaw": "default",
+        "defaultValue": "default"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 64,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "updateSortColumns",
+    "memberof": "lib/helpers/local-helpers.js",
+    "longname": "lib/helpers/local-helpers.js~updateSortColumns",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/local-helpers.js",
+    "importStyle": "{updateSortColumns}",
+    "description": null,
+    "lineNumber": 127,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "columns",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "sortAscending",
+        "optional": true,
+        "types": [
+          "*"
+        ],
+        "defaultRaw": null,
+        "defaultValue": "null"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 65,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "sortDataByColumns",
+    "memberof": "lib/helpers/local-helpers.js",
+    "longname": "lib/helpers/local-helpers.js~sortDataByColumns",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/local-helpers.js",
+    "importStyle": "{sortDataByColumns}",
+    "description": null,
+    "lineNumber": 139,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 66,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getDataSetSize",
+    "memberof": "lib/helpers/local-helpers.js",
+    "longname": "lib/helpers/local-helpers.js~getDataSetSize",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/local-helpers.js",
+    "importStyle": "{getDataSetSize}",
+    "description": null,
+    "lineNumber": 171,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 67,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getPage",
+    "memberof": "lib/helpers/local-helpers.js",
+    "longname": "lib/helpers/local-helpers.js~getPage",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/local-helpers.js",
+    "importStyle": "{getPage}",
+    "description": null,
+    "lineNumber": 175,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "pageNumber",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 68,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/helpers/__tests__/dataHelperTests.js",
+    "memberof": null,
+    "longname": "lib/helpers/__tests__/dataHelperTests.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Immutable from 'immutable';\r\n\r\nimport {\r\n  getVisibleData,\r\n  getVisibleDataColumns,\r\n  updateVisibleData,\r\n  getState,\r\n  getPageProperties,\r\n  addKeyToRows,\r\n  getPageCount,\r\n  getColumnTitles,\r\n  getColumnProperties,\r\n  getAllPossibleColumns,\r\n  getDataColumns\r\n} from '../data-helpers';\r\n\r\nimport { getBasicState } from './stateUtils';\r\n\r\nconst withoutMetadata = (item) => {\r\n  delete item[\"__metadata\"];\r\n  return item;\r\n}\r\n\r\ndescribe('data helpers', () => {\r\n  describe('getVisibleData', () => {\r\n    it('gets visible data', () => {\r\n      const state = getBasicState();\r\n      const results = getVisibleData(state);\r\n      expect(results.toJSON().map(withoutMetadata)).toEqual([{two: 'two', one: 'one'}, {two: 'four', one: 'three'}]);\r\n    });\r\n\r\n    it('only gets data for visible columns', () => {\r\n      const columnProperties = getBasicState().getIn(['renderProperties', 'columnProperties']).filterNot(col => col.get('id') === 'one');\r\n      const state = getBasicState().setIn(['renderProperties', 'columnProperties'], columnProperties);\r\n      const results = getVisibleData(state);\r\n\r\n      expect(results.toJSON().map(withoutMetadata)).toEqual([{two: 'two'}, {two: 'four'}]);\r\n    })\r\n\r\n    it('gets the index', () => {\r\n      const columnProperties = getBasicState().getIn(['renderProperties', 'columnProperties']).filterNot(col => col.get('id') === 'one');\r\n      const state = getBasicState().setIn(['renderProperties', 'columnProperties'], columnProperties);\r\n      const results = getVisibleData(state);\r\n\r\n      expect(results.toJSON().every((r, i) => r.__metadata.index === i)).toEqual(true)\r\n    });\r\n  });\r\n\r\n  describe('getVisibleDataColumns', () => {\r\n    it('gets data for the given columns', () => {\r\n      const state = getBasicState();\r\n      const results = getVisibleDataColumns(state.get('data'), ['one', 'two']);\r\n\r\n      expect(results.toJSON().map(withoutMetadata)).toEqual([{two: 'two', one: 'one'}, {two: 'four', one: 'three'}]);\r\n    });\r\n\r\n    it('sorts the columns', () => {\r\n      const state = getBasicState();\r\n      const sorted = getVisibleDataColumns(state.get('data'), ['two', 'one']);\r\n\r\n      expect(Object.keys(sorted.toJSON()[0])).toEqual(['two', 'one', '__metadata']);\r\n    });\r\n\r\n    //test for the columns that are made up from thin air\r\n    it('gets null for magic column', () => {\r\n      const state = getBasicState();\r\n      const results = getVisibleDataColumns(state.get('data'), ['one', 'onepointfive', 'two']);\r\n\r\n      expect(results.toJSON().map(withoutMetadata)).toEqual([{two: 'two', onepointfive: null,  one: 'one'}, {two: 'four', onepointfive: null,  one: 'three'}]);\r\n    });\r\n\r\n    it('gets correct order for magic column', () => {\r\n      const state = getBasicState();\r\n      const results = getVisibleDataColumns(state.get('data'), ['one', 'onepointfive', 'two']);\r\n\r\n      expect(Object.keys(results.toJSON()[0])).toEqual(['one', 'onepointfive', 'two', '__metadata']);\r\n    });\r\n  })\r\n\r\n  describe('updateVisibleData', () => {\r\n    it('sets visible data', () => {\r\n      const state = getBasicState();\r\n      const nextState = updateVisibleData(state);\r\n\r\n      expect(state.get('data').toJSON().map(withoutMetadata)).toEqual(nextState.get('visibleData').toJSON().map(withoutMetadata));\r\n    });\r\n  });\r\n\r\n  describe('getState', () => {\r\n    it('gets state', () => {\r\n      const state = getBasicState();\r\n\r\n      expect(getState(state)).toEqual(state);\r\n    });\r\n  });\r\n\r\n  describe('getPageProperties', () => {\r\n    it('gets page properties', () => {\r\n      const state = getBasicState();\r\n\r\n      expect(getPageProperties(state)).toEqual(state.get('pageProperties'));\r\n    })\r\n  });\r\n\r\n  describe('addKeyToRows', () => {\r\n    it('adds a key to all rows', () => {\r\n      const state = getBasicState();\r\n      const newData = addKeyToRows(state.get('data'));\r\n\r\n      expect(newData.get(0).get('griddleKey')).toBeDefined();\r\n    });\r\n  });\r\n\r\n  describe('getPageCount', () => {\r\n    it('gets the correct number of pages', () => {\r\n      expect(getPageCount(50, 5)).toEqual(10);\r\n      expect(getPageCount(50, 6)).toEqual(9);\r\n    });\r\n  });\r\n\r\n  describe('getColumnTitles', () => {\r\n    it('gets the correct titles', () => {\r\n      const state = getBasicState();\r\n      const titles = getColumnTitles(state);\r\n\r\n      expect(titles).toEqual({\r\n        one: { one: 'One' },\r\n        two: { two: 'Two' }\r\n      });\r\n    });\r\n  });\r\n\r\n  describe('getColumnProperties', () => {\r\n    it('gets column properties', () => {\r\n      const state = getBasicState();\r\n      const properties = getColumnProperties(state);\r\n\r\n      expect(properties).toEqual(state.getIn(['renderProperties', 'columnProperties']).toJSON())\r\n    });\r\n\r\n    it('returns empty object on state without columnProperties', () => {\r\n      const state = Immutable.fromJS({\r\n        renderProperties: {}\r\n      });\r\n      const properties = getColumnProperties(state);\r\n\r\n      expect(properties).toEqual({});\r\n    });\r\n  });\r\n\r\n  describe('getAllPossibleColumns', () => {\r\n    it('gets as Seq containing keys from data', () => {\r\n      const state = getBasicState();\r\n      const possibleColumns = getAllPossibleColumns(state);\r\n\r\n      expect(possibleColumns.toJSON()).toEqual(['one', 'two'])\r\n    });\r\n  });\r\n\r\n  describe('getDataColumns', () => {\r\n    it('gets the columns arranged by order', () => {\r\n      const state = getBasicState();\r\n      const dataColumns = getDataColumns(state);\r\n\r\n      expect(dataColumns).toEqual(['two', 'one']);\r\n    });\r\n\r\n    it('gets only the visible columns', () => {\r\n      const columnProperties = getBasicState().getIn(['renderProperties', 'columnProperties']).filterNot(col => col.get('id') === 'one');\r\n      const state = getBasicState().setIn(['renderProperties', 'columnProperties'], columnProperties);\r\n      const dataColumns = getDataColumns(state);\r\n\r\n      expect(dataColumns).toEqual(['two']);\r\n    });\r\n\r\n    it('gets all columns if visible columns is empty', () => {\r\n      const columnProperties = getBasicState().getIn(['renderProperties', 'columnProperties']).filterNot(col => (col.get('id') === 'one' || col.get('id') === 'two'));\r\n      const state = getBasicState().setIn(['renderProperties', 'columnProperties'], columnProperties);\r\n      const dataColumns = getDataColumns(state);\r\n\r\n      //this needs to be one, two because it's not checking the order property\r\n      expect(dataColumns).toEqual(['one', 'two']);\r\n    })\r\n  });\r\n});\r\n\r\n"
+  },
+  {
+    "__docId__": 69,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "withoutMetadata",
+    "memberof": "lib/helpers/__tests__/dataHelperTests.js",
+    "longname": "lib/helpers/__tests__/dataHelperTests.js~withoutMetadata",
+    "access": null,
+    "export": false,
+    "importPath": "griddle-overhaul-core/lib/helpers/__tests__/dataHelperTests.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 70,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/helpers/__tests__/localHelperTests.js",
+    "memberof": null,
+    "longname": "lib/helpers/__tests__/localHelperTests.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Immutable from 'immutable';\r\n\r\nimport {\r\n  getVisibleData,\r\n  hasNext,\r\n  hasPrevious,\r\n  getDataSet,\r\n  filterData,\r\n  filterDataByColumns,\r\n  getSortedData,\r\n  updateSortColumns,\r\n  sortDataByColumns,\r\n  getPage\r\n} from '../local-helpers';\r\n\r\n//TODO: Make this a method in a utils because it's shared with dataHelperTests\r\nconst withoutMetadata = (item) => {\r\n  delete item[\"__metadata\"];\r\n  return item;\r\n}\r\n\r\nimport { getBasicState } from './stateUtils';\r\n\r\ndescribe('localHelpers', () => {\r\n  it('gets visible data', () => {\r\n    const state = getBasicState();\r\n    const visibleData = getVisibleData(state);\r\n\r\n    expect(visibleData.size).toEqual(state.getIn(['pageProperties', 'pageSize']));\r\n    expect(visibleData.toJSON().map(withoutMetadata)).toEqual([{two: 'two', one: 'one'}]);\r\n  });\r\n\r\n  describe('hasNext', () => {\r\n    it('returns true when on first page and there are more results', () => {\r\n      //this is currently one page and one result per page and there are two items\r\n      const state = getBasicState();\r\n      const hasMore  = hasNext(state);\r\n\r\n      expect(hasMore).toEqual(true);\r\n    });\r\n\r\n    it('returns false when on the last page', () => {\r\n      const state = getBasicState().setIn(['pageProperties', 'currentPage'], 2);\r\n      const hasMore = hasNext(state);\r\n\r\n      expect(hasMore).toEqual(false);\r\n    });\r\n  });\r\n\r\n  describe('hasPrevious', () => {\r\n    it('returns false when on first page', () => {\r\n      const state = getBasicState();\r\n      const localHasPrevious  = hasPrevious(state);\r\n\r\n      expect(localHasPrevious).toEqual(false);\r\n    });\r\n\r\n    it('returns false when on the last page', () => {\r\n      const state = getBasicState().setIn(['pageProperties', 'currentPage'], 2);\r\n      const localHasPrevious  = hasPrevious(state);\r\n\r\n      expect(localHasPrevious).toEqual(true);\r\n    });\r\n  });\r\n\r\n  describe('getDataSet', () => {\r\n    it('returns state if no filter present', () => {\r\n      const state = getBasicState();\r\n      const dataState = getDataSet(state);\r\n\r\n      expect(state.get('data')).toEqual(dataState);\r\n    });\r\n\r\n    //TODO: Add test to make sure it calls filter method when there is a filter present\r\n    it('returns filtered data if columnFilters present', () => {\r\n      const state = getBasicState()\r\n        .set('columnFilters', Immutable.List([\r\n          {column: 'three', filter: 'r'}\r\n        ]))\r\n        .set('data', Immutable.fromJS([\r\n          {one: 'one', two: 'two', three: 'three'},\r\n          {one: 'four', two: 'six', three: 'seven'},\r\n          {one: 'ichi', two: 'ni', three: 'san'},\r\n          {one: 'shi', two: 'go', three: 'roku'}\r\n        ]));\r\n\r\n      const dataState = getDataSet(state);\r\n\r\n      expect(dataState.toJSON()).toEqual([\r\n        {one: 'one', two: 'two', three: 'three'},\r\n        {one: 'shi', two: 'go', three: 'roku'}\r\n      ])\r\n    })\r\n  });\r\n\r\n  describe('filterData', () => {\r\n    it('returns filtered data', () => {\r\n      const state = getBasicState();\r\n      const filteredData = filterData(state.get('data'), 'four');\r\n\r\n      expect(filteredData.size).toEqual(1);\r\n      expect(filteredData.toJSON()).toEqual([{one: 'three', two: 'four'}]);\r\n    });\r\n\r\n    it('returns the whole dataset when no filter is present', () => {\r\n      const state = getBasicState();\r\n      const filteredData = filterData(state.get('data'), '');\r\n\r\n      expect(filteredData.size).toEqual(2);\r\n      expect(filteredData.toJSON()).toEqual(state.get('data').toJSON());\r\n    });\r\n\r\n    //TODO: Break this test down a bit\r\n    it('filters by column', () => {\r\n      const state = getBasicState()\r\n        .set('data', Immutable.fromJS([\r\n          {one: 'one', two: 'two', three: 'three'},\r\n          {one: 'four', two: 'six', three: 'seven'},\r\n          {one: 'ichi', two: 'ni', three: 'san'},\r\n          {one: 'shi', two: 'go', three: 'roku'}\r\n        ]));\r\n\r\n      const filteredData = filterDataByColumns(state.get('data'), Immutable.List([\r\n        {column: 'three', filter: 'r'},\r\n      ]));\r\n\r\n      expect(filteredData.toJSON()).toEqual([\r\n        {one: 'one', two: 'two', three: 'three'},\r\n        {one: 'shi', two: 'go', three: 'roku'}\r\n      ]);\r\n\r\n      const filteredData2 = filterDataByColumns(state.get('data'), Immutable.List([\r\n        {column: 'three', filter: 'r'},\r\n        {column: 'one', filter: 's'}\r\n      ]))\r\n\r\n      expect(filteredData2.toJSON()).toEqual([\r\n        {one: 'shi', two: 'go', three: 'roku'}\r\n      ]);\r\n\r\n      const filteredData3 = filterDataByColumns(state.get('data'), Immutable.fromJS([\r\n        {column: 'three', filter: 'r'},\r\n        {column: 'one', filter: 's'},\r\n        {column: 'two', filter: 'w'}\r\n      ]))\r\n\r\n      expect(filteredData3.toJSON()).toEqual([]);\r\n    })\r\n  });\r\n\r\n  describe('getSortedData', () => {\r\n    it('sorts the data', () => {\r\n      const state = getBasicState();\r\n      const updatedState = updateSortColumns(state, ['two'], true);\r\n      const sortedData = sortDataByColumns(updatedState);\r\n\r\n      expect(sortedData.get('data').toJSON()).toEqual([{one: 'three', two: 'four'}, {one: 'one', two: 'two'}]);\r\n    });\r\n\r\n    it('sorts in reverse order when sortAscending = false', () => {\r\n      const state = getBasicState();\r\n      const updatedState = updateSortColumns(state, ['two'], false);\r\n      const sortedData = sortDataByColumns(updatedState);\r\n\r\n      expect(sortedData.get('data').toJSON()).toEqual([{one: 'one', two: 'two'}, {one: 'three', two: 'four'}]);\r\n    });\r\n\r\n    it('sorts by date', () => {\r\n      const state = getBasicState()\r\n        .set('data', Immutable.fromJS([\r\n          {one: '1/1/1900', two: '1/5/2016'},\r\n          {one: '7/20/1982', two: '8/21/2015'}]))\r\n        .setIn(\r\n          ['renderProperties', 'columnProperties', 'two'],\r\n          new Immutable.Map({ sortType: 'date', id: 'two', displayName: 'Two'}))\r\n\r\n      const updatedState = updateSortColumns(state, ['two']);\r\n\r\n      const sortedData = sortDataByColumns(updatedState);\r\n\r\n      expect(sortedData.get('data').toJSON())\r\n        .toEqual([{one: '7/20/1982', two: '8/21/2015'}, {one: '1/1/1900', two: '1/5/2016'}]);\r\n    });\r\n\r\n    it('sorts by date descending', () => {\r\n      const state = getBasicState()\r\n        .set('data', Immutable.fromJS([\r\n          {one: '1/1/1900', two: '1/5/2016'},\r\n          {one: '7/20/1982', two: '8/21/2015'}]))\r\n        .setIn(\r\n          ['renderProperties', 'columnProperties', 'two'],\r\n          new Immutable.Map({ sortType: 'date', id: 'two', displayName: 'Two'}))\r\n\r\n      const updatedState = updateSortColumns(state, ['two'], false);\r\n\r\n      const sortedData = sortDataByColumns(updatedState);\r\n\r\n      expect(sortedData.get('data').toJSON())\r\n        .toEqual([{one: '1/1/1900', two: '1/5/2016'}, {one: '7/20/1982', two: '8/21/2015'}]);\r\n    });\r\n\r\n  });\r\n\r\n  describe('updateSortColumns', () => {\r\n    it('sorts the data', () => {\r\n      const state = getBasicState();\r\n      const updatedState = updateSortColumns(state, ['two']);\r\n      const sortedByColumns = sortDataByColumns(updatedState);\r\n\r\n      expect(sortedByColumns.get('data').toJSON()).toEqual([{one: 'three', two: 'four'}, {one: 'one', two: 'two'}]);\r\n    });\r\n\r\n    it('sorts in reverse order when sortAscending = false', () => {\r\n      const state = getBasicState();\r\n      const updatedState = updateSortColumns(state, ['two'], false);\r\n      const sortedData = sortDataByColumns(updatedState);\r\n\r\n      expect(sortedData.get('data').toJSON()).toEqual([{one: 'one', two: 'two'}, {one: 'three', two: 'four'}]);\r\n    });\r\n  });\r\n\r\n  describe('getPage', () => {\r\n    it('gets the specified page', () => {\r\n      const state = getBasicState();\r\n      const firstPage = getPage(state, 1);\r\n      const secondPage = getPage(state, 2);\r\n      const invalidPage = getPage(state, 5);\r\n\r\n      expect(firstPage.getIn(['pageProperties', 'currentPage'])).toEqual(1);\r\n      expect(firstPage.getIn(['pageProperties', 'maxPage'])).toEqual(2);\r\n\r\n      expect(secondPage.getIn(['pageProperties', 'currentPage'])).toEqual(2);\r\n      expect(secondPage.getIn(['pageProperties', 'maxPage'])).toEqual(2);\r\n\r\n      expect(invalidPage.getIn(['pageProperties', 'currentPage'])).toEqual(0);\r\n      expect(invalidPage.getIn(['pageProperties', 'maxPage'])).toEqual(2);\r\n    });\r\n  })\r\n});\r\n\r\n"
+  },
+  {
+    "__docId__": 71,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "withoutMetadata",
+    "memberof": "lib/helpers/__tests__/localHelperTests.js",
+    "longname": "lib/helpers/__tests__/localHelperTests.js~withoutMetadata",
+    "access": null,
+    "export": false,
+    "importPath": "griddle-overhaul-core/lib/helpers/__tests__/localHelperTests.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 72,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/helpers/__tests__/stateUtils.js",
+    "memberof": null,
+    "longname": "lib/helpers/__tests__/stateUtils.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Immutable from 'immutable';\r\n\r\nexport function getBasicState() {\r\n  return Immutable.fromJS({\r\n    data: [\r\n      { one: 'one', two: 'two' },\r\n      { one: 'three', two: 'four' }\r\n    ],\r\n    renderProperties: {\r\n      columnProperties: {\r\n        one: { id: 'one', displayName: 'One', order: 2 },\r\n        two: { id: 'two', displayName: 'Two', order: 1 }\r\n      }\r\n    },\r\n    pageProperties: {\r\n      property1: 'one',\r\n      property2: 'two',\r\n      pageSize: 1,\r\n      currentPage: 0,\r\n      maxPage: 2\r\n    }\r\n  });\r\n}\r\n\r\n"
+  },
+  {
+    "__docId__": 73,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getBasicState",
+    "memberof": "lib/helpers/__tests__/stateUtils.js",
+    "longname": "lib/helpers/__tests__/stateUtils.js~getBasicState",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/helpers/__tests__/stateUtils.js",
+    "importStyle": "{getBasicState}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 74,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/initialStates/data-state.js",
+    "memberof": null,
+    "longname": "lib/initialStates/data-state.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Immutable from 'immutable';\r\n\r\nexport default Immutable.fromJS({\r\n  loading: true,\r\n  data: [],\r\n  visibleData: [],\r\n  columnTitles: [],\r\n  allColumns: [],\r\n  renderProperties: {},\r\n  hasNext: false,\r\n  hasPrevious: false,\r\n  pageProperties: {\r\n    currentPage: 0,\r\n    maxPage: 0,\r\n    pageSize: 0\r\n  }\r\n});"
+  },
+  {
+    "__docId__": 75,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/initialStates/index.js",
+    "memberof": null,
+    "longname": "lib/initialStates/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import {default as data} from './data-state';\r\nimport {default as local} from './local-state';\r\n\r\nexport { data as data };\r\nexport { local as local };"
+  },
+  {
+    "__docId__": 76,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/initialStates/local-state.js",
+    "memberof": null,
+    "longname": "lib/initialStates/local-state.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Immutable from 'immutable';\r\n\r\nexport default Immutable.fromJS({\r\n  pageProperties: {\r\n    pageSize: 10,\r\n    currentPage: 1,\r\n    sortColumns: [],\r\n    sortAscending: true\r\n  },\r\n  filter: '',\r\n  columnFilters: [],\r\n});\r\n"
+  },
+  {
+    "__docId__": 77,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/module.js",
+    "memberof": null,
+    "longname": "lib/module.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import * as reducers from './reducers'\r\nimport * as states from './initialStates/index'\r\nimport GriddleReducer from './reducers/griddle-overhaul-reducer'\r\nimport * as GriddleActions from './actions/local-actions'\r\nimport * as GriddleHelpers from './helpers'\r\n\r\nexport { reducers as Reducers }\r\nexport { states as States }\r\nexport { GriddleActions as GriddleActions }\r\nexport { GriddleReducer as GriddleReducer }\r\nexport {GriddleHelpers as GriddleHelpers}\r\n"
+  },
+  {
+    "__docId__": 78,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/reducers/data-reducer.js",
+    "memberof": null,
+    "longname": "lib/reducers/data-reducer.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "'use strict';\r\n\r\n//clean these up\r\nimport * as types from '../constants/action-types';\r\nimport Immutable from 'immutable';\r\nimport MAX_SAFE_INTEGER from 'max-safe-integer';\r\n\r\n//TODO: Dumb bug requires this to be here for things to work\r\nexport function BEFORE_REDUCE(state, action, helpers) {\r\n  return state;\r\n}\r\n\r\nexport function AFTER_REDUCE(state, action, helpers) {\r\n  return state;\r\n}\r\n\r\nexport function GRIDDLE_INITIALIZED(state, action, helpers) {\r\n  return state.set('renderProperties', Immutable.fromJS(action.properties));\r\n}\r\n\r\nexport function GRIDDLE_LOADED_DATA(state, action, helpers) {\r\n  return state.set('data', helpers.addKeyToRows(Immutable.fromJS(action.data)))\r\n              .set('loading', false);\r\n}\r\n\r\nexport function GRIDDLE_TOGGLE_COLUMN(state, action, helpers) {\r\n  const toggleColumn = function(columnId, fromProperty, toProperty) {\r\n    if(state.get('renderProperties').get(fromProperty) &&\r\n      state.get('renderProperties').get(fromProperty).has(columnId)) {\r\n        const columnValue = state.getIn(['renderProperties', fromProperty, columnId])\r\n        return state\r\n          .setIn(['renderProperties', toProperty, columnId], columnValue)\r\n          .removeIn(['renderProperties', fromProperty, columnId]);\r\n      }\r\n  }\r\n\r\n  //check to see if the column is in hiddenColumnProperties\r\n  //if it is move it to columnProperties\r\n  const hidden = toggleColumn(action.columnId, 'hiddenColumnProperties', 'columnProperties');\r\n\r\n  //if it is not check to make sure it's in columnProperties and move to hiddenColumnProperties\r\n  const column = toggleColumn(action.columnId, 'columnProperties', 'hiddenColumnProperties');\r\n\r\n  //if it's neither just return state for now\r\n  return helpers.updateVisibleData(hidden || column || state);\r\n}"
+  },
+  {
+    "__docId__": 79,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "BEFORE_REDUCE",
+    "memberof": "lib/reducers/data-reducer.js",
+    "longname": "lib/reducers/data-reducer.js~BEFORE_REDUCE",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/data-reducer.js",
+    "importStyle": "{BEFORE_REDUCE}",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "action",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 80,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "AFTER_REDUCE",
+    "memberof": "lib/reducers/data-reducer.js",
+    "longname": "lib/reducers/data-reducer.js~AFTER_REDUCE",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/data-reducer.js",
+    "importStyle": "{AFTER_REDUCE}",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "action",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 81,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_INITIALIZED",
+    "memberof": "lib/reducers/data-reducer.js",
+    "longname": "lib/reducers/data-reducer.js~GRIDDLE_INITIALIZED",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/data-reducer.js",
+    "importStyle": "{GRIDDLE_INITIALIZED}",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "action",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 82,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_LOADED_DATA",
+    "memberof": "lib/reducers/data-reducer.js",
+    "longname": "lib/reducers/data-reducer.js~GRIDDLE_LOADED_DATA",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/data-reducer.js",
+    "importStyle": "{GRIDDLE_LOADED_DATA}",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "action",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 83,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_TOGGLE_COLUMN",
+    "memberof": "lib/reducers/data-reducer.js",
+    "longname": "lib/reducers/data-reducer.js~GRIDDLE_TOGGLE_COLUMN",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/data-reducer.js",
+    "importStyle": "{GRIDDLE_TOGGLE_COLUMN}",
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "action",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 84,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/reducers/griddle-reducer.js",
+    "memberof": null,
+    "longname": "lib/reducers/griddle-reducer.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "//TODO: determine if there is a better way to make an empty immutable object\r\nimport Immutable from 'immutable';\r\nimport pick from 'lodash.pick';\r\nimport extend from 'lodash.assign';\r\nconst initialState = Immutable.fromJS({});\r\n\r\n//from MDN\r\nif (!String.prototype.endsWith) {\r\n  String.prototype.endsWith = function(searchString, position) {\r\n      var subjectString = this.toString();\r\n      if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position > subjectString.length) {\r\n        position = subjectString.length;\r\n      }\r\n      position -= searchString.length;\r\n      var lastIndex = subjectString.indexOf(searchString, position);\r\n      return lastIndex !== -1 && lastIndex === position;\r\n  };\r\n}\r\n\r\nexport function combineAndOverrideReducers(containers) {\r\n  if(!containers) { return {}; }\r\n  containers.unshift({});\r\n  let griddleReducers = extend.apply(this, containers);\r\n  containers.shift();\r\n  return griddleReducers;\r\n}\r\n\r\n/*\r\n  This method creates a pipeline of reducers. This is mainly\r\n  used for the before / after reducers\r\n*/\r\nexport function getReducersByWordEnding(reducers, ending) {\r\n  return reducers.reduce((previous, current) => {\r\n    const keys = Object.keys(current).filter((name) => name.endsWith(ending));\r\n\r\n    let reducer = pick(current, keys);\r\n\r\n    //TODO: clean this up it's a bit hacky\r\n    for (var key in current) {\r\n      if(!key.endsWith(ending)) { continue; }\r\n\r\n      const keyWithoutEnding = key.replace(`_${ending}`, \"\");\r\n      //make a new method that pipes output of previous into state of current\r\n      //this is to allow chaining these\r\n      const hasPrevious =  previous.hasOwnProperty(keyWithoutEnding) && typeof previous[keyWithoutEnding] === 'function';\r\n      const previousReducer = hasPrevious ? previous[keyWithoutEnding] : undefined;\r\n      const currentReducer = reducer[key]\r\n\r\n      reducer[keyWithoutEnding] = wrapReducer(currentReducer, previousReducer);\r\n    }\r\n\r\n    //override anything in previous (since this now calls previous to make sure we have helpers from both);\r\n    return extend(previous, reducer);\r\n  }, {});\r\n}\r\n\r\nexport function getBeforeReducers(reducers) {\r\n  return getReducersByWordEnding(reducers, \"BEFORE\");\r\n}\r\n\r\nexport function getAfterReducers(reducers) {\r\n  return getReducersByWordEnding(reducers, \"AFTER\");\r\n}\r\n\r\n//feed the result of previous reducer into next\r\nexport function wrapReducer(next, previous) {\r\n  //if previous reducer exists -- return the result of wrapper as state to next\r\n  return previous && typeof(previous) === 'function' && typeof(next) === 'function' ?\r\n    (state, action, helpers) => next(previous(state, action, helpers), action, helpers) :\r\n    next;\r\n}\r\n\r\n//TODO: Maybe this is dumb becuase it's just wrapping a typeof\r\nfunction isFunction(item) {\r\n  return typeof(item) === 'function';\r\n}\r\n\r\nfunction isFunctionOrUndefined(item) {\r\n  return isFunction(item) || typeof(item) === 'undefined';\r\n}\r\n\r\nfunction wrapReducers(...reducers) {\r\n  const finalReducer = reducers.reduce((previous, current) => {\r\n    //get all reducer methods and either set the prop\r\n    for(var key in current) {\r\n      if(isFunctionOrUndefined(current[key]) && isFunctionOrUndefined(previous[key])){\r\n        previous[key] = wrapReducer(current[key], previous[key]);\r\n      }\r\n    }\r\n\r\n    return previous;\r\n  }, {});\r\n\r\n  return finalReducer;\r\n}\r\n\r\nexport function combineInitialState(states) {\r\n  //TODO: Do this in a better way\r\n  let griddleState = initialState;\r\n\r\n  for(const state in states) {\r\n    griddleState = griddleState.mergeDeep(states[state]);\r\n  }\r\n\r\n  return griddleState;\r\n}\r\n\r\n//TODO: This is not the most efficient way to do this.\r\nexport function buildReducerWithHooks(reducers, reducer) {\r\n  const filteredReducerEndings = ['BEFORE', 'AFTER', 'BEFORE_REDUCE', 'AFTER_REDUCE'];\r\n\r\n  const validKeys = Object.keys(reducer).filter(key => {\r\n    return !filteredReducerEndings.some(reducerEnding => key.endsWith(reducerEnding))\r\n  });\r\n\r\n  const preReduce = getReducersByWordEnding(reducers, \"BEFORE_REDUCE\").BEFORE_REDUCE;\r\n  const postReduce = getReducersByWordEnding(reducers, \"AFTER_REDUCE\").AFTER_REDUCE;\r\n\r\n  let retVal = {};\r\n  validKeys.forEach(key => retVal[key] = wrapReducer(postReduce, wrapReducer(preReduce, reducer[key])));\r\n\r\n  return extend(reducer, retVal);\r\n}\r\n\r\n//TODO: maybe add helpers in here too and override them on add. idk\r\nexport default function buildGriddleReducer(initialStates, reducers, helpers) {\r\n    const beforeReducers = getBeforeReducers(reducers);\r\n    const afterReducers = getAfterReducers(reducers);\r\n    const griddleReducers = combineAndOverrideReducers(reducers);\r\n\r\n    const wrappedReducers = buildReducerWithHooks(reducers, wrapReducers(beforeReducers, griddleReducers, afterReducers));\r\n    const finalReducer = wrappedReducers;\r\n\r\n    const griddleState = combineInitialState(initialStates);\r\n    const griddleHelpers = combineAndOverrideReducers(helpers);\r\n\r\n    //TODO: Decrease the inception\r\n    return function griddleReducer(state = griddleState, action, helpers = griddleHelpers) {\r\n      return finalReducer[action.type] ?\r\n        finalReducer[action.type](state, action, helpers) :\r\n        state;\r\n    }\r\n}\r\n\r\n"
+  },
+  {
+    "__docId__": 85,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "initialState",
+    "memberof": "lib/reducers/griddle-reducer.js",
+    "longname": "lib/reducers/griddle-reducer.js~initialState",
+    "access": null,
+    "export": false,
+    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 86,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "combineAndOverrideReducers",
+    "memberof": "lib/reducers/griddle-reducer.js",
+    "longname": "lib/reducers/griddle-reducer.js~combineAndOverrideReducers",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
+    "importStyle": "{combineAndOverrideReducers}",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "params": [
+      {
+        "name": "containers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 87,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getReducersByWordEnding",
+    "memberof": "lib/reducers/griddle-reducer.js",
+    "longname": "lib/reducers/griddle-reducer.js~getReducersByWordEnding",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
+    "importStyle": "{getReducersByWordEnding}",
+    "description": null,
+    "lineNumber": 32,
+    "undocument": true,
+    "params": [
+      {
+        "name": "reducers",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "ending",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 88,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getBeforeReducers",
+    "memberof": "lib/reducers/griddle-reducer.js",
+    "longname": "lib/reducers/griddle-reducer.js~getBeforeReducers",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
+    "importStyle": "{getBeforeReducers}",
+    "description": null,
+    "lineNumber": 57,
+    "undocument": true,
+    "params": [
+      {
+        "name": "reducers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 89,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getAfterReducers",
+    "memberof": "lib/reducers/griddle-reducer.js",
+    "longname": "lib/reducers/griddle-reducer.js~getAfterReducers",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
+    "importStyle": "{getAfterReducers}",
+    "description": null,
+    "lineNumber": 61,
+    "undocument": true,
+    "params": [
+      {
+        "name": "reducers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 90,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "wrapReducer",
+    "memberof": "lib/reducers/griddle-reducer.js",
+    "longname": "lib/reducers/griddle-reducer.js~wrapReducer",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
+    "importStyle": "{wrapReducer}",
+    "description": null,
+    "lineNumber": 66,
+    "undocument": true,
+    "params": [
+      {
+        "name": "next",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "previous",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 91,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "isFunction",
+    "memberof": "lib/reducers/griddle-reducer.js",
+    "longname": "lib/reducers/griddle-reducer.js~isFunction",
+    "access": null,
+    "export": false,
+    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 74,
+    "undocument": true,
+    "params": [
+      {
+        "name": "item",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 92,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "isFunctionOrUndefined",
+    "memberof": "lib/reducers/griddle-reducer.js",
+    "longname": "lib/reducers/griddle-reducer.js~isFunctionOrUndefined",
+    "access": null,
+    "export": false,
+    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 78,
+    "undocument": true,
+    "params": [
+      {
+        "name": "item",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 93,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "wrapReducers",
+    "memberof": "lib/reducers/griddle-reducer.js",
+    "longname": "lib/reducers/griddle-reducer.js~wrapReducers",
+    "access": null,
+    "export": false,
+    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 82,
+    "undocument": true,
+    "params": [
+      {
+        "name": "reducers",
+        "types": [
+          "...*"
+        ],
+        "spread": true
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 94,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "combineInitialState",
+    "memberof": "lib/reducers/griddle-reducer.js",
+    "longname": "lib/reducers/griddle-reducer.js~combineInitialState",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
+    "importStyle": "{combineInitialState}",
+    "description": null,
+    "lineNumber": 97,
+    "undocument": true,
+    "params": [
+      {
+        "name": "states",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 95,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "buildReducerWithHooks",
+    "memberof": "lib/reducers/griddle-reducer.js",
+    "longname": "lib/reducers/griddle-reducer.js~buildReducerWithHooks",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
+    "importStyle": "{buildReducerWithHooks}",
+    "description": null,
+    "lineNumber": 109,
+    "undocument": true,
+    "params": [
+      {
+        "name": "reducers",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "reducer",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 96,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "buildGriddleReducer",
+    "memberof": "lib/reducers/griddle-reducer.js",
+    "longname": "lib/reducers/griddle-reducer.js~buildGriddleReducer",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
+    "importStyle": "buildGriddleReducer",
+    "description": null,
+    "lineNumber": 126,
+    "undocument": true,
+    "params": [
+      {
+        "name": "initialStates",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "reducers",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 97,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/reducers/index.js",
+    "memberof": null,
+    "longname": "lib/reducers/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import * as data from './data-reducer';\r\nimport * as local from './local-reducer';\r\n\r\nexport { data as data }\r\nexport { local as local }\r\n"
+  },
+  {
+    "__docId__": 98,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/reducers/local-reducer.js",
+    "memberof": null,
+    "longname": "lib/reducers/local-reducer.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "'use strict';\r\n\r\nimport * as types from '../constants/action-types';\r\nimport Immutable from 'immutable';\r\n\r\n/*\r\n  The handler that happens when data is loaded.\r\n  Needs to set the:\r\n    Properties,\r\n    Data,\r\n    Pagination buttons\r\n    visible data\r\n    it should sort the data if a sort is specified\r\n*/\r\nexport function GRIDDLE_LOADED_DATA(state, action, helpers) {\r\n  const columns = action.data.length > 0 ? Object.keys(action.data[0]) : [];\r\n  //set state's data to this\r\n  const tempState = state\r\n  .set('data', helpers.addKeyToRows(Immutable.fromJS(action.data)))\r\n  .set('allColumns', columns)\r\n  .setIn(\r\n    ['pageProperties', 'maxPage'],\r\n    helpers.getPageCount(\r\n      action.data.length,\r\n      state.getIn(['pageProperties', 'pageSize'])))\r\n  .set('loading', false);\r\n\r\n  const columnProperties = tempState.get('renderProperties').get('columnProperties');\r\n\r\n  return columnProperties ?\r\n     helpers\r\n      .sortDataByColumns(tempState, helpers)\r\n      .setIn(['pageProperties', 'currentPage'], 1) :\r\n    tempState;\r\n\r\n}\r\n\r\nexport function AFTER_REDUCE(state, action, helpers) {\r\n  const tempState = state\r\n    .set('visibleData', helpers.getVisibleData(state))\r\n    .setIn(\r\n      ['pageProperties', 'maxPage'],\r\n      helpers.getPageCount(\r\n        helpers.getDataSetSize(state),\r\n        state.getIn(['pageProperties', 'pageSize'])))\r\n\r\n  return tempState\r\n    .set('hasNext', helpers.hasNext(tempState))\r\n    .set('hasPrevious', helpers.hasPrevious(tempState));\r\n}\r\n\r\n/*\r\n  Needs to update:\r\n    visible data,\r\n    max pages,\r\n    hasNext,\r\n    hasPrevious\r\n*/\r\nexport function GRIDDLE_SET_PAGE_SIZE(state, action, helpers) {\r\n  const pageSizeState = state\r\n    .setIn(['pageProperties', 'currentPage'], 1)\r\n    .setIn(['pageProperties', 'pageSize'],\r\n      action.pageSize);\r\n\r\n   const stateWithMaxPage = pageSizeState\r\n      .setIn(\r\n        ['pageProperties', 'maxPage'],\r\n        helpers.getPageCount(\r\n          pageSizeState.get('data').size,\r\n          action.pageSize));\r\n\r\n      return stateWithMaxPage;\r\n}\r\n\r\n//TODO: Move the helper function to the method body and call this\r\n//      from next / previous. This will be easier since we have\r\n//      the AFTER_REDUCE stuff now.\r\nexport function GRIDDLE_GET_PAGE(state, action, helpers) {\r\n  return(helpers\r\n    .getPage(state, action.pageNumber));\r\n}\r\n\r\nexport function GRIDDLE_NEXT_PAGE(state, action, helpers) {\r\n  const currentPage = state.getIn(['pageProperties', 'currentPage']);\r\n  const maxPage = state.getIn(['pageProperties', 'maxPage']);\r\n\r\n  return(helpers\r\n    .getPage(state,\r\n      currentPage < maxPage ? currentPage + 1 : currentPage));\r\n}\r\n\r\nexport function GRIDDLE_PREVIOUS_PAGE(state, action, helpers) {\r\n  const currentPage = state.getIn(['pageProperties', 'currentPage']);\r\n\r\n  return(helpers\r\n      .getPage(state,\r\n        currentPage > 0 ? currentPage - 1 : currentPage ));\r\n}\r\n\r\nexport function GRIDDLE_FILTERED_BY_COLUMN(state, action, helpers) {\r\n  const filters = state.get('columnFilters');\r\n  const { column, filter } = action;\r\n  let setFilters = filters\r\n    .filter(f => f.column !== column);\r\n\r\n  //are we reseting a filter?\r\n  if (filter !== '') {\r\n    setFilters = setFilters.concat({ filter, column });\r\n  }\r\n\r\n  return state\r\n    .set('columnFilters', setFilters)\r\n    .setIn(['pageProperties', 'currentPage'], 1);\r\n}\r\n\r\nexport function GRIDDLE_FILTERED(state, action, helpers) {\r\n  //TODO: Just set the filter and let the visible data handle what is actually shown + next / previous\r\n  return state\r\n    .set('filter', action.filter)\r\n    .setIn(['pageProperties','currentPage'], 1);\r\n}\r\n\r\n//TODO: This is a really simple sort, for now\r\n//      We need to add sort type and different sort operations\r\nexport function GRIDDLE_SORT(state, action, helpers) {\r\n  if(!action.sortColumns || action.sortColumns.length < 1) { return state }\r\n\r\n  // Update the sort columns\r\n  let tempState = helpers.updateSortColumns(state, action.sortColumns);\r\n\r\n  const columnProperties = state.get('renderProperties').get('columnProperties');\r\n  // Sort the data\r\n  return helpers\r\n    .sortDataByColumns(tempState, helpers)\r\n    .setIn(['pageProperties', 'currentPage'], 1)\r\n}\r\n"
+  },
+  {
+    "__docId__": 99,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_LOADED_DATA",
+    "memberof": "lib/reducers/local-reducer.js",
+    "longname": "lib/reducers/local-reducer.js~GRIDDLE_LOADED_DATA",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
+    "importStyle": "{GRIDDLE_LOADED_DATA}",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "action",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 100,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "AFTER_REDUCE",
+    "memberof": "lib/reducers/local-reducer.js",
+    "longname": "lib/reducers/local-reducer.js~AFTER_REDUCE",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
+    "importStyle": "{AFTER_REDUCE}",
+    "description": null,
+    "lineNumber": 38,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "action",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 101,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_SET_PAGE_SIZE",
+    "memberof": "lib/reducers/local-reducer.js",
+    "longname": "lib/reducers/local-reducer.js~GRIDDLE_SET_PAGE_SIZE",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
+    "importStyle": "{GRIDDLE_SET_PAGE_SIZE}",
+    "description": null,
+    "lineNumber": 59,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "action",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 102,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_GET_PAGE",
+    "memberof": "lib/reducers/local-reducer.js",
+    "longname": "lib/reducers/local-reducer.js~GRIDDLE_GET_PAGE",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
+    "importStyle": "{GRIDDLE_GET_PAGE}",
+    "description": null,
+    "lineNumber": 78,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "action",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 103,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_NEXT_PAGE",
+    "memberof": "lib/reducers/local-reducer.js",
+    "longname": "lib/reducers/local-reducer.js~GRIDDLE_NEXT_PAGE",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
+    "importStyle": "{GRIDDLE_NEXT_PAGE}",
+    "description": null,
+    "lineNumber": 83,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "action",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 104,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_PREVIOUS_PAGE",
+    "memberof": "lib/reducers/local-reducer.js",
+    "longname": "lib/reducers/local-reducer.js~GRIDDLE_PREVIOUS_PAGE",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
+    "importStyle": "{GRIDDLE_PREVIOUS_PAGE}",
+    "description": null,
+    "lineNumber": 92,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "action",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 105,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_FILTERED_BY_COLUMN",
+    "memberof": "lib/reducers/local-reducer.js",
+    "longname": "lib/reducers/local-reducer.js~GRIDDLE_FILTERED_BY_COLUMN",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
+    "importStyle": "{GRIDDLE_FILTERED_BY_COLUMN}",
+    "description": null,
+    "lineNumber": 100,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "action",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 106,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_FILTERED",
+    "memberof": "lib/reducers/local-reducer.js",
+    "longname": "lib/reducers/local-reducer.js~GRIDDLE_FILTERED",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
+    "importStyle": "{GRIDDLE_FILTERED}",
+    "description": null,
+    "lineNumber": 116,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "action",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 107,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "GRIDDLE_SORT",
+    "memberof": "lib/reducers/local-reducer.js",
+    "longname": "lib/reducers/local-reducer.js~GRIDDLE_SORT",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
+    "importStyle": "{GRIDDLE_SORT}",
+    "description": null,
+    "lineNumber": 125,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "action",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "helpers",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 108,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/reducers/__tests__/dataReducerTest.js",
+    "memberof": null,
+    "longname": "lib/reducers/__tests__/dataReducerTest.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Immutable from 'immutable';\r\nimport { getMethod, getReducer } from './testUtils';\r\nimport extend from 'lodash.assign';\r\n\r\nimport {\r\n  GRIDDLE_INITIALIZED,\r\n  GRIDDLE_LOADED_DATA,\r\n  GRIDDLE_TOGGLE_COLUMN\r\n} from '../data-reducer';\r\n\r\nconst defaultData = [\r\n  {one: \"one\", two: \"two\", three: \"three\", griddleKey: 1 },\r\n  {one: \"un\", two: \"du\", three: \"trois\", griddleKey: 2 },\r\n  {one: \"uno\", two: \"dos\", three: \"tres\", griddleKey: 3, selected: true },\r\n  {one: \"ichi\", two: \"ni\", three: \"san\", griddleKey: 4 },\r\n];\r\n\r\ndescribe('DataReducer', () => {\r\n  describe('GRIDDLE_INITIALIZED', () => {\r\n    const state = getReducer({\r\n      payload: { properties: { property1: \"one\" } },\r\n    }, GRIDDLE_INITIALIZED);\r\n\r\n    it('set the render properties', () => {\r\n      expect(state.get('renderProperties').toJSON()).toEqual({ property1: \"one\" });\r\n    });\r\n  });\r\n\r\n  describe('GRIDDLE_LOADED_DATA', () => {\r\n    const state = getReducer({\r\n      payload: { data: defaultData, properties: { property1: \"one\" } },\r\n      helpers: {\r\n        addKeyToRows: (data) => Immutable.fromJS(data)\r\n      }\r\n    }, GRIDDLE_LOADED_DATA);\r\n\r\n    it('runs addKeyToRows', () => {\r\n      //if data is immutable, it called the addKeyToRows method here\r\n      expect(state.get('data').toJSON()).toEqual(defaultData)\r\n    });\r\n  });\r\n\r\n  describe('GRIDDLE_TOGGLE_COLUMN', () => {\r\n    const props = {\r\n      state: Immutable.fromJS({\r\n        data: defaultData,\r\n        renderProperties: {\r\n          hiddenColumnProperties: {two: 'two'} ,\r\n          columnProperties: { one: 'one', three: 'three' }\r\n        }\r\n      }),\r\n      helpers: {\r\n        addKeyToRows: (data) => Immutable.fromJS(data),\r\n        updateVisibleData: (data) => Immutable.fromJS(data)\r\n      },\r\n      payload: {\r\n        columnId: 'two'\r\n      }\r\n    };\r\n\r\n    const runReducer = (properties) => {\r\n      return getReducer(properties, GRIDDLE_TOGGLE_COLUMN);\r\n    }\r\n\r\n    it('toggles a column when not currently selected', () => {\r\n      const state = runReducer(props);\r\n      expect(state.getIn(['renderProperties', 'hiddenColumnProperties']).toJSON().hasOwnProperty('two')).toEqual(false);\r\n    });\r\n\r\n    it('toggles a column when not currently selected', () => {\r\n      const state = runReducer(extend({}, props, { payload: { columnId: 'three' }}));\r\n      expect(state.getIn(['renderProperties', 'hiddenColumnProperties']).toJSON().hasOwnProperty('three')).toEqual(true);\r\n    });\r\n  });\r\n});\r\n\r\n"
+  },
+  {
+    "__docId__": 109,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "defaultData",
+    "memberof": "lib/reducers/__tests__/dataReducerTest.js",
+    "longname": "lib/reducers/__tests__/dataReducerTest.js~defaultData",
+    "access": null,
+    "export": false,
+    "importPath": "griddle-overhaul-core/lib/reducers/__tests__/dataReducerTest.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 110,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/reducers/__tests__/griddleReducerTest.js",
+    "memberof": null,
+    "longname": "lib/reducers/__tests__/griddleReducerTest.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import GriddleReducer, {\r\n  combineAndOverrideReducers,\r\n  getBeforeReducers,\r\n  getAfterReducers,\r\n  getReducersByWordEnding,\r\n  wrapReducer,\r\n  combineInitialState,\r\n  buildReducerWithHooks\r\n} from '../griddle-reducer'\r\n\r\nimport Immutable from 'immutable';\r\n\r\nconst setup = () => {\r\n  const first = {\r\n    basic: function(state, action, helpers) { return 'first'; },\r\n    greet: function(state, action, helpers) { return state.set(\"testGreeting\", `${state.get('testGreeting')} and hello`); },\r\n    sayGoodbye: function(state, action, helpers) { return state.set(\"testGreeting\", `${state.get('testGreeting')} and goodbye`); },\r\n    hi_BEFORE: function(state, action, helpers) { return state.set('testBefore', 'hello from first before')},\r\n    hi_AFTER: function(state, action, helpers) { return state.set('testAfter', 'hello from first after')}\r\n  };\r\n\r\n  const second = {\r\n    basic: function(state, action, helpers) { return 'second'; },\r\n    greet: function(state, action, helpers) { return state.set(\"testGreeting\", `Yo! ${state.get('testGreeting')}`); },\r\n    sayGoodbye: function(state, action, helpers) { return state.set(\"testGreeting\", `Later! ${state.get('testGreeting')}`); },\r\n    helloGoodbye: function(state, action, helpers) { return state; },\r\n    hi_BEFORE: function(state, action, helpers) { return state.set('testBefore', 'hello from second before')},\r\n    hi_AFTER: function(state, action, helpers) { return state.set('testAfter', 'hello from second after')}\r\n\r\n  };\r\n\r\n  return { first, second };\r\n};\r\n\r\ndescribe('GriddleReducer', () => {\r\n  describe('CombineAndOverrideReducers', () => {\r\n     it('has the right methods', () => {\r\n      const { first, second } = setup();\r\n      const result = combineAndOverrideReducers([first, second]);\r\n      const methods = Object.keys(result);\r\n      expect(methods.indexOf('greet') >= 0).toBe(true);\r\n      expect(methods.indexOf('sayGoodbye') >= 0).toBe(true);\r\n    });\r\n\r\n    it('overrides reducers in the correct order', () =>{\r\n      const { first, second } = setup();\r\n      const result = combineAndOverrideReducers([first, second]);\r\n\r\n      expect(second.basic()).toEqual(result.basic());\r\n    });\r\n  });\r\n  \r\n  describe('getReducersByWordEnding', () => {\r\n     it('Obtains reducers by word ending', () => {\r\n      const { first, second } = setup();\r\n\r\n      const reducers = getReducersByWordEnding([first, second], 'Goodbye');\r\n      expect(reducers.helloGoodbye).toEqual(jasmine.anything());\r\n      expect(reducers.sayGoodbye).toEqual(jasmine.anything());\r\n      expect(reducers.greet).not.toEqual(jasmine.anything());\r\n    });\r\n\r\n    it('calls reducers in correct in the order they were defined by word ending', () => {\r\n      const state = Immutable.Map().set(\"testGreeting\", \"Hi\");\r\n      const { first, second } = setup();\r\n      const reducers = getReducersByWordEnding([first, second], 'Goodbye');\r\n\r\n      var message = reducers.sayGoodbye(state, null, null);\r\n      expect(message.get('testGreeting')).toEqual(\"Later! Hi and goodbye\");\r\n    });\r\n  });\r\n\r\n  describe('getBeforeReducers', () => {\r\n    it('obtains before reducers', () => {\r\n      const { first, second } = setup();\r\n      const reducers = getBeforeReducers([first, second]);\r\n\r\n      expect(reducers.hi_BEFORE).toEqual(jasmine.anything());\r\n    });\r\n\r\n    it('has a proper method as the result of getBeforeReducers', () => {\r\n      const { first, second } = setup();\r\n      const reducers = getBeforeReducers([first, second]);\r\n      const reducers2 = getBeforeReducers([second, first]);\r\n\r\n      const state = Immutable.Map().set(\"testGreeting\", \"Hi\");\r\n\r\n      expect(reducers.hi_BEFORE(state, null, null).toJSON().testBefore).toEqual('hello from second before');\r\n      expect(reducers2.hi_BEFORE(state, null, null).toJSON().testBefore).toEqual('hello from first before');\r\n    });\r\n  });\r\n\r\n  describe('getAfterReducers', () => {\r\n     it('obtains after reducers', () => {\r\n      const { first, second } = setup();\r\n      const reducers = getAfterReducers([first, second]);\r\n\r\n      expect(reducers.hi_AFTER).toEqual(jasmine.anything());\r\n    });\r\n\r\n    it('has a proper method as the result of getAfter', () => {\r\n      const { first, second } = setup();\r\n      const reducers = getAfterReducers([first, second]);\r\n      const reducers2 = getAfterReducers([second, first]);\r\n\r\n      const state = Immutable.Map().set(\"testGreeting\", \"Hi\");\r\n\r\n      expect(reducers.hi_AFTER(state, null, null).toJSON().testAfter).toEqual('hello from second after');\r\n      expect(reducers2.hi_AFTER(state, null, null).toJSON().testAfter).toEqual('hello from first after');\r\n    });\r\n  });\r\n\r\n  describe('wrapReducer', () => {\r\n    it('passes the result of the previous function to the next', () => {\r\n      const function1 = function function1(state, action, helpers) { return \"hi\"; }\r\n      const function2 = function function2(state, action, helpers) { return state; }\r\n\r\n      expect(wrapReducer(function2, function1)(\"something\", null, null)).toEqual(\"hi\");\r\n    });\r\n\r\n    it('returns just the \"next\" function if previous is not specified', () => {\r\n      const function1 = function function1(state, action, helpers) { return \"hi\"; }\r\n      const function2 = function function2(state, action, helpers) { return state; }\r\n\r\n      expect(wrapReducer(function2)(\"something\", null, null)).toEqual(\"something\");\r\n    });\r\n  });\r\n\r\n  describe('combineInitialState', () => {\r\n    it('combines state', () => {\r\n      var one = new Immutable.fromJS({ one: \"first\" });\r\n      var two = new Immutable.fromJS({ two: \"second\" });\r\n      var three = new Immutable.fromJS({ three: \"third\" });\r\n\r\n      const states = combineInitialState([one, two, three]);\r\n      expect(states.get('one')).toEqual('first');\r\n      expect(states.get('two')).toEqual('second');\r\n      expect(states.get('three')).toEqual('third');\r\n    });\r\n  });\r\n\r\n  describe('buildReducerWithHooks', () => {\r\n    it('combines the reducers with before_reduce / after_reduce', () => {\r\n      //TODO: switch this to use the reducers defined above\r\n      const base = {\r\n        DO_SOMETHING: (state) => state.set('example', `${state.get('example')} middle`),\r\n        BEFORE_REDUCE: (state) => state.set('example', `before ${state.get('example')}`),\r\n        AFTER_REDUCE: (state) => state.set('example', `${state.get('example')} after`)\r\n      }\r\n      \r\n      const state = Immutable.fromJS({example: 'hi'})\r\n      const reducer = buildReducerWithHooks([base], base)\r\n      expect(reducer.DO_SOMETHING(state).get('example')).toEqual('before hi middle after');\r\n    });\r\n\r\n    it('combines the reducers in the correct order', () => {\r\n      const base = {\r\n        DO_SOMETHING: (state) => state.set('example', `${state.get('example')}`),\r\n        BEFORE_REDUCE: (state) => state.set('example', `firstBefore ${state.get('example')}`),\r\n        AFTER_REDUCE: (state) => state.set('example', `${state.get('example')} firstAfter`)\r\n      }\r\n\r\n      const second = {\r\n        BEFORE_REDUCE: (state) => state.set('example', `secondBefore ${state.get('example')}`),\r\n        AFTER_REDUCE: (state) => state.set('example', `${state.get('example')} secondAfter`)\r\n      }\r\n\r\n       const third = {\r\n        BEFORE_REDUCE: (state) => state.set('example', `thirdBefore ${state.get('example')}`),\r\n        AFTER_REDUCE: (state) => state.set('example', `${state.get('example')} thirdAfter`)\r\n      }\r\n\r\n      const state = Immutable.fromJS({example: 'hi'})\r\n      const reducer = buildReducerWithHooks([base, second, third], base)\r\n        expect(reducer.DO_SOMETHING(state).get('example'))\r\n           //the before filters should be last first\r\n          .toEqual('thirdBefore secondBefore firstBefore hi firstAfter secondAfter thirdAfter');\r\n    });\r\n  });\r\n});\r\n"
+  },
+  {
+    "__docId__": 111,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "setup",
+    "memberof": "lib/reducers/__tests__/griddleReducerTest.js",
+    "longname": "lib/reducers/__tests__/griddleReducerTest.js~setup",
+    "access": null,
+    "export": false,
+    "importPath": "griddle-overhaul-core/lib/reducers/__tests__/griddleReducerTest.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 112,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/reducers/__tests__/localReducerTest.js",
+    "memberof": null,
+    "longname": "lib/reducers/__tests__/localReducerTest.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Immutable from 'immutable';\r\nimport * as Helpers from '../../helpers/local-helpers';\r\nimport LocalReducer, {\r\n  GRIDDLE_LOADED_DATA,\r\n  AFTER_REDUCE,\r\n  GRIDDLE_SET_PAGE_SIZE,\r\n  GRIDDLE_GET_PAGE,\r\n  GRIDDLE_NEXT_PAGE,\r\n  GRIDDLE_PREVIOUS_PAGE,\r\n  GRIDDLE_FILTERED,\r\n  GRIDDLE_FILTERED_BY_COLUMN,\r\n  GRIDDLE_SORT\r\n} from '../local-reducer';\r\n\r\nimport extend from 'lodash.assign';\r\n\r\nconst initialState = {renderProperties: {columnProperties: null}, columnFilters: []};\r\n//TODO: Import the testHelpers instead of using this directly\r\nconst getMethod = (options) => {\r\n  if(!options.method) {\r\n    throw \"Need a method to call\"\r\n  }\r\n\r\n  const combined = extend({state: Immutable.fromJS(initialState), payload: {}, helpers: {}, method: null}, options);\r\n  const { state, payload, helpers, method } = combined;\r\n  return method.call(this, state, payload, helpers);\r\n}\r\n\r\nconst defaultData = [\r\n  {one: \"one\", two: \"two\", three: \"three\"},\r\n  {one: \"un\", two: \"du\", three: \"trois\"},\r\n  {one: \"uno\", two: \"dos\", three: \"tres\"},\r\n  {one: \"ichi\", two: \"ni\", three: \"san\"},\r\n];\r\n\r\ndescribe('localDataReducer', () => {\r\n  describe('load data', () => {\r\n    const loadData = (options) => {\r\n      return getMethod(extend(options, {method: GRIDDLE_LOADED_DATA}));\r\n    }\r\n\r\n    it('sets the data', () => {\r\n      const helpers = extend(Helpers, { addKeyToRows:  (state) => {return state} });\r\n      const state = loadData({ helpers, payload: { data: defaultData }});\r\n\r\n      expect(state.get('data').toJSON()).toEqual(defaultData);\r\n    });\r\n\r\n    it('sets all columns', () => {\r\n      const helpers = extend(Helpers, { addKeyToRows:  (state) => {return state} });\r\n      const state = loadData({ helpers, payload: { data: defaultData }});\r\n      expect(state.get('allColumns')).toEqual(['one', 'two', 'three'])\r\n    });\r\n\r\n    it('sets max page', () => {\r\n      const helpers = extend(Helpers, {\r\n        addKeyToRows: (state) => {return state},\r\n        getPageCount: (state) => { return 3}\r\n      });\r\n\r\n      const state = loadData({ helpers, payload: { data: defaultData }});\r\n\r\n      expect(state.getIn(['pageProperties', 'maxPage'])).toEqual(3);\r\n    });\r\n  });\r\n\r\n  describe('after reduce', () => {\r\n    const afterReduce = (options) => {\r\n      return getMethod(extend(options, {method: AFTER_REDUCE}));\r\n    }\r\n\r\n    const defaultHelpers = extend(Helpers, {\r\n      getDataSet: (state) => { return state; },\r\n      getVisibleData: (state) => { return state; },\r\n      hasNext: (state) => { return true; },\r\n      hasPrevious: (state) => { return true; },\r\n      getDataSetSize: (state) => { return state.count(); }\r\n    });\r\n\r\n    it('sets visible data', () => {\r\n      const visibleData = [{ one: \"one\", two: \"two\", three: \"three\" }];\r\n      const helpers = extend({}, defaultHelpers, {\r\n        getVisibleData: (state) => { return visibleData; },\r\n      });\r\n\r\n      const state = afterReduce({ helpers });\r\n      expect(state.get('visibleData')).toEqual(visibleData);\r\n    });\r\n\r\n    it('sets has next', () => {\r\n      const helpers = extend({}, defaultHelpers, {\r\n        hasNext: (state) => { return true; },\r\n      });\r\n\r\n      const state = afterReduce({ helpers });\r\n      expect(state.get('hasNext')).toEqual(true);\r\n    });\r\n\r\n    it('sets has previous', () => {\r\n      const helpers = extend({}, defaultHelpers, {\r\n        hasPrevious: (state) => { return true; },\r\n      });\r\n\r\n      const state = afterReduce({ helpers });\r\n      expect(state.get('hasPrevious')).toEqual(true);\r\n    });\r\n\r\n    it('sets max page', () => {\r\n      const helpers = extend({}, defaultHelpers, {\r\n        getPageCount: (state) => { return 3}\r\n      });\r\n\r\n      const state = afterReduce({ helpers });\r\n      expect(state.getIn(['pageProperties', 'maxPage'])).toEqual(3);\r\n    });\r\n  });\r\n\r\n  describe('set page size', () => {\r\n    const setPageSize  = (options) => {\r\n      return getMethod(extend(options, { method: GRIDDLE_SET_PAGE_SIZE }));\r\n    }\r\n\r\n    const defaultHelpers = extend(Helpers, {\r\n      getPageCount: (state) => { return 3; }\r\n    });\r\n\r\n\r\n    it('sets the page size', () => {\r\n      const state = setPageSize({ helpers: defaultHelpers,\r\n        state: Immutable.fromJS({ data: defaultData }),\r\n        payload: { pageSize: 10 }\r\n      });\r\n\r\n      expect(state.getIn(['pageProperties', 'maxPage'])).toEqual(3);\r\n      expect(state.getIn(['pageProperties', 'pageSize'])).toEqual(10);\r\n    });\r\n  });\r\n\r\n  describe('paging', () => {\r\n    const reducer = (options, method) => {\r\n      return getMethod(extend(options, { method }));\r\n    }\r\n\r\n    const defaultPage = [\r\n      {one: 'one', two: 'two', three: 'three'},\r\n      {one: 'uno', two: 'dos', three: 'tres'},\r\n      {one: 'ichi', two: 'ni', three: 'san'}\r\n    ];\r\n\r\n    const defaultHelpers = extend(Helpers,\r\n      { getPage: (state, pageNumber) => state.set('data', defaultPage[pageNumber]) });\r\n\r\n    it('gets a page of data', () => {\r\n      const state = reducer({ helpers: defaultHelpers,\r\n        state: Immutable.fromJS({}),\r\n        payload: { pageNumber: 2 }\r\n      }, GRIDDLE_GET_PAGE);\r\n\r\n      expect(state.get('data')).toEqual(defaultPage[2]);\r\n    });\r\n\r\n    it('gets next page', () => {\r\n      const state = reducer({ helpers: defaultHelpers,\r\n        state: Immutable.fromJS({ pageProperties: { currentPage: 0, maxPage: 2 } }),\r\n      }, GRIDDLE_NEXT_PAGE);\r\n\r\n      expect(state.get('data')).toEqual(defaultPage[1]);\r\n    });\r\n\r\n    it('gets last page when calling next page on last page', () => {\r\n      const state = reducer({ helpers: defaultHelpers,\r\n        state: Immutable.fromJS({ pageProperties: { currentPage: 2, maxPage: 2 } }),\r\n      }, GRIDDLE_NEXT_PAGE);\r\n\r\n      expect(state.get('data')).toEqual(defaultPage[2]);\r\n    });\r\n\r\n    it('gets previous page', () => {\r\n      const state = reducer({ helpers: defaultHelpers,\r\n        state: Immutable.fromJS({ pageProperties: { currentPage: 1 } }),\r\n      }, GRIDDLE_PREVIOUS_PAGE);\r\n\r\n      expect(state.get('data')).toEqual(defaultPage[0]);\r\n    });\r\n\r\n    it('gets first page when calling previous on first page', () => {\r\n      const state = reducer({ helpers: defaultHelpers,\r\n        state: Immutable.fromJS({ pageProperties: { currentPage: 0 } }),\r\n      }, GRIDDLE_PREVIOUS_PAGE);\r\n\r\n      expect(state.get('data')).toEqual(defaultPage[0]);\r\n    });\r\n  });\r\n\r\n  describe('filtering', () => {\r\n    const reducer = (options, method) => {\r\n      return getMethod(extend(options, { method }));\r\n    }\r\n\r\n    it('sets the filter', () => {\r\n      const state = reducer({ payload: { filter: 'test' }}, GRIDDLE_FILTERED);\r\n      expect(state.get('filter')).toEqual('test');\r\n    });\r\n\r\n    it('sets the first page when filtering', () => {\r\n      const state = reducer({ payload: { filter: 'test'}}, GRIDDLE_FILTERED);\r\n      expect(state.getIn(['pageProperties', 'currentPage'])).toEqual(1);\r\n    })\r\n\r\n    it('sets column filter', () => {\r\n      const state = reducer({ payload: { filter: 'test', column: 'someColumn'}}, GRIDDLE_FILTERED_BY_COLUMN);\r\n      expect(state.get('columnFilters').toJSON()).toEqual([{filter: 'test', column: 'someColumn'}]);\r\n\r\n      const state2 = reducer({ payload: { filter: 'test2', column: 'someColumn2'}, state}, GRIDDLE_FILTERED_BY_COLUMN);\r\n      expect(state2.get('columnFilters').toJSON()).toEqual([\r\n        {filter: 'test', column: 'someColumn'},\r\n        {filter: 'test2', column: 'someColumn2'}\r\n      ]);\r\n    })\r\n\r\n    it('removes column filter when given empty filter for column', () => {\r\n      const state = reducer({ payload: { filter: 'test', column: 'someColumn'}}, GRIDDLE_FILTERED_BY_COLUMN);\r\n      const state2 = reducer({ payload: { filter: '', column: 'someColumn'}, state}, GRIDDLE_FILTERED_BY_COLUMN);\r\n\r\n      expect(state2.get('columnFilters').size).toEqual(0);\r\n    })\r\n\r\n    it('sets first page when filtering by column', () => {\r\n      const state = reducer({ payload: { filter: 'test', column: 'someColumn'}}, GRIDDLE_FILTERED_BY_COLUMN);\r\n      expect(state.getIn(['pageProperties', 'currentPage'])).toEqual(1);\r\n    })\r\n  });\r\n\r\n  describe('sorting', () => {\r\n    const reducer = (options, method) => {\r\n      return getMethod(extend(options, { method }));\r\n    }\r\n\r\n    it('returns the state when no sort columns are present', () => {\r\n      const state = reducer({}, GRIDDLE_SORT);\r\n\r\n      expect(state.toJSON()).toEqual(initialState);\r\n    });\r\n\r\n    it('calls sortDataByColumns when sort column present', () => {\r\n      let count = 0;\r\n\r\n      const helpers = extend(Helpers,\r\n        { sortDataByColumns: (state, pageNumber) => new Immutable.Map({count: count++ }) });\r\n      const payload = { sortColumns: ['one'] };\r\n      const state = reducer({ helpers, payload }, GRIDDLE_SORT)\r\n\r\n      //the sortByColumns method should increment the count -- this is a cheezy shouldHaveBeenCalled\r\n      expect(count).toEqual(1);\r\n    });\r\n  });\r\n});\r\n"
+  },
+  {
+    "__docId__": 113,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "initialState",
+    "memberof": "lib/reducers/__tests__/localReducerTest.js",
+    "longname": "lib/reducers/__tests__/localReducerTest.js~initialState",
+    "access": null,
+    "export": false,
+    "importPath": "griddle-overhaul-core/lib/reducers/__tests__/localReducerTest.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 114,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "getMethod",
+    "memberof": "lib/reducers/__tests__/localReducerTest.js",
+    "longname": "lib/reducers/__tests__/localReducerTest.js~getMethod",
+    "access": null,
+    "export": false,
+    "importPath": "griddle-overhaul-core/lib/reducers/__tests__/localReducerTest.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 115,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "defaultData",
+    "memberof": "lib/reducers/__tests__/localReducerTest.js",
+    "longname": "lib/reducers/__tests__/localReducerTest.js~defaultData",
+    "access": null,
+    "export": false,
+    "importPath": "griddle-overhaul-core/lib/reducers/__tests__/localReducerTest.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 116,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "lib/reducers/__tests__/testUtils.js",
+    "memberof": null,
+    "longname": "lib/reducers/__tests__/testUtils.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Immutable from 'immutable';\r\nimport extend from 'lodash.assign';\r\n\r\nexport function getMethod(options) {\r\n  if(!options.method) {\r\n    throw \"Need a method to call\"\r\n  }\r\n\r\n  const combined = extend({state: Immutable.fromJS({}), payload: {}, helpers: {}, method: null}, options);\r\n  const { state, payload, helpers, method } = combined;\r\n  return method.call(this, state, payload, helpers);\r\n}\r\n\r\nexport function getReducer(options, method) {\r\n  return getMethod(extend(options, { method }));\r\n}\r\n\r\n"
+  },
+  {
+    "__docId__": 117,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getMethod",
+    "memberof": "lib/reducers/__tests__/testUtils.js",
+    "longname": "lib/reducers/__tests__/testUtils.js~getMethod",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/__tests__/testUtils.js",
+    "importStyle": "{getMethod}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [
+      {
+        "name": "options",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 118,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getReducer",
+    "memberof": "lib/reducers/__tests__/testUtils.js",
+    "longname": "lib/reducers/__tests__/testUtils.js~getReducer",
+    "access": null,
+    "export": true,
+    "importPath": "griddle-overhaul-core/lib/reducers/__tests__/testUtils.js",
+    "importStyle": "{getReducer}",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "params": [
+      {
+        "name": "options",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "method",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 120,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Infinity",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 121,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~NaN",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 122,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~undefined",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 123,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~null",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 124,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 125,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 126,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 127,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 128,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 129,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 130,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Symbol",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 131,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Error",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 132,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~EvalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 133,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~InternalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 134,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RangeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 135,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ReferenceError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 136,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~SyntaxError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 137,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~TypeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 138,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~URIError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 139,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 140,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 141,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Date",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 142,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~String",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 143,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~string",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 144,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RegExp",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 145,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 146,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 147,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 148,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8ClampedArray",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 149,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 150,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 151,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 152,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 153,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 154,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float64Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 155,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Map",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 156,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Set",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 157,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakMap",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 158,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakSet",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 159,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ArrayBuffer",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 160,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~DataView",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 161,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~JSON",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 162,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Promise",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 163,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Generator",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 164,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~GeneratorFunction",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 165,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Reflect",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 166,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Proxy",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 168,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "CanvasRenderingContext2D",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~CanvasRenderingContext2D",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 169,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "DocumentFragment",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~DocumentFragment",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 170,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Element",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Element",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 171,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Event",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Event",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 172,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Node",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Node",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Node",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 173,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "NodeList",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~NodeList",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 174,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "XMLHttpRequest",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~XMLHttpRequest",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 175,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "AudioContext",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/AudioContext",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~AudioContext",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  }
+]

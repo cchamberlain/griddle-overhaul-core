@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">lib/reducers/__tests__/griddleReducerTest.js | griddle-overhaul-core API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/cchamberlain/griddle-overhaul-core" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">actions</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-addSortColumn">addSortColumn</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-filterData">filterData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-filterDataByColumn">filterDataByColumn</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-initializeGrid">initializeGrid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-loadData">loadData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-loadNext">loadNext</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-loadPage">loadPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-loadPrevious">loadPrevious</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-removeGrid">removeGrid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-setPageSize">setPageSize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-sort">sort</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-toggleColumn">toggleColumn</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">constants</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTER">GRIDDLE_FILTER</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTERED">GRIDDLE_FILTERED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTERED_BY_ADDITIONAL_COLUMN">GRIDDLE_FILTERED_BY_ADDITIONAL_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTERED_BY_COLUMN">GRIDDLE_FILTERED_BY_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTER_BY_ADDITIONAL_COLUMN">GRIDDLE_FILTER_BY_ADDITIONAL_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTER_BY_COLUMN">GRIDDLE_FILTER_BY_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTER_REMOVED">GRIDDLE_FILTER_REMOVED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_GET_PAGE">GRIDDLE_GET_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_INITIALIZE">GRIDDLE_INITIALIZE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_INITIALIZED">GRIDDLE_INITIALIZED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_LOADED_DATA">GRIDDLE_LOADED_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_LOAD_DATA">GRIDDLE_LOAD_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_NEXT_PAGE">GRIDDLE_NEXT_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_PAGE_LOADED">GRIDDLE_PAGE_LOADED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_PREVIOUS_PAGE">GRIDDLE_PREVIOUS_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_REMOVED">GRIDDLE_REMOVED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_ROW_SELECTION_TOGGLED">GRIDDLE_ROW_SELECTION_TOGGLED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_ROW_TOGGLED">GRIDDLE_ROW_TOGGLED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_SET_PAGE_SIZE">GRIDDLE_SET_PAGE_SIZE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_SORT">GRIDDLE_SORT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_SORTED">GRIDDLE_SORTED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_SORTED_ADDITIONAL">GRIDDLE_SORTED_ADDITIONAL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_SORT_ADDITIONAL">GRIDDLE_SORT_ADDITIONAL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_TOGGLE_COLUMN">GRIDDLE_TOGGLE_COLUMN</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">helpers</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-addKeyToRows">addKeyToRows</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllPossibleColumns">getAllPossibleColumns</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getColumnProperties">getColumnProperties</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getColumnTitles">getColumnTitles</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getDataColumns">getDataColumns</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getPageCount">getPageCount</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getPageProperties">getPageProperties</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getState">getState</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getVisibleData">getVisibleData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getVisibleDataColumns">getVisibleDataColumns</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateVisibleData">updateVisibleData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-dateSort">dateSort</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-defaultSort">defaultSort</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-filterData">filterData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-filterDataByColumns">filterDataByColumns</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getDataSet">getDataSet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getDataSetSize">getDataSetSize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getPage">getPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getSortByType">getSortByType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getSortedData">getSortedData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getVisibleData">getVisibleData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-hasNext">hasNext</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-hasPrevious">hasPrevious</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-sortDataByColumns">sortDataByColumns</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-sortTypes">sortTypes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateSortColumns">updateSortColumns</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">helpers/__tests__</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getBasicState">getBasicState</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">reducers</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-AFTER_REDUCE">AFTER_REDUCE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-BEFORE_REDUCE">BEFORE_REDUCE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_INITIALIZED">GRIDDLE_INITIALIZED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_LOADED_DATA">GRIDDLE_LOADED_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_TOGGLE_COLUMN">GRIDDLE_TOGGLE_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-buildGriddleReducer">buildGriddleReducer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-buildReducerWithHooks">buildReducerWithHooks</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-combineAndOverrideReducers">combineAndOverrideReducers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-combineInitialState">combineInitialState</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAfterReducers">getAfterReducers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getBeforeReducers">getBeforeReducers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getReducersByWordEnding">getReducersByWordEnding</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-wrapReducer">wrapReducer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-AFTER_REDUCE">AFTER_REDUCE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_FILTERED">GRIDDLE_FILTERED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_FILTERED_BY_COLUMN">GRIDDLE_FILTERED_BY_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_GET_PAGE">GRIDDLE_GET_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_LOADED_DATA">GRIDDLE_LOADED_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_NEXT_PAGE">GRIDDLE_NEXT_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_PREVIOUS_PAGE">GRIDDLE_PREVIOUS_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_SET_PAGE_SIZE">GRIDDLE_SET_PAGE_SIZE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_SORT">GRIDDLE_SORT</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">reducers/__tests__</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getMethod">getMethod</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getReducer">getReducer</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">lib/reducers/__tests__/griddleReducerTest.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import GriddleReducer, {
+  combineAndOverrideReducers,
+  getBeforeReducers,
+  getAfterReducers,
+  getReducersByWordEnding,
+  wrapReducer,
+  combineInitialState,
+  buildReducerWithHooks
+} from &apos;../griddle-reducer&apos;
+
+import Immutable from &apos;immutable&apos;;
+
+const setup = () =&gt; {
+  const first = {
+    basic: function(state, action, helpers) { return &apos;first&apos;; },
+    greet: function(state, action, helpers) { return state.set(&quot;testGreeting&quot;, `${state.get(&apos;testGreeting&apos;)} and hello`); },
+    sayGoodbye: function(state, action, helpers) { return state.set(&quot;testGreeting&quot;, `${state.get(&apos;testGreeting&apos;)} and goodbye`); },
+    hi_BEFORE: function(state, action, helpers) { return state.set(&apos;testBefore&apos;, &apos;hello from first before&apos;)},
+    hi_AFTER: function(state, action, helpers) { return state.set(&apos;testAfter&apos;, &apos;hello from first after&apos;)}
+  };
+
+  const second = {
+    basic: function(state, action, helpers) { return &apos;second&apos;; },
+    greet: function(state, action, helpers) { return state.set(&quot;testGreeting&quot;, `Yo! ${state.get(&apos;testGreeting&apos;)}`); },
+    sayGoodbye: function(state, action, helpers) { return state.set(&quot;testGreeting&quot;, `Later! ${state.get(&apos;testGreeting&apos;)}`); },
+    helloGoodbye: function(state, action, helpers) { return state; },
+    hi_BEFORE: function(state, action, helpers) { return state.set(&apos;testBefore&apos;, &apos;hello from second before&apos;)},
+    hi_AFTER: function(state, action, helpers) { return state.set(&apos;testAfter&apos;, &apos;hello from second after&apos;)}
+
+  };
+
+  return { first, second };
+};
+
+describe(&apos;GriddleReducer&apos;, () =&gt; {
+  describe(&apos;CombineAndOverrideReducers&apos;, () =&gt; {
+     it(&apos;has the right methods&apos;, () =&gt; {
+      const { first, second } = setup();
+      const result = combineAndOverrideReducers([first, second]);
+      const methods = Object.keys(result);
+      expect(methods.indexOf(&apos;greet&apos;) &gt;= 0).toBe(true);
+      expect(methods.indexOf(&apos;sayGoodbye&apos;) &gt;= 0).toBe(true);
+    });
+
+    it(&apos;overrides reducers in the correct order&apos;, () =&gt;{
+      const { first, second } = setup();
+      const result = combineAndOverrideReducers([first, second]);
+
+      expect(second.basic()).toEqual(result.basic());
+    });
+  });
+  
+  describe(&apos;getReducersByWordEnding&apos;, () =&gt; {
+     it(&apos;Obtains reducers by word ending&apos;, () =&gt; {
+      const { first, second } = setup();
+
+      const reducers = getReducersByWordEnding([first, second], &apos;Goodbye&apos;);
+      expect(reducers.helloGoodbye).toEqual(jasmine.anything());
+      expect(reducers.sayGoodbye).toEqual(jasmine.anything());
+      expect(reducers.greet).not.toEqual(jasmine.anything());
+    });
+
+    it(&apos;calls reducers in correct in the order they were defined by word ending&apos;, () =&gt; {
+      const state = Immutable.Map().set(&quot;testGreeting&quot;, &quot;Hi&quot;);
+      const { first, second } = setup();
+      const reducers = getReducersByWordEnding([first, second], &apos;Goodbye&apos;);
+
+      var message = reducers.sayGoodbye(state, null, null);
+      expect(message.get(&apos;testGreeting&apos;)).toEqual(&quot;Later! Hi and goodbye&quot;);
+    });
+  });
+
+  describe(&apos;getBeforeReducers&apos;, () =&gt; {
+    it(&apos;obtains before reducers&apos;, () =&gt; {
+      const { first, second } = setup();
+      const reducers = getBeforeReducers([first, second]);
+
+      expect(reducers.hi_BEFORE).toEqual(jasmine.anything());
+    });
+
+    it(&apos;has a proper method as the result of getBeforeReducers&apos;, () =&gt; {
+      const { first, second } = setup();
+      const reducers = getBeforeReducers([first, second]);
+      const reducers2 = getBeforeReducers([second, first]);
+
+      const state = Immutable.Map().set(&quot;testGreeting&quot;, &quot;Hi&quot;);
+
+      expect(reducers.hi_BEFORE(state, null, null).toJSON().testBefore).toEqual(&apos;hello from second before&apos;);
+      expect(reducers2.hi_BEFORE(state, null, null).toJSON().testBefore).toEqual(&apos;hello from first before&apos;);
+    });
+  });
+
+  describe(&apos;getAfterReducers&apos;, () =&gt; {
+     it(&apos;obtains after reducers&apos;, () =&gt; {
+      const { first, second } = setup();
+      const reducers = getAfterReducers([first, second]);
+
+      expect(reducers.hi_AFTER).toEqual(jasmine.anything());
+    });
+
+    it(&apos;has a proper method as the result of getAfter&apos;, () =&gt; {
+      const { first, second } = setup();
+      const reducers = getAfterReducers([first, second]);
+      const reducers2 = getAfterReducers([second, first]);
+
+      const state = Immutable.Map().set(&quot;testGreeting&quot;, &quot;Hi&quot;);
+
+      expect(reducers.hi_AFTER(state, null, null).toJSON().testAfter).toEqual(&apos;hello from second after&apos;);
+      expect(reducers2.hi_AFTER(state, null, null).toJSON().testAfter).toEqual(&apos;hello from first after&apos;);
+    });
+  });
+
+  describe(&apos;wrapReducer&apos;, () =&gt; {
+    it(&apos;passes the result of the previous function to the next&apos;, () =&gt; {
+      const function1 = function function1(state, action, helpers) { return &quot;hi&quot;; }
+      const function2 = function function2(state, action, helpers) { return state; }
+
+      expect(wrapReducer(function2, function1)(&quot;something&quot;, null, null)).toEqual(&quot;hi&quot;);
+    });
+
+    it(&apos;returns just the &quot;next&quot; function if previous is not specified&apos;, () =&gt; {
+      const function1 = function function1(state, action, helpers) { return &quot;hi&quot;; }
+      const function2 = function function2(state, action, helpers) { return state; }
+
+      expect(wrapReducer(function2)(&quot;something&quot;, null, null)).toEqual(&quot;something&quot;);
+    });
+  });
+
+  describe(&apos;combineInitialState&apos;, () =&gt; {
+    it(&apos;combines state&apos;, () =&gt; {
+      var one = new Immutable.fromJS({ one: &quot;first&quot; });
+      var two = new Immutable.fromJS({ two: &quot;second&quot; });
+      var three = new Immutable.fromJS({ three: &quot;third&quot; });
+
+      const states = combineInitialState([one, two, three]);
+      expect(states.get(&apos;one&apos;)).toEqual(&apos;first&apos;);
+      expect(states.get(&apos;two&apos;)).toEqual(&apos;second&apos;);
+      expect(states.get(&apos;three&apos;)).toEqual(&apos;third&apos;);
+    });
+  });
+
+  describe(&apos;buildReducerWithHooks&apos;, () =&gt; {
+    it(&apos;combines the reducers with before_reduce / after_reduce&apos;, () =&gt; {
+      //TODO: switch this to use the reducers defined above
+      const base = {
+        DO_SOMETHING: (state) =&gt; state.set(&apos;example&apos;, `${state.get(&apos;example&apos;)} middle`),
+        BEFORE_REDUCE: (state) =&gt; state.set(&apos;example&apos;, `before ${state.get(&apos;example&apos;)}`),
+        AFTER_REDUCE: (state) =&gt; state.set(&apos;example&apos;, `${state.get(&apos;example&apos;)} after`)
+      }
+      
+      const state = Immutable.fromJS({example: &apos;hi&apos;})
+      const reducer = buildReducerWithHooks([base], base)
+      expect(reducer.DO_SOMETHING(state).get(&apos;example&apos;)).toEqual(&apos;before hi middle after&apos;);
+    });
+
+    it(&apos;combines the reducers in the correct order&apos;, () =&gt; {
+      const base = {
+        DO_SOMETHING: (state) =&gt; state.set(&apos;example&apos;, `${state.get(&apos;example&apos;)}`),
+        BEFORE_REDUCE: (state) =&gt; state.set(&apos;example&apos;, `firstBefore ${state.get(&apos;example&apos;)}`),
+        AFTER_REDUCE: (state) =&gt; state.set(&apos;example&apos;, `${state.get(&apos;example&apos;)} firstAfter`)
+      }
+
+      const second = {
+        BEFORE_REDUCE: (state) =&gt; state.set(&apos;example&apos;, `secondBefore ${state.get(&apos;example&apos;)}`),
+        AFTER_REDUCE: (state) =&gt; state.set(&apos;example&apos;, `${state.get(&apos;example&apos;)} secondAfter`)
+      }
+
+       const third = {
+        BEFORE_REDUCE: (state) =&gt; state.set(&apos;example&apos;, `thirdBefore ${state.get(&apos;example&apos;)}`),
+        AFTER_REDUCE: (state) =&gt; state.set(&apos;example&apos;, `${state.get(&apos;example&apos;)} thirdAfter`)
+      }
+
+      const state = Immutable.fromJS({example: &apos;hi&apos;})
+      const reducer = buildReducerWithHooks([base, second, third], base)
+        expect(reducer.DO_SOMETHING(state).get(&apos;example&apos;))
+           //the before filters should be last first
+          .toEqual(&apos;thirdBefore secondBefore firstBefore hi firstAfter secondAfter thirdAfter&apos;);
+    });
+  });
+});
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.6)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

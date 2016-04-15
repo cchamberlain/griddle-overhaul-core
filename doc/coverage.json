@@ -1,0 +1,148 @@
+{
+  "coverage": "0%",
+  "expectCount": 87,
+  "actualCount": 0,
+  "files": {
+    "lib/reducers/local-reducer.js": {
+      "expectCount": 9,
+      "actualCount": 0,
+      "undocumentLines": [
+        38,
+        116,
+        100,
+        78,
+        15,
+        83,
+        92,
+        59,
+        125
+      ]
+    },
+    "lib/reducers/data-reducer.js": {
+      "expectCount": 5,
+      "actualCount": 0,
+      "undocumentLines": [
+        13,
+        9,
+        17,
+        21,
+        26
+      ]
+    },
+    "lib/constants/action-types.js": {
+      "expectCount": 24,
+      "actualCount": 0,
+      "undocumentLines": [
+        9,
+        10,
+        14,
+        12,
+        13,
+        11,
+        15,
+        24,
+        27,
+        28,
+        21,
+        20,
+        22,
+        25,
+        23,
+        29,
+        32,
+        31,
+        26,
+        16,
+        17,
+        19,
+        18,
+        30
+      ]
+    },
+    "lib/helpers/data-helpers.js": {
+      "expectCount": 11,
+      "actualCount": 0,
+      "undocumentLines": [
+        25,
+        64,
+        53,
+        37,
+        107,
+        32,
+        21,
+        17,
+        4,
+        81,
+        11
+      ]
+    },
+    "lib/actions/local-actions.js": {
+      "expectCount": 12,
+      "actualCount": 0,
+      "undocumentLines": [
+        10,
+        6,
+        7,
+        3,
+        5,
+        11,
+        13,
+        12,
+        4,
+        8,
+        9,
+        14
+      ]
+    },
+    "lib/reducers/griddle-reducer.js": {
+      "expectCount": 8,
+      "actualCount": 0,
+      "undocumentLines": [
+        126,
+        109,
+        20,
+        97,
+        61,
+        57,
+        32,
+        66
+      ]
+    },
+    "lib/helpers/local-helpers.js": {
+      "expectCount": 15,
+      "actualCount": 0,
+      "undocumentLines": [
+        76,
+        91,
+        53,
+        62,
+        34,
+        171,
+        175,
+        117,
+        122,
+        12,
+        25,
+        30,
+        139,
+        110,
+        127
+      ]
+    },
+    "lib/helpers/__tests__/stateUtils.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "lib/reducers/__tests__/testUtils.js": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        4,
+        14
+      ]
+    }
+  }
+}
