@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">lib/helpers/local-helpers.js | griddle-overhaul-core API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/cchamberlain/griddle-overhaul-core" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">actions</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-addSortColumn">addSortColumn</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-filterData">filterData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-filterDataByColumn">filterDataByColumn</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-initializeGrid">initializeGrid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-loadData">loadData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-loadNext">loadNext</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-loadPage">loadPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-loadPrevious">loadPrevious</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-removeGrid">removeGrid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-setPageSize">setPageSize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-sort">sort</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-toggleColumn">toggleColumn</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">constants</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTER">GRIDDLE_FILTER</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTERED">GRIDDLE_FILTERED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTERED_BY_ADDITIONAL_COLUMN">GRIDDLE_FILTERED_BY_ADDITIONAL_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTERED_BY_COLUMN">GRIDDLE_FILTERED_BY_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTER_BY_ADDITIONAL_COLUMN">GRIDDLE_FILTER_BY_ADDITIONAL_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTER_BY_COLUMN">GRIDDLE_FILTER_BY_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTER_REMOVED">GRIDDLE_FILTER_REMOVED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_GET_PAGE">GRIDDLE_GET_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_INITIALIZE">GRIDDLE_INITIALIZE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_INITIALIZED">GRIDDLE_INITIALIZED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_LOADED_DATA">GRIDDLE_LOADED_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_LOAD_DATA">GRIDDLE_LOAD_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_NEXT_PAGE">GRIDDLE_NEXT_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_PAGE_LOADED">GRIDDLE_PAGE_LOADED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_PREVIOUS_PAGE">GRIDDLE_PREVIOUS_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_REMOVED">GRIDDLE_REMOVED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_ROW_SELECTION_TOGGLED">GRIDDLE_ROW_SELECTION_TOGGLED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_ROW_TOGGLED">GRIDDLE_ROW_TOGGLED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_SET_PAGE_SIZE">GRIDDLE_SET_PAGE_SIZE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_SORT">GRIDDLE_SORT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_SORTED">GRIDDLE_SORTED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_SORTED_ADDITIONAL">GRIDDLE_SORTED_ADDITIONAL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_SORT_ADDITIONAL">GRIDDLE_SORT_ADDITIONAL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_TOGGLE_COLUMN">GRIDDLE_TOGGLE_COLUMN</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">helpers</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-addKeyToRows">addKeyToRows</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllPossibleColumns">getAllPossibleColumns</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getColumnProperties">getColumnProperties</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getColumnTitles">getColumnTitles</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getDataColumns">getDataColumns</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getPageCount">getPageCount</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getPageProperties">getPageProperties</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getState">getState</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getVisibleData">getVisibleData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getVisibleDataColumns">getVisibleDataColumns</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateVisibleData">updateVisibleData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-dateSort">dateSort</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-defaultSort">defaultSort</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-filterData">filterData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-filterDataByColumns">filterDataByColumns</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getDataSet">getDataSet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getDataSetSize">getDataSetSize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getPage">getPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getSortByType">getSortByType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getSortedData">getSortedData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getVisibleData">getVisibleData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-hasNext">hasNext</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-hasPrevious">hasPrevious</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-sortDataByColumns">sortDataByColumns</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-sortTypes">sortTypes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateSortColumns">updateSortColumns</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">helpers/__tests__</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getBasicState">getBasicState</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">reducers</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-AFTER_REDUCE">AFTER_REDUCE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-BEFORE_REDUCE">BEFORE_REDUCE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_INITIALIZED">GRIDDLE_INITIALIZED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_LOADED_DATA">GRIDDLE_LOADED_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_TOGGLE_COLUMN">GRIDDLE_TOGGLE_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-buildGriddleReducer">buildGriddleReducer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-buildReducerWithHooks">buildReducerWithHooks</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-combineAndOverrideReducers">combineAndOverrideReducers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-combineInitialState">combineInitialState</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAfterReducers">getAfterReducers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getBeforeReducers">getBeforeReducers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getReducersByWordEnding">getReducersByWordEnding</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-wrapReducer">wrapReducer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-AFTER_REDUCE">AFTER_REDUCE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_FILTERED">GRIDDLE_FILTERED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_FILTERED_BY_COLUMN">GRIDDLE_FILTERED_BY_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_GET_PAGE">GRIDDLE_GET_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_LOADED_DATA">GRIDDLE_LOADED_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_NEXT_PAGE">GRIDDLE_NEXT_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_PREVIOUS_PAGE">GRIDDLE_PREVIOUS_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_SET_PAGE_SIZE">GRIDDLE_SET_PAGE_SIZE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_SORT">GRIDDLE_SORT</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">reducers/__tests__</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getMethod">getMethod</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getReducer">getReducer</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">lib/helpers/local-helpers.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import {
+  getPageCount,
+  getDataColumns,
+  getVisibleDataColumns,
+  addKeyToRows
+} from &apos;./data-helpers&apos;;
+import Immutable from &apos;immutable&apos;;
+
+export { addKeyToRows as addKeyToRows };
+export { getPageCount as getPageCount };
+
+export function getVisibleData(state) {
+
+  //get the max page / current page and the current page of data
+  const pageSize = state.getIn([&apos;pageProperties&apos;, &apos;pageSize&apos;]);
+  const currentPage = state.getIn([&apos;pageProperties&apos;, &apos;currentPage&apos;]);
+
+  const data =  getDataSet(state)
+    .skip(pageSize * (currentPage-1)).take(pageSize);
+
+  const columns = getDataColumns(state, data);
+  return getVisibleDataColumns(data, columns);
+}
+
+export function hasNext(state) {
+  return state.getIn([&apos;pageProperties&apos;, &apos;currentPage&apos;]) &lt;
+    state.getIn([&apos;pageProperties&apos;, &apos;maxPage&apos;]);
+}
+
+export function hasPrevious(state) {
+  return state.getIn([&apos;pageProperties&apos;, &apos;currentPage&apos;]) &gt; 1;
+}
+
+export function getDataSet(state) {
+  let data = null;
+
+  //filtered data
+  if(state.get(&apos;filter&apos;) &amp;&amp; state.get(&apos;filter&apos;) !== &apos;&apos;) {
+    data = filterData(state.get(&apos;data&apos;), state.get(&apos;filter&apos;));
+  }
+
+  //full data
+  data = data || state.get(&apos;data&apos;);
+
+  //filter data by columns
+  if(state.get(&apos;columnFilters&apos;) &amp;&amp; state.get(&apos;columnFilters&apos;).size &gt; 0) {
+    data = filterDataByColumns(data, state.get(&apos;columnFilters&apos;));
+  }
+
+  return data;
+}
+
+export function filterData(data, filter) {
+    return data.filter(row  =&gt; {
+      return Object.keys(row.toJSON())
+        .some(key =&gt; {
+          return row.get(key) &amp;&amp; row.get(key).toString().toLowerCase().indexOf(filter.toLowerCase()) &gt; -1
+        })
+      })
+}
+
+export function filterDataByColumns(data, filters) {
+  //filters is an immutable list
+  //go through the list and apply the filter to the data based on the filter
+  return filters.reduce((previous, current) =&gt; {
+    const { column, filter } = current;
+
+    return previous.filter(row =&gt; row.get(column) &amp;&amp;
+      row.get(column)
+        .toString()
+        .toLowerCase()
+        .indexOf(filter.toLowerCase()) &gt; -1)
+  }, data)
+}
+
+export function dateSort(data, column, sortAscending = true) {
+  return data.sort(
+    (original, newRecord) =&gt; {
+      original = (!!original.get(column) &amp;&amp; new Date(original.get(column))) || null;
+      newRecord = (!!newRecord.get(column) &amp;&amp; new Date(newRecord.get(column))) || null;
+      if(original.getTime() === newRecord.getTime()) {
+        return 0;
+      } else if (original &gt; newRecord) {
+        return sortAscending ?  1 : -1;
+      } else {
+        return sortAscending ? -1 : 1;
+      }
+    })
+}
+
+export function defaultSort(data, column, sortAscending = true) {
+  return data.sort(
+    (original, newRecord) =&gt; {
+      original = (!!original.get(column) &amp;&amp; original.get(column)) || &quot;&quot;;
+      newRecord = (!!newRecord.get(column) &amp;&amp; newRecord.get(column)) || &quot;&quot;;
+
+      //TODO: This is about the most cheezy sorting check ever.
+      //Make it be able to sort for dates / monetary / regex / whatever
+      if(original === newRecord) {
+        return 0;
+      } else if (original &gt; newRecord) {
+        return sortAscending ? 1 : -1;
+      }
+      else {
+        return sortAscending ? -1 : 1;
+      }
+    });
+}
+
+export function sortTypes(type) {
+  return {
+    &quot;default&quot;: defaultSort,
+    &quot;date&quot;: dateSort,
+  }
+}
+
+export function getSortByType(type, helpers) {
+  const sortType = ((helpers &amp;&amp; helpers.sortTypes)||sortTypes)();
+  return sortType.hasOwnProperty(type) ? sortType[type] : defaultSort
+}
+
+export function getSortedData(data, columns, helpers, sortAscending = true, sortType = &quot;default&quot;) {
+  return getSortByType(sortType, helpers)(data, columns[0], sortAscending, helpers);
+}
+
+//TODO: Consider renaming sortAscending here to sortDescending
+export function updateSortColumns(state, columns, sortAscending = null) {
+  if(columns.length === 0) { return state; }
+
+  const shouldSortAscending = sortAscending !== null ?
+    sortAscending :
+    !(state.getIn([&apos;pageProperties&apos;, &apos;sortAscending&apos;]) === true &amp;&amp;
+      state.getIn([&apos;pageProperties&apos;, &apos;sortColumns&apos;])[0] === columns[0]);
+
+  return state.setIn([&apos;pageProperties&apos;, &apos;sortAscending&apos;], shouldSortAscending)
+              .setIn([&apos;pageProperties&apos;, &apos;sortColumns&apos;], columns);
+}
+
+export function sortDataByColumns(state, helpers) {
+  if(!state.get(&apos;data&apos;)) { return state; }
+
+  //TODO: Clean this up
+  const allColumnProperties = state.getIn([&apos;renderProperties&apos;, &apos;columnProperties&apos;]);
+  const sortColumns = state.getIn([&apos;pageProperties&apos;, &apos;sortColumns&apos;]);
+  //TODO: Make sort for more than just the first column
+  const columnProperties = sortColumns &amp;&amp; sortColumns.length &gt; 0 ?
+    allColumnProperties.get(sortColumns[0]) :
+    null;
+
+  const sortType = (columnProperties &amp;&amp; columnProperties.get(&apos;sortType&apos;)) || null;
+  let sorted = state.set(
+    &apos;data&apos;,
+    (helpers &amp;&amp; helpers.getSortedData||getSortedData)(
+      state.get(&apos;data&apos;),
+      sortColumns,
+      helpers,
+      state.getIn([&apos;pageProperties&apos;, &apos;sortAscending&apos;]),
+      sortType
+    )
+  );
+
+  //if filter is set we need to filter
+  //TODO: filter the data when it&apos;s being sorted
+  if(!!state.get(&apos;filter&apos;)) {
+    sorted = filter(sorted, sorted.get(&apos;filter&apos;));
+  }
+
+  return sorted;
+}
+
+export function getDataSetSize(state) {
+  return getDataSet(state).size;
+}
+
+export function getPage(state, pageNumber) {
+  const maxPage = getPageCount(
+    getDataSetSize(state),
+    state.getIn([&apos;pageProperties&apos;, &apos;pageSize&apos;]));
+
+  if(pageNumber &gt;= 1 &amp;&amp; pageNumber &lt;= maxPage) {
+    return state
+        .setIn([&apos;pageProperties&apos;, &apos;currentPage&apos;], pageNumber)
+        .setIn([&apos;pageProperties&apos;, &apos;maxPage&apos;], maxPage);
+  }
+
+  return state;
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.6)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

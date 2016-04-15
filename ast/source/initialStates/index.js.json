@@ -1,0 +1,316 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 150,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 5,
+      "column": 26
+    }
+  },
+  "sourceType": "module",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "start": 0,
+      "end": 45,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 45
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "start": 8,
+          "end": 23,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 8
+            },
+            "end": {
+              "line": 1,
+              "column": 23
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "start": 8,
+            "end": 15,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 8
+              },
+              "end": {
+                "line": 1,
+                "column": 15
+              }
+            },
+            "name": "default"
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 19,
+            "end": 23,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 19
+              },
+              "end": {
+                "line": 1,
+                "column": 23
+              }
+            },
+            "name": "data"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 30,
+        "end": 44,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 30
+          },
+          "end": {
+            "line": 1,
+            "column": 44
+          }
+        },
+        "value": "./data-state",
+        "rawValue": "./data-state",
+        "raw": "'./data-state'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 47,
+      "end": 94,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 47
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "start": 55,
+          "end": 71,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 8
+            },
+            "end": {
+              "line": 2,
+              "column": 24
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "start": 55,
+            "end": 62,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 8
+              },
+              "end": {
+                "line": 2,
+                "column": 15
+              }
+            },
+            "name": "default"
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 66,
+            "end": 71,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 19
+              },
+              "end": {
+                "line": 2,
+                "column": 24
+              }
+            },
+            "name": "local"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 78,
+        "end": 93,
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 31
+          },
+          "end": {
+            "line": 2,
+            "column": 46
+          }
+        },
+        "value": "./local-state",
+        "rawValue": "./local-state",
+        "raw": "'./local-state'"
+      }
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 98,
+      "end": 122,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 24
+        }
+      },
+      "declaration": null,
+      "specifiers": [
+        {
+          "type": "ExportSpecifier",
+          "start": 107,
+          "end": 119,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 9
+            },
+            "end": {
+              "line": 4,
+              "column": 21
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 107,
+            "end": 111,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 9
+              },
+              "end": {
+                "line": 4,
+                "column": 13
+              }
+            },
+            "name": "data"
+          },
+          "exported": {
+            "type": "Identifier",
+            "start": 115,
+            "end": 119,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 17
+              },
+              "end": {
+                "line": 4,
+                "column": 21
+              }
+            },
+            "name": "data"
+          }
+        }
+      ],
+      "source": null
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 124,
+      "end": 150,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 26
+        }
+      },
+      "declaration": null,
+      "specifiers": [
+        {
+          "type": "ExportSpecifier",
+          "start": 133,
+          "end": 147,
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 9
+            },
+            "end": {
+              "line": 5,
+              "column": 23
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 133,
+            "end": 138,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 9
+              },
+              "end": {
+                "line": 5,
+                "column": 14
+              }
+            },
+            "name": "local"
+          },
+          "exported": {
+            "type": "Identifier",
+            "start": 142,
+            "end": 147,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 18
+              },
+              "end": {
+                "line": 5,
+                "column": 23
+              }
+            },
+            "name": "local"
+          }
+        }
+      ],
+      "source": null
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="">
+  <title data-ice="title">Source | griddle-overhaul-core API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/cchamberlain/griddle-overhaul-core" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">actions</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-addSortColumn">addSortColumn</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-filterData">filterData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-filterDataByColumn">filterDataByColumn</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-initializeGrid">initializeGrid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-loadData">loadData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-loadNext">loadNext</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-loadPage">loadPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-loadPrevious">loadPrevious</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-removeGrid">removeGrid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-setPageSize">setPageSize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-sort">sort</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-toggleColumn">toggleColumn</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">constants</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTER">GRIDDLE_FILTER</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTERED">GRIDDLE_FILTERED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTERED_BY_ADDITIONAL_COLUMN">GRIDDLE_FILTERED_BY_ADDITIONAL_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTERED_BY_COLUMN">GRIDDLE_FILTERED_BY_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTER_BY_ADDITIONAL_COLUMN">GRIDDLE_FILTER_BY_ADDITIONAL_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTER_BY_COLUMN">GRIDDLE_FILTER_BY_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTER_REMOVED">GRIDDLE_FILTER_REMOVED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_GET_PAGE">GRIDDLE_GET_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_INITIALIZE">GRIDDLE_INITIALIZE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_INITIALIZED">GRIDDLE_INITIALIZED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_LOADED_DATA">GRIDDLE_LOADED_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_LOAD_DATA">GRIDDLE_LOAD_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_NEXT_PAGE">GRIDDLE_NEXT_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_PAGE_LOADED">GRIDDLE_PAGE_LOADED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_PREVIOUS_PAGE">GRIDDLE_PREVIOUS_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_REMOVED">GRIDDLE_REMOVED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_ROW_SELECTION_TOGGLED">GRIDDLE_ROW_SELECTION_TOGGLED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_ROW_TOGGLED">GRIDDLE_ROW_TOGGLED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_SET_PAGE_SIZE">GRIDDLE_SET_PAGE_SIZE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_SORT">GRIDDLE_SORT</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_SORTED">GRIDDLE_SORTED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_SORTED_ADDITIONAL">GRIDDLE_SORTED_ADDITIONAL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_SORT_ADDITIONAL">GRIDDLE_SORT_ADDITIONAL</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GRIDDLE_TOGGLE_COLUMN">GRIDDLE_TOGGLE_COLUMN</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">helpers</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-addKeyToRows">addKeyToRows</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAllPossibleColumns">getAllPossibleColumns</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getColumnProperties">getColumnProperties</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getColumnTitles">getColumnTitles</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getDataColumns">getDataColumns</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getPageCount">getPageCount</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getPageProperties">getPageProperties</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getState">getState</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getVisibleData">getVisibleData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getVisibleDataColumns">getVisibleDataColumns</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateVisibleData">updateVisibleData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-dateSort">dateSort</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-defaultSort">defaultSort</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-filterData">filterData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-filterDataByColumns">filterDataByColumns</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getDataSet">getDataSet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getDataSetSize">getDataSetSize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getPage">getPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getSortByType">getSortByType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getSortedData">getSortedData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getVisibleData">getVisibleData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-hasNext">hasNext</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-hasPrevious">hasPrevious</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-sortDataByColumns">sortDataByColumns</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-sortTypes">sortTypes</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateSortColumns">updateSortColumns</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">helpers/__tests__</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getBasicState">getBasicState</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">reducers</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-AFTER_REDUCE">AFTER_REDUCE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-BEFORE_REDUCE">BEFORE_REDUCE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_INITIALIZED">GRIDDLE_INITIALIZED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_LOADED_DATA">GRIDDLE_LOADED_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_TOGGLE_COLUMN">GRIDDLE_TOGGLE_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-buildGriddleReducer">buildGriddleReducer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-buildReducerWithHooks">buildReducerWithHooks</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-combineAndOverrideReducers">combineAndOverrideReducers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-combineInitialState">combineInitialState</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getAfterReducers">getAfterReducers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getBeforeReducers">getBeforeReducers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getReducersByWordEnding">getReducersByWordEnding</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-wrapReducer">wrapReducer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-AFTER_REDUCE">AFTER_REDUCE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_FILTERED">GRIDDLE_FILTERED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_FILTERED_BY_COLUMN">GRIDDLE_FILTERED_BY_COLUMN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_GET_PAGE">GRIDDLE_GET_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_LOADED_DATA">GRIDDLE_LOADED_DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_NEXT_PAGE">GRIDDLE_NEXT_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_PREVIOUS_PAGE">GRIDDLE_PREVIOUS_PAGE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_SET_PAGE_SIZE">GRIDDLE_SET_PAGE_SIZE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GRIDDLE_SORT">GRIDDLE_SORT</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">reducers/__tests__</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getMethod">getMethod</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getReducer">getReducer</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1>Source <img data-ice="coverageBadge" src="./badge.svg"><span data-ice="totalCoverageCount" class="total-coverage-count">0/87</span></h1>
+
+<table class="files-summary" data-ice="files" data-use-coverage="true">
+  <thead>
+    <tr>
+      <td>File</td>
+      <td>Identifier</td>
+      <td class="coverage">Document</td>
+      <td style="display: none;">Size</td>
+      <td style="display: none;">Lines</td>
+      <td style="display: none;">Updated</td>
+    </tr>
+  </thead>
+  <tbody>
+    
+  <tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/actions/local-actions.js.html#errorLines=10,11,12,13,14,3,4,5,6,7,8,9">lib/actions/local-actions.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-addSortColumn">addSortColumn</a></span>
+<span><a href="variable/index.html#static-variable-filterData">filterData</a></span>
+<span><a href="variable/index.html#static-variable-filterDataByColumn">filterDataByColumn</a></span>
+<span><a href="variable/index.html#static-variable-initializeGrid">initializeGrid</a></span>
+<span><a href="variable/index.html#static-variable-loadData">loadData</a></span>
+<span><a href="variable/index.html#static-variable-loadNext">loadNext</a></span>
+<span><a href="variable/index.html#static-variable-loadPage">loadPage</a></span>
+<span><a href="variable/index.html#static-variable-loadPrevious">loadPrevious</a></span>
+<span><a href="variable/index.html#static-variable-removeGrid">removeGrid</a></span>
+<span><a href="variable/index.html#static-variable-setPageSize">setPageSize</a></span>
+<span><a href="variable/index.html#static-variable-sort">sort</a></span>
+<span><a href="variable/index.html#static-variable-toggleColumn">toggleColumn</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/12</span></td>
+      <td style="display: none;" data-ice="size">1103 byte</td>
+      <td style="display: none;" data-ice="lines">14</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/constants/action-types.js.html#errorLines=10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,9">lib/constants/action-types.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-GRIDDLE_FILTER">GRIDDLE_FILTER</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_FILTERED">GRIDDLE_FILTERED</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_FILTERED_BY_ADDITIONAL_COLUMN">GRIDDLE_FILTERED_BY_ADDITIONAL_COLUMN</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_FILTERED_BY_COLUMN">GRIDDLE_FILTERED_BY_COLUMN</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_FILTER_BY_ADDITIONAL_COLUMN">GRIDDLE_FILTER_BY_ADDITIONAL_COLUMN</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_FILTER_BY_COLUMN">GRIDDLE_FILTER_BY_COLUMN</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_FILTER_REMOVED">GRIDDLE_FILTER_REMOVED</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_GET_PAGE">GRIDDLE_GET_PAGE</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_INITIALIZE">GRIDDLE_INITIALIZE</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_INITIALIZED">GRIDDLE_INITIALIZED</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_LOADED_DATA">GRIDDLE_LOADED_DATA</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_LOAD_DATA">GRIDDLE_LOAD_DATA</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_NEXT_PAGE">GRIDDLE_NEXT_PAGE</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_PAGE_LOADED">GRIDDLE_PAGE_LOADED</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_PREVIOUS_PAGE">GRIDDLE_PREVIOUS_PAGE</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_REMOVED">GRIDDLE_REMOVED</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_ROW_SELECTION_TOGGLED">GRIDDLE_ROW_SELECTION_TOGGLED</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_ROW_TOGGLED">GRIDDLE_ROW_TOGGLED</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_SET_PAGE_SIZE">GRIDDLE_SET_PAGE_SIZE</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_SORT">GRIDDLE_SORT</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_SORTED">GRIDDLE_SORTED</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_SORTED_ADDITIONAL">GRIDDLE_SORTED_ADDITIONAL</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_SORT_ADDITIONAL">GRIDDLE_SORT_ADDITIONAL</a></span>
+<span><a href="variable/index.html#static-variable-GRIDDLE_TOGGLE_COLUMN">GRIDDLE_TOGGLE_COLUMN</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/24</span></td>
+      <td style="display: none;" data-ice="size">1694 byte</td>
+      <td style="display: none;" data-ice="lines">31</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/helpers/__tests__/dataHelperTests.js.html">lib/helpers/__tests__/dataHelperTests.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">6441 byte</td>
+      <td style="display: none;" data-ice="lines">186</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/helpers/__tests__/localHelperTests.js.html">lib/helpers/__tests__/localHelperTests.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">8269 byte</td>
+      <td style="display: none;" data-ice="lines">240</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/helpers/__tests__/stateUtils.js.html#errorLines=3">lib/helpers/__tests__/stateUtils.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-getBasicState">getBasicState</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/1</span></td>
+      <td style="display: none;" data-ice="size">534 byte</td>
+      <td style="display: none;" data-ice="lines">24</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/helpers/data-helpers.js.html#errorLines=107,11,17,21,25,32,37,4,53,64,81">lib/helpers/data-helpers.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-addKeyToRows">addKeyToRows</a></span>
+<span><a href="function/index.html#static-function-getAllPossibleColumns">getAllPossibleColumns</a></span>
+<span><a href="function/index.html#static-function-getColumnProperties">getColumnProperties</a></span>
+<span><a href="function/index.html#static-function-getColumnTitles">getColumnTitles</a></span>
+<span><a href="function/index.html#static-function-getDataColumns">getDataColumns</a></span>
+<span><a href="function/index.html#static-function-getPageCount">getPageCount</a></span>
+<span><a href="function/index.html#static-function-getPageProperties">getPageProperties</a></span>
+<span><a href="function/index.html#static-function-getState">getState</a></span>
+<span><a href="function/index.html#static-function-getVisibleData">getVisibleData</a></span>
+<span><a href="function/index.html#static-function-getVisibleDataColumns">getVisibleDataColumns</a></span>
+<span><a href="function/index.html#static-function-updateVisibleData">updateVisibleData</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/11</span></td>
+      <td style="display: none;" data-ice="size">3617 byte</td>
+      <td style="display: none;" data-ice="lines">120</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/helpers/index.js.html">lib/helpers/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">138 byte</td>
+      <td style="display: none;" data-ice="lines">5</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/helpers/local-helpers.js.html#errorLines=110,117,12,122,127,139,171,175,25,30,34,53,62,76,91">lib/helpers/local-helpers.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-dateSort">dateSort</a></span>
+<span><a href="function/index.html#static-function-defaultSort">defaultSort</a></span>
+<span><a href="function/index.html#static-function-filterData">filterData</a></span>
+<span><a href="function/index.html#static-function-filterDataByColumns">filterDataByColumns</a></span>
+<span><a href="function/index.html#static-function-getDataSet">getDataSet</a></span>
+<span><a href="function/index.html#static-function-getDataSetSize">getDataSetSize</a></span>
+<span><a href="function/index.html#static-function-getPage">getPage</a></span>
+<span><a href="function/index.html#static-function-getSortByType">getSortByType</a></span>
+<span><a href="function/index.html#static-function-getSortedData">getSortedData</a></span>
+<span><a href="function/index.html#static-function-getVisibleData">getVisibleData</a></span>
+<span><a href="function/index.html#static-function-hasNext">hasNext</a></span>
+<span><a href="function/index.html#static-function-hasPrevious">hasPrevious</a></span>
+<span><a href="function/index.html#static-function-sortDataByColumns">sortDataByColumns</a></span>
+<span><a href="function/index.html#static-function-sortTypes">sortTypes</a></span>
+<span><a href="function/index.html#static-function-updateSortColumns">updateSortColumns</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/15</span></td>
+      <td style="display: none;" data-ice="size">5778 byte</td>
+      <td style="display: none;" data-ice="lines">187</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/initialStates/data-state.js.html">lib/initialStates/data-state.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">315 byte</td>
+      <td style="display: none;" data-ice="lines">16</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/initialStates/index.js.html">lib/initialStates/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">150 byte</td>
+      <td style="display: none;" data-ice="lines">4</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/initialStates/local-state.js.html">lib/initialStates/local-state.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">229 byte</td>
+      <td style="display: none;" data-ice="lines">12</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/module.js.html">lib/module.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">456 byte</td>
+      <td style="display: none;" data-ice="lines">11</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/reducers/__tests__/dataReducerTest.js.html">lib/reducers/__tests__/dataReducerTest.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2460 byte</td>
+      <td style="display: none;" data-ice="lines">76</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/reducers/__tests__/griddleReducerTest.js.html">lib/reducers/__tests__/griddleReducerTest.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">7743 byte</td>
+      <td style="display: none;" data-ice="lines">180</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/reducers/__tests__/localReducerTest.js.html">lib/reducers/__tests__/localReducerTest.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">8861 byte</td>
+      <td style="display: none;" data-ice="lines">257</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/reducers/__tests__/testUtils.js.html#errorLines=14,4">lib/reducers/__tests__/testUtils.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-getMethod">getMethod</a></span>
+<span><a href="function/index.html#static-function-getReducer">getReducer</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/2</span></td>
+      <td style="display: none;" data-ice="size">506 byte</td>
+      <td style="display: none;" data-ice="lines">17</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/reducers/data-reducer.js.html#errorLines=13,17,21,26,9">lib/reducers/data-reducer.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-AFTER_REDUCE">AFTER_REDUCE</a></span>
+<span><a href="function/index.html#static-function-BEFORE_REDUCE">BEFORE_REDUCE</a></span>
+<span><a href="function/index.html#static-function-GRIDDLE_INITIALIZED">GRIDDLE_INITIALIZED</a></span>
+<span><a href="function/index.html#static-function-GRIDDLE_LOADED_DATA">GRIDDLE_LOADED_DATA</a></span>
+<span><a href="function/index.html#static-function-GRIDDLE_TOGGLE_COLUMN">GRIDDLE_TOGGLE_COLUMN</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/5</span></td>
+      <td style="display: none;" data-ice="size">1770 byte</td>
+      <td style="display: none;" data-ice="lines">45</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/reducers/griddle-reducer.js.html#errorLines=109,126,20,32,57,61,66,97">lib/reducers/griddle-reducer.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-buildGriddleReducer">buildGriddleReducer</a></span>
+<span><a href="function/index.html#static-function-buildReducerWithHooks">buildReducerWithHooks</a></span>
+<span><a href="function/index.html#static-function-combineAndOverrideReducers">combineAndOverrideReducers</a></span>
+<span><a href="function/index.html#static-function-combineInitialState">combineInitialState</a></span>
+<span><a href="function/index.html#static-function-getAfterReducers">getAfterReducers</a></span>
+<span><a href="function/index.html#static-function-getBeforeReducers">getBeforeReducers</a></span>
+<span><a href="function/index.html#static-function-getReducersByWordEnding">getReducersByWordEnding</a></span>
+<span><a href="function/index.html#static-function-wrapReducer">wrapReducer</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/8</span></td>
+      <td style="display: none;" data-ice="size">5238 byte</td>
+      <td style="display: none;" data-ice="lines">144</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/reducers/index.js.html">lib/reducers/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">138 byte</td>
+      <td style="display: none;" data-ice="lines">5</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/lib/reducers/local-reducer.js.html#errorLines=100,116,125,15,38,59,78,83,92">lib/reducers/local-reducer.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-AFTER_REDUCE">AFTER_REDUCE</a></span>
+<span><a href="function/index.html#static-function-GRIDDLE_FILTERED">GRIDDLE_FILTERED</a></span>
+<span><a href="function/index.html#static-function-GRIDDLE_FILTERED_BY_COLUMN">GRIDDLE_FILTERED_BY_COLUMN</a></span>
+<span><a href="function/index.html#static-function-GRIDDLE_GET_PAGE">GRIDDLE_GET_PAGE</a></span>
+<span><a href="function/index.html#static-function-GRIDDLE_LOADED_DATA">GRIDDLE_LOADED_DATA</a></span>
+<span><a href="function/index.html#static-function-GRIDDLE_NEXT_PAGE">GRIDDLE_NEXT_PAGE</a></span>
+<span><a href="function/index.html#static-function-GRIDDLE_PREVIOUS_PAGE">GRIDDLE_PREVIOUS_PAGE</a></span>
+<span><a href="function/index.html#static-function-GRIDDLE_SET_PAGE_SIZE">GRIDDLE_SET_PAGE_SIZE</a></span>
+<span><a href="function/index.html#static-function-GRIDDLE_SORT">GRIDDLE_SORT</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/9</span></td>
+      <td style="display: none;" data-ice="size">4182 byte</td>
+      <td style="display: none;" data-ice="lines">136</td>
+      <td style="display: none;" data-ice="updated">2016-04-06 00:46:36 (UTC)</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.6)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
