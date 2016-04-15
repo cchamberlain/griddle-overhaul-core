@@ -1,6 +1,6 @@
 {
   "name": "griddle-overhaul-core",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "The core code used in the griddle-overhaul grid. ",
   "main": "lib/index.js",
   "scripts": {
