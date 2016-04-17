@@ -1862,6 +1862,19 @@
     "kind": "file",
     "static": true,
     "variation": null,
+    "name": "lib/index.js",
+    "memberof": null,
+    "longname": "lib/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import * as reducers from './reducers'\r\nimport * as states from './initialStates/index'\r\nimport * as GriddleActions from './actions/local-actions'\r\nimport * as GriddleHelpers from './helpers'\r\n\r\nexport { reducers, states, GriddleActions, GriddleHelpers }\r\n"
+  },
+  {
+    "__docId__": 75,
+    "kind": "file",
+    "static": true,
+    "variation": null,
     "name": "lib/initialStates/data-state.js",
     "memberof": null,
     "longname": "lib/initialStates/data-state.js",
@@ -1871,7 +1884,7 @@
     "content": "import Immutable from 'immutable';\r\n\r\nexport default Immutable.fromJS({\r\n  loading: true,\r\n  data: [],\r\n  visibleData: [],\r\n  columnTitles: [],\r\n  allColumns: [],\r\n  renderProperties: {},\r\n  hasNext: false,\r\n  hasPrevious: false,\r\n  pageProperties: {\r\n    currentPage: 0,\r\n    maxPage: 0,\r\n    pageSize: 0\r\n  }\r\n});"
   },
   {
-    "__docId__": 75,
+    "__docId__": 76,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -1884,7 +1897,7 @@
     "content": "import {default as data} from './data-state';\r\nimport {default as local} from './local-state';\r\n\r\nexport { data as data };\r\nexport { local as local };"
   },
   {
-    "__docId__": 76,
+    "__docId__": 77,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -1897,1265 +1910,7 @@
     "content": "import Immutable from 'immutable';\r\n\r\nexport default Immutable.fromJS({\r\n  pageProperties: {\r\n    pageSize: 10,\r\n    currentPage: 1,\r\n    sortColumns: [],\r\n    sortAscending: true\r\n  },\r\n  filter: '',\r\n  columnFilters: [],\r\n});\r\n"
   },
   {
-    "__docId__": 77,
-    "kind": "file",
-    "static": true,
-    "variation": null,
-    "name": "lib/module.js",
-    "memberof": null,
-    "longname": "lib/module.js",
-    "access": null,
-    "description": null,
-    "lineNumber": 1,
-    "content": "import * as reducers from './reducers'\r\nimport * as states from './initialStates/index'\r\nimport GriddleReducer from './reducers/griddle-overhaul-reducer'\r\nimport * as GriddleActions from './actions/local-actions'\r\nimport * as GriddleHelpers from './helpers'\r\n\r\nexport { reducers as Reducers }\r\nexport { states as States }\r\nexport { GriddleActions as GriddleActions }\r\nexport { GriddleReducer as GriddleReducer }\r\nexport {GriddleHelpers as GriddleHelpers}\r\n"
-  },
-  {
-    "__docId__": 78,
-    "kind": "file",
-    "static": true,
-    "variation": null,
-    "name": "lib/reducers/data-reducer.js",
-    "memberof": null,
-    "longname": "lib/reducers/data-reducer.js",
-    "access": null,
-    "description": null,
-    "lineNumber": 1,
-    "content": "'use strict';\r\n\r\n//clean these up\r\nimport * as types from '../constants/action-types';\r\nimport Immutable from 'immutable';\r\nimport MAX_SAFE_INTEGER from 'max-safe-integer';\r\n\r\n//TODO: Dumb bug requires this to be here for things to work\r\nexport function BEFORE_REDUCE(state, action, helpers) {\r\n  return state;\r\n}\r\n\r\nexport function AFTER_REDUCE(state, action, helpers) {\r\n  return state;\r\n}\r\n\r\nexport function GRIDDLE_INITIALIZED(state, action, helpers) {\r\n  return state.set('renderProperties', Immutable.fromJS(action.properties));\r\n}\r\n\r\nexport function GRIDDLE_LOADED_DATA(state, action, helpers) {\r\n  return state.set('data', helpers.addKeyToRows(Immutable.fromJS(action.data)))\r\n              .set('loading', false);\r\n}\r\n\r\nexport function GRIDDLE_TOGGLE_COLUMN(state, action, helpers) {\r\n  const toggleColumn = function(columnId, fromProperty, toProperty) {\r\n    if(state.get('renderProperties').get(fromProperty) &&\r\n      state.get('renderProperties').get(fromProperty).has(columnId)) {\r\n        const columnValue = state.getIn(['renderProperties', fromProperty, columnId])\r\n        return state\r\n          .setIn(['renderProperties', toProperty, columnId], columnValue)\r\n          .removeIn(['renderProperties', fromProperty, columnId]);\r\n      }\r\n  }\r\n\r\n  //check to see if the column is in hiddenColumnProperties\r\n  //if it is move it to columnProperties\r\n  const hidden = toggleColumn(action.columnId, 'hiddenColumnProperties', 'columnProperties');\r\n\r\n  //if it is not check to make sure it's in columnProperties and move to hiddenColumnProperties\r\n  const column = toggleColumn(action.columnId, 'columnProperties', 'hiddenColumnProperties');\r\n\r\n  //if it's neither just return state for now\r\n  return helpers.updateVisibleData(hidden || column || state);\r\n}"
-  },
-  {
     "__docId__": 79,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "BEFORE_REDUCE",
-    "memberof": "lib/reducers/data-reducer.js",
-    "longname": "lib/reducers/data-reducer.js~BEFORE_REDUCE",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/data-reducer.js",
-    "importStyle": "{BEFORE_REDUCE}",
-    "description": null,
-    "lineNumber": 9,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "action",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "helpers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 80,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "AFTER_REDUCE",
-    "memberof": "lib/reducers/data-reducer.js",
-    "longname": "lib/reducers/data-reducer.js~AFTER_REDUCE",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/data-reducer.js",
-    "importStyle": "{AFTER_REDUCE}",
-    "description": null,
-    "lineNumber": 13,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "action",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "helpers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 81,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "GRIDDLE_INITIALIZED",
-    "memberof": "lib/reducers/data-reducer.js",
-    "longname": "lib/reducers/data-reducer.js~GRIDDLE_INITIALIZED",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/data-reducer.js",
-    "importStyle": "{GRIDDLE_INITIALIZED}",
-    "description": null,
-    "lineNumber": 17,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "action",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "helpers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 82,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "GRIDDLE_LOADED_DATA",
-    "memberof": "lib/reducers/data-reducer.js",
-    "longname": "lib/reducers/data-reducer.js~GRIDDLE_LOADED_DATA",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/data-reducer.js",
-    "importStyle": "{GRIDDLE_LOADED_DATA}",
-    "description": null,
-    "lineNumber": 21,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "action",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "helpers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 83,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "GRIDDLE_TOGGLE_COLUMN",
-    "memberof": "lib/reducers/data-reducer.js",
-    "longname": "lib/reducers/data-reducer.js~GRIDDLE_TOGGLE_COLUMN",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/data-reducer.js",
-    "importStyle": "{GRIDDLE_TOGGLE_COLUMN}",
-    "description": null,
-    "lineNumber": 26,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "action",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "helpers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 84,
-    "kind": "file",
-    "static": true,
-    "variation": null,
-    "name": "lib/reducers/griddle-reducer.js",
-    "memberof": null,
-    "longname": "lib/reducers/griddle-reducer.js",
-    "access": null,
-    "description": null,
-    "lineNumber": 1,
-    "content": "//TODO: determine if there is a better way to make an empty immutable object\r\nimport Immutable from 'immutable';\r\nimport pick from 'lodash.pick';\r\nimport extend from 'lodash.assign';\r\nconst initialState = Immutable.fromJS({});\r\n\r\n//from MDN\r\nif (!String.prototype.endsWith) {\r\n  String.prototype.endsWith = function(searchString, position) {\r\n      var subjectString = this.toString();\r\n      if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position > subjectString.length) {\r\n        position = subjectString.length;\r\n      }\r\n      position -= searchString.length;\r\n      var lastIndex = subjectString.indexOf(searchString, position);\r\n      return lastIndex !== -1 && lastIndex === position;\r\n  };\r\n}\r\n\r\nexport function combineAndOverrideReducers(containers) {\r\n  if(!containers) { return {}; }\r\n  containers.unshift({});\r\n  let griddleReducers = extend.apply(this, containers);\r\n  containers.shift();\r\n  return griddleReducers;\r\n}\r\n\r\n/*\r\n  This method creates a pipeline of reducers. This is mainly\r\n  used for the before / after reducers\r\n*/\r\nexport function getReducersByWordEnding(reducers, ending) {\r\n  return reducers.reduce((previous, current) => {\r\n    const keys = Object.keys(current).filter((name) => name.endsWith(ending));\r\n\r\n    let reducer = pick(current, keys);\r\n\r\n    //TODO: clean this up it's a bit hacky\r\n    for (var key in current) {\r\n      if(!key.endsWith(ending)) { continue; }\r\n\r\n      const keyWithoutEnding = key.replace(`_${ending}`, \"\");\r\n      //make a new method that pipes output of previous into state of current\r\n      //this is to allow chaining these\r\n      const hasPrevious =  previous.hasOwnProperty(keyWithoutEnding) && typeof previous[keyWithoutEnding] === 'function';\r\n      const previousReducer = hasPrevious ? previous[keyWithoutEnding] : undefined;\r\n      const currentReducer = reducer[key]\r\n\r\n      reducer[keyWithoutEnding] = wrapReducer(currentReducer, previousReducer);\r\n    }\r\n\r\n    //override anything in previous (since this now calls previous to make sure we have helpers from both);\r\n    return extend(previous, reducer);\r\n  }, {});\r\n}\r\n\r\nexport function getBeforeReducers(reducers) {\r\n  return getReducersByWordEnding(reducers, \"BEFORE\");\r\n}\r\n\r\nexport function getAfterReducers(reducers) {\r\n  return getReducersByWordEnding(reducers, \"AFTER\");\r\n}\r\n\r\n//feed the result of previous reducer into next\r\nexport function wrapReducer(next, previous) {\r\n  //if previous reducer exists -- return the result of wrapper as state to next\r\n  return previous && typeof(previous) === 'function' && typeof(next) === 'function' ?\r\n    (state, action, helpers) => next(previous(state, action, helpers), action, helpers) :\r\n    next;\r\n}\r\n\r\n//TODO: Maybe this is dumb becuase it's just wrapping a typeof\r\nfunction isFunction(item) {\r\n  return typeof(item) === 'function';\r\n}\r\n\r\nfunction isFunctionOrUndefined(item) {\r\n  return isFunction(item) || typeof(item) === 'undefined';\r\n}\r\n\r\nfunction wrapReducers(...reducers) {\r\n  const finalReducer = reducers.reduce((previous, current) => {\r\n    //get all reducer methods and either set the prop\r\n    for(var key in current) {\r\n      if(isFunctionOrUndefined(current[key]) && isFunctionOrUndefined(previous[key])){\r\n        previous[key] = wrapReducer(current[key], previous[key]);\r\n      }\r\n    }\r\n\r\n    return previous;\r\n  }, {});\r\n\r\n  return finalReducer;\r\n}\r\n\r\nexport function combineInitialState(states) {\r\n  //TODO: Do this in a better way\r\n  let griddleState = initialState;\r\n\r\n  for(const state in states) {\r\n    griddleState = griddleState.mergeDeep(states[state]);\r\n  }\r\n\r\n  return griddleState;\r\n}\r\n\r\n//TODO: This is not the most efficient way to do this.\r\nexport function buildReducerWithHooks(reducers, reducer) {\r\n  const filteredReducerEndings = ['BEFORE', 'AFTER', 'BEFORE_REDUCE', 'AFTER_REDUCE'];\r\n\r\n  const validKeys = Object.keys(reducer).filter(key => {\r\n    return !filteredReducerEndings.some(reducerEnding => key.endsWith(reducerEnding))\r\n  });\r\n\r\n  const preReduce = getReducersByWordEnding(reducers, \"BEFORE_REDUCE\").BEFORE_REDUCE;\r\n  const postReduce = getReducersByWordEnding(reducers, \"AFTER_REDUCE\").AFTER_REDUCE;\r\n\r\n  let retVal = {};\r\n  validKeys.forEach(key => retVal[key] = wrapReducer(postReduce, wrapReducer(preReduce, reducer[key])));\r\n\r\n  return extend(reducer, retVal);\r\n}\r\n\r\n//TODO: maybe add helpers in here too and override them on add. idk\r\nexport default function buildGriddleReducer(initialStates, reducers, helpers) {\r\n    const beforeReducers = getBeforeReducers(reducers);\r\n    const afterReducers = getAfterReducers(reducers);\r\n    const griddleReducers = combineAndOverrideReducers(reducers);\r\n\r\n    const wrappedReducers = buildReducerWithHooks(reducers, wrapReducers(beforeReducers, griddleReducers, afterReducers));\r\n    const finalReducer = wrappedReducers;\r\n\r\n    const griddleState = combineInitialState(initialStates);\r\n    const griddleHelpers = combineAndOverrideReducers(helpers);\r\n\r\n    //TODO: Decrease the inception\r\n    return function griddleReducer(state = griddleState, action, helpers = griddleHelpers) {\r\n      return finalReducer[action.type] ?\r\n        finalReducer[action.type](state, action, helpers) :\r\n        state;\r\n    }\r\n}\r\n\r\n"
-  },
-  {
-    "__docId__": 85,
-    "kind": "variable",
-    "static": true,
-    "variation": null,
-    "name": "initialState",
-    "memberof": "lib/reducers/griddle-reducer.js",
-    "longname": "lib/reducers/griddle-reducer.js~initialState",
-    "access": null,
-    "export": false,
-    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 5,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 86,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "combineAndOverrideReducers",
-    "memberof": "lib/reducers/griddle-reducer.js",
-    "longname": "lib/reducers/griddle-reducer.js~combineAndOverrideReducers",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
-    "importStyle": "{combineAndOverrideReducers}",
-    "description": null,
-    "lineNumber": 20,
-    "undocument": true,
-    "params": [
-      {
-        "name": "containers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 87,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "getReducersByWordEnding",
-    "memberof": "lib/reducers/griddle-reducer.js",
-    "longname": "lib/reducers/griddle-reducer.js~getReducersByWordEnding",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
-    "importStyle": "{getReducersByWordEnding}",
-    "description": null,
-    "lineNumber": 32,
-    "undocument": true,
-    "params": [
-      {
-        "name": "reducers",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "ending",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 88,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "getBeforeReducers",
-    "memberof": "lib/reducers/griddle-reducer.js",
-    "longname": "lib/reducers/griddle-reducer.js~getBeforeReducers",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
-    "importStyle": "{getBeforeReducers}",
-    "description": null,
-    "lineNumber": 57,
-    "undocument": true,
-    "params": [
-      {
-        "name": "reducers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 89,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "getAfterReducers",
-    "memberof": "lib/reducers/griddle-reducer.js",
-    "longname": "lib/reducers/griddle-reducer.js~getAfterReducers",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
-    "importStyle": "{getAfterReducers}",
-    "description": null,
-    "lineNumber": 61,
-    "undocument": true,
-    "params": [
-      {
-        "name": "reducers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 90,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "wrapReducer",
-    "memberof": "lib/reducers/griddle-reducer.js",
-    "longname": "lib/reducers/griddle-reducer.js~wrapReducer",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
-    "importStyle": "{wrapReducer}",
-    "description": null,
-    "lineNumber": 66,
-    "undocument": true,
-    "params": [
-      {
-        "name": "next",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "previous",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 91,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "isFunction",
-    "memberof": "lib/reducers/griddle-reducer.js",
-    "longname": "lib/reducers/griddle-reducer.js~isFunction",
-    "access": null,
-    "export": false,
-    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 74,
-    "undocument": true,
-    "params": [
-      {
-        "name": "item",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 92,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "isFunctionOrUndefined",
-    "memberof": "lib/reducers/griddle-reducer.js",
-    "longname": "lib/reducers/griddle-reducer.js~isFunctionOrUndefined",
-    "access": null,
-    "export": false,
-    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 78,
-    "undocument": true,
-    "params": [
-      {
-        "name": "item",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 93,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "wrapReducers",
-    "memberof": "lib/reducers/griddle-reducer.js",
-    "longname": "lib/reducers/griddle-reducer.js~wrapReducers",
-    "access": null,
-    "export": false,
-    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 82,
-    "undocument": true,
-    "params": [
-      {
-        "name": "reducers",
-        "types": [
-          "...*"
-        ],
-        "spread": true
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 94,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "combineInitialState",
-    "memberof": "lib/reducers/griddle-reducer.js",
-    "longname": "lib/reducers/griddle-reducer.js~combineInitialState",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
-    "importStyle": "{combineInitialState}",
-    "description": null,
-    "lineNumber": 97,
-    "undocument": true,
-    "params": [
-      {
-        "name": "states",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 95,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "buildReducerWithHooks",
-    "memberof": "lib/reducers/griddle-reducer.js",
-    "longname": "lib/reducers/griddle-reducer.js~buildReducerWithHooks",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
-    "importStyle": "{buildReducerWithHooks}",
-    "description": null,
-    "lineNumber": 109,
-    "undocument": true,
-    "params": [
-      {
-        "name": "reducers",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "reducer",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 96,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "buildGriddleReducer",
-    "memberof": "lib/reducers/griddle-reducer.js",
-    "longname": "lib/reducers/griddle-reducer.js~buildGriddleReducer",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/griddle-reducer.js",
-    "importStyle": "buildGriddleReducer",
-    "description": null,
-    "lineNumber": 126,
-    "undocument": true,
-    "params": [
-      {
-        "name": "initialStates",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "reducers",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "helpers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 97,
-    "kind": "file",
-    "static": true,
-    "variation": null,
-    "name": "lib/reducers/index.js",
-    "memberof": null,
-    "longname": "lib/reducers/index.js",
-    "access": null,
-    "description": null,
-    "lineNumber": 1,
-    "content": "import * as data from './data-reducer';\r\nimport * as local from './local-reducer';\r\n\r\nexport { data as data }\r\nexport { local as local }\r\n"
-  },
-  {
-    "__docId__": 98,
-    "kind": "file",
-    "static": true,
-    "variation": null,
-    "name": "lib/reducers/local-reducer.js",
-    "memberof": null,
-    "longname": "lib/reducers/local-reducer.js",
-    "access": null,
-    "description": null,
-    "lineNumber": 1,
-    "content": "'use strict';\r\n\r\nimport * as types from '../constants/action-types';\r\nimport Immutable from 'immutable';\r\n\r\n/*\r\n  The handler that happens when data is loaded.\r\n  Needs to set the:\r\n    Properties,\r\n    Data,\r\n    Pagination buttons\r\n    visible data\r\n    it should sort the data if a sort is specified\r\n*/\r\nexport function GRIDDLE_LOADED_DATA(state, action, helpers) {\r\n  const columns = action.data.length > 0 ? Object.keys(action.data[0]) : [];\r\n  //set state's data to this\r\n  const tempState = state\r\n  .set('data', helpers.addKeyToRows(Immutable.fromJS(action.data)))\r\n  .set('allColumns', columns)\r\n  .setIn(\r\n    ['pageProperties', 'maxPage'],\r\n    helpers.getPageCount(\r\n      action.data.length,\r\n      state.getIn(['pageProperties', 'pageSize'])))\r\n  .set('loading', false);\r\n\r\n  const columnProperties = tempState.get('renderProperties').get('columnProperties');\r\n\r\n  return columnProperties ?\r\n     helpers\r\n      .sortDataByColumns(tempState, helpers)\r\n      .setIn(['pageProperties', 'currentPage'], 1) :\r\n    tempState;\r\n\r\n}\r\n\r\nexport function AFTER_REDUCE(state, action, helpers) {\r\n  const tempState = state\r\n    .set('visibleData', helpers.getVisibleData(state))\r\n    .setIn(\r\n      ['pageProperties', 'maxPage'],\r\n      helpers.getPageCount(\r\n        helpers.getDataSetSize(state),\r\n        state.getIn(['pageProperties', 'pageSize'])))\r\n\r\n  return tempState\r\n    .set('hasNext', helpers.hasNext(tempState))\r\n    .set('hasPrevious', helpers.hasPrevious(tempState));\r\n}\r\n\r\n/*\r\n  Needs to update:\r\n    visible data,\r\n    max pages,\r\n    hasNext,\r\n    hasPrevious\r\n*/\r\nexport function GRIDDLE_SET_PAGE_SIZE(state, action, helpers) {\r\n  const pageSizeState = state\r\n    .setIn(['pageProperties', 'currentPage'], 1)\r\n    .setIn(['pageProperties', 'pageSize'],\r\n      action.pageSize);\r\n\r\n   const stateWithMaxPage = pageSizeState\r\n      .setIn(\r\n        ['pageProperties', 'maxPage'],\r\n        helpers.getPageCount(\r\n          pageSizeState.get('data').size,\r\n          action.pageSize));\r\n\r\n      return stateWithMaxPage;\r\n}\r\n\r\n//TODO: Move the helper function to the method body and call this\r\n//      from next / previous. This will be easier since we have\r\n//      the AFTER_REDUCE stuff now.\r\nexport function GRIDDLE_GET_PAGE(state, action, helpers) {\r\n  return(helpers\r\n    .getPage(state, action.pageNumber));\r\n}\r\n\r\nexport function GRIDDLE_NEXT_PAGE(state, action, helpers) {\r\n  const currentPage = state.getIn(['pageProperties', 'currentPage']);\r\n  const maxPage = state.getIn(['pageProperties', 'maxPage']);\r\n\r\n  return(helpers\r\n    .getPage(state,\r\n      currentPage < maxPage ? currentPage + 1 : currentPage));\r\n}\r\n\r\nexport function GRIDDLE_PREVIOUS_PAGE(state, action, helpers) {\r\n  const currentPage = state.getIn(['pageProperties', 'currentPage']);\r\n\r\n  return(helpers\r\n      .getPage(state,\r\n        currentPage > 0 ? currentPage - 1 : currentPage ));\r\n}\r\n\r\nexport function GRIDDLE_FILTERED_BY_COLUMN(state, action, helpers) {\r\n  const filters = state.get('columnFilters');\r\n  const { column, filter } = action;\r\n  let setFilters = filters\r\n    .filter(f => f.column !== column);\r\n\r\n  //are we reseting a filter?\r\n  if (filter !== '') {\r\n    setFilters = setFilters.concat({ filter, column });\r\n  }\r\n\r\n  return state\r\n    .set('columnFilters', setFilters)\r\n    .setIn(['pageProperties', 'currentPage'], 1);\r\n}\r\n\r\nexport function GRIDDLE_FILTERED(state, action, helpers) {\r\n  //TODO: Just set the filter and let the visible data handle what is actually shown + next / previous\r\n  return state\r\n    .set('filter', action.filter)\r\n    .setIn(['pageProperties','currentPage'], 1);\r\n}\r\n\r\n//TODO: This is a really simple sort, for now\r\n//      We need to add sort type and different sort operations\r\nexport function GRIDDLE_SORT(state, action, helpers) {\r\n  if(!action.sortColumns || action.sortColumns.length < 1) { return state }\r\n\r\n  // Update the sort columns\r\n  let tempState = helpers.updateSortColumns(state, action.sortColumns);\r\n\r\n  const columnProperties = state.get('renderProperties').get('columnProperties');\r\n  // Sort the data\r\n  return helpers\r\n    .sortDataByColumns(tempState, helpers)\r\n    .setIn(['pageProperties', 'currentPage'], 1)\r\n}\r\n"
-  },
-  {
-    "__docId__": 99,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "GRIDDLE_LOADED_DATA",
-    "memberof": "lib/reducers/local-reducer.js",
-    "longname": "lib/reducers/local-reducer.js~GRIDDLE_LOADED_DATA",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
-    "importStyle": "{GRIDDLE_LOADED_DATA}",
-    "description": null,
-    "lineNumber": 15,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "action",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "helpers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 100,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "AFTER_REDUCE",
-    "memberof": "lib/reducers/local-reducer.js",
-    "longname": "lib/reducers/local-reducer.js~AFTER_REDUCE",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
-    "importStyle": "{AFTER_REDUCE}",
-    "description": null,
-    "lineNumber": 38,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "action",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "helpers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 101,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "GRIDDLE_SET_PAGE_SIZE",
-    "memberof": "lib/reducers/local-reducer.js",
-    "longname": "lib/reducers/local-reducer.js~GRIDDLE_SET_PAGE_SIZE",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
-    "importStyle": "{GRIDDLE_SET_PAGE_SIZE}",
-    "description": null,
-    "lineNumber": 59,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "action",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "helpers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 102,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "GRIDDLE_GET_PAGE",
-    "memberof": "lib/reducers/local-reducer.js",
-    "longname": "lib/reducers/local-reducer.js~GRIDDLE_GET_PAGE",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
-    "importStyle": "{GRIDDLE_GET_PAGE}",
-    "description": null,
-    "lineNumber": 78,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "action",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "helpers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 103,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "GRIDDLE_NEXT_PAGE",
-    "memberof": "lib/reducers/local-reducer.js",
-    "longname": "lib/reducers/local-reducer.js~GRIDDLE_NEXT_PAGE",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
-    "importStyle": "{GRIDDLE_NEXT_PAGE}",
-    "description": null,
-    "lineNumber": 83,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "action",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "helpers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 104,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "GRIDDLE_PREVIOUS_PAGE",
-    "memberof": "lib/reducers/local-reducer.js",
-    "longname": "lib/reducers/local-reducer.js~GRIDDLE_PREVIOUS_PAGE",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
-    "importStyle": "{GRIDDLE_PREVIOUS_PAGE}",
-    "description": null,
-    "lineNumber": 92,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "action",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "helpers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 105,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "GRIDDLE_FILTERED_BY_COLUMN",
-    "memberof": "lib/reducers/local-reducer.js",
-    "longname": "lib/reducers/local-reducer.js~GRIDDLE_FILTERED_BY_COLUMN",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
-    "importStyle": "{GRIDDLE_FILTERED_BY_COLUMN}",
-    "description": null,
-    "lineNumber": 100,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "action",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "helpers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 106,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "GRIDDLE_FILTERED",
-    "memberof": "lib/reducers/local-reducer.js",
-    "longname": "lib/reducers/local-reducer.js~GRIDDLE_FILTERED",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
-    "importStyle": "{GRIDDLE_FILTERED}",
-    "description": null,
-    "lineNumber": 116,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "action",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "helpers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 107,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "GRIDDLE_SORT",
-    "memberof": "lib/reducers/local-reducer.js",
-    "longname": "lib/reducers/local-reducer.js~GRIDDLE_SORT",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/local-reducer.js",
-    "importStyle": "{GRIDDLE_SORT}",
-    "description": null,
-    "lineNumber": 125,
-    "undocument": true,
-    "params": [
-      {
-        "name": "state",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "action",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "helpers",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 108,
-    "kind": "file",
-    "static": true,
-    "variation": null,
-    "name": "lib/reducers/__tests__/dataReducerTest.js",
-    "memberof": null,
-    "longname": "lib/reducers/__tests__/dataReducerTest.js",
-    "access": null,
-    "description": null,
-    "lineNumber": 1,
-    "content": "import Immutable from 'immutable';\r\nimport { getMethod, getReducer } from './testUtils';\r\nimport extend from 'lodash.assign';\r\n\r\nimport {\r\n  GRIDDLE_INITIALIZED,\r\n  GRIDDLE_LOADED_DATA,\r\n  GRIDDLE_TOGGLE_COLUMN\r\n} from '../data-reducer';\r\n\r\nconst defaultData = [\r\n  {one: \"one\", two: \"two\", three: \"three\", griddleKey: 1 },\r\n  {one: \"un\", two: \"du\", three: \"trois\", griddleKey: 2 },\r\n  {one: \"uno\", two: \"dos\", three: \"tres\", griddleKey: 3, selected: true },\r\n  {one: \"ichi\", two: \"ni\", three: \"san\", griddleKey: 4 },\r\n];\r\n\r\ndescribe('DataReducer', () => {\r\n  describe('GRIDDLE_INITIALIZED', () => {\r\n    const state = getReducer({\r\n      payload: { properties: { property1: \"one\" } },\r\n    }, GRIDDLE_INITIALIZED);\r\n\r\n    it('set the render properties', () => {\r\n      expect(state.get('renderProperties').toJSON()).toEqual({ property1: \"one\" });\r\n    });\r\n  });\r\n\r\n  describe('GRIDDLE_LOADED_DATA', () => {\r\n    const state = getReducer({\r\n      payload: { data: defaultData, properties: { property1: \"one\" } },\r\n      helpers: {\r\n        addKeyToRows: (data) => Immutable.fromJS(data)\r\n      }\r\n    }, GRIDDLE_LOADED_DATA);\r\n\r\n    it('runs addKeyToRows', () => {\r\n      //if data is immutable, it called the addKeyToRows method here\r\n      expect(state.get('data').toJSON()).toEqual(defaultData)\r\n    });\r\n  });\r\n\r\n  describe('GRIDDLE_TOGGLE_COLUMN', () => {\r\n    const props = {\r\n      state: Immutable.fromJS({\r\n        data: defaultData,\r\n        renderProperties: {\r\n          hiddenColumnProperties: {two: 'two'} ,\r\n          columnProperties: { one: 'one', three: 'three' }\r\n        }\r\n      }),\r\n      helpers: {\r\n        addKeyToRows: (data) => Immutable.fromJS(data),\r\n        updateVisibleData: (data) => Immutable.fromJS(data)\r\n      },\r\n      payload: {\r\n        columnId: 'two'\r\n      }\r\n    };\r\n\r\n    const runReducer = (properties) => {\r\n      return getReducer(properties, GRIDDLE_TOGGLE_COLUMN);\r\n    }\r\n\r\n    it('toggles a column when not currently selected', () => {\r\n      const state = runReducer(props);\r\n      expect(state.getIn(['renderProperties', 'hiddenColumnProperties']).toJSON().hasOwnProperty('two')).toEqual(false);\r\n    });\r\n\r\n    it('toggles a column when not currently selected', () => {\r\n      const state = runReducer(extend({}, props, { payload: { columnId: 'three' }}));\r\n      expect(state.getIn(['renderProperties', 'hiddenColumnProperties']).toJSON().hasOwnProperty('three')).toEqual(true);\r\n    });\r\n  });\r\n});\r\n\r\n"
-  },
-  {
-    "__docId__": 109,
-    "kind": "variable",
-    "static": true,
-    "variation": null,
-    "name": "defaultData",
-    "memberof": "lib/reducers/__tests__/dataReducerTest.js",
-    "longname": "lib/reducers/__tests__/dataReducerTest.js~defaultData",
-    "access": null,
-    "export": false,
-    "importPath": "griddle-overhaul-core/lib/reducers/__tests__/dataReducerTest.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 11,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 110,
-    "kind": "file",
-    "static": true,
-    "variation": null,
-    "name": "lib/reducers/__tests__/griddleReducerTest.js",
-    "memberof": null,
-    "longname": "lib/reducers/__tests__/griddleReducerTest.js",
-    "access": null,
-    "description": null,
-    "lineNumber": 1,
-    "content": "import GriddleReducer, {\r\n  combineAndOverrideReducers,\r\n  getBeforeReducers,\r\n  getAfterReducers,\r\n  getReducersByWordEnding,\r\n  wrapReducer,\r\n  combineInitialState,\r\n  buildReducerWithHooks\r\n} from '../griddle-reducer'\r\n\r\nimport Immutable from 'immutable';\r\n\r\nconst setup = () => {\r\n  const first = {\r\n    basic: function(state, action, helpers) { return 'first'; },\r\n    greet: function(state, action, helpers) { return state.set(\"testGreeting\", `${state.get('testGreeting')} and hello`); },\r\n    sayGoodbye: function(state, action, helpers) { return state.set(\"testGreeting\", `${state.get('testGreeting')} and goodbye`); },\r\n    hi_BEFORE: function(state, action, helpers) { return state.set('testBefore', 'hello from first before')},\r\n    hi_AFTER: function(state, action, helpers) { return state.set('testAfter', 'hello from first after')}\r\n  };\r\n\r\n  const second = {\r\n    basic: function(state, action, helpers) { return 'second'; },\r\n    greet: function(state, action, helpers) { return state.set(\"testGreeting\", `Yo! ${state.get('testGreeting')}`); },\r\n    sayGoodbye: function(state, action, helpers) { return state.set(\"testGreeting\", `Later! ${state.get('testGreeting')}`); },\r\n    helloGoodbye: function(state, action, helpers) { return state; },\r\n    hi_BEFORE: function(state, action, helpers) { return state.set('testBefore', 'hello from second before')},\r\n    hi_AFTER: function(state, action, helpers) { return state.set('testAfter', 'hello from second after')}\r\n\r\n  };\r\n\r\n  return { first, second };\r\n};\r\n\r\ndescribe('GriddleReducer', () => {\r\n  describe('CombineAndOverrideReducers', () => {\r\n     it('has the right methods', () => {\r\n      const { first, second } = setup();\r\n      const result = combineAndOverrideReducers([first, second]);\r\n      const methods = Object.keys(result);\r\n      expect(methods.indexOf('greet') >= 0).toBe(true);\r\n      expect(methods.indexOf('sayGoodbye') >= 0).toBe(true);\r\n    });\r\n\r\n    it('overrides reducers in the correct order', () =>{\r\n      const { first, second } = setup();\r\n      const result = combineAndOverrideReducers([first, second]);\r\n\r\n      expect(second.basic()).toEqual(result.basic());\r\n    });\r\n  });\r\n  \r\n  describe('getReducersByWordEnding', () => {\r\n     it('Obtains reducers by word ending', () => {\r\n      const { first, second } = setup();\r\n\r\n      const reducers = getReducersByWordEnding([first, second], 'Goodbye');\r\n      expect(reducers.helloGoodbye).toEqual(jasmine.anything());\r\n      expect(reducers.sayGoodbye).toEqual(jasmine.anything());\r\n      expect(reducers.greet).not.toEqual(jasmine.anything());\r\n    });\r\n\r\n    it('calls reducers in correct in the order they were defined by word ending', () => {\r\n      const state = Immutable.Map().set(\"testGreeting\", \"Hi\");\r\n      const { first, second } = setup();\r\n      const reducers = getReducersByWordEnding([first, second], 'Goodbye');\r\n\r\n      var message = reducers.sayGoodbye(state, null, null);\r\n      expect(message.get('testGreeting')).toEqual(\"Later! Hi and goodbye\");\r\n    });\r\n  });\r\n\r\n  describe('getBeforeReducers', () => {\r\n    it('obtains before reducers', () => {\r\n      const { first, second } = setup();\r\n      const reducers = getBeforeReducers([first, second]);\r\n\r\n      expect(reducers.hi_BEFORE).toEqual(jasmine.anything());\r\n    });\r\n\r\n    it('has a proper method as the result of getBeforeReducers', () => {\r\n      const { first, second } = setup();\r\n      const reducers = getBeforeReducers([first, second]);\r\n      const reducers2 = getBeforeReducers([second, first]);\r\n\r\n      const state = Immutable.Map().set(\"testGreeting\", \"Hi\");\r\n\r\n      expect(reducers.hi_BEFORE(state, null, null).toJSON().testBefore).toEqual('hello from second before');\r\n      expect(reducers2.hi_BEFORE(state, null, null).toJSON().testBefore).toEqual('hello from first before');\r\n    });\r\n  });\r\n\r\n  describe('getAfterReducers', () => {\r\n     it('obtains after reducers', () => {\r\n      const { first, second } = setup();\r\n      const reducers = getAfterReducers([first, second]);\r\n\r\n      expect(reducers.hi_AFTER).toEqual(jasmine.anything());\r\n    });\r\n\r\n    it('has a proper method as the result of getAfter', () => {\r\n      const { first, second } = setup();\r\n      const reducers = getAfterReducers([first, second]);\r\n      const reducers2 = getAfterReducers([second, first]);\r\n\r\n      const state = Immutable.Map().set(\"testGreeting\", \"Hi\");\r\n\r\n      expect(reducers.hi_AFTER(state, null, null).toJSON().testAfter).toEqual('hello from second after');\r\n      expect(reducers2.hi_AFTER(state, null, null).toJSON().testAfter).toEqual('hello from first after');\r\n    });\r\n  });\r\n\r\n  describe('wrapReducer', () => {\r\n    it('passes the result of the previous function to the next', () => {\r\n      const function1 = function function1(state, action, helpers) { return \"hi\"; }\r\n      const function2 = function function2(state, action, helpers) { return state; }\r\n\r\n      expect(wrapReducer(function2, function1)(\"something\", null, null)).toEqual(\"hi\");\r\n    });\r\n\r\n    it('returns just the \"next\" function if previous is not specified', () => {\r\n      const function1 = function function1(state, action, helpers) { return \"hi\"; }\r\n      const function2 = function function2(state, action, helpers) { return state; }\r\n\r\n      expect(wrapReducer(function2)(\"something\", null, null)).toEqual(\"something\");\r\n    });\r\n  });\r\n\r\n  describe('combineInitialState', () => {\r\n    it('combines state', () => {\r\n      var one = new Immutable.fromJS({ one: \"first\" });\r\n      var two = new Immutable.fromJS({ two: \"second\" });\r\n      var three = new Immutable.fromJS({ three: \"third\" });\r\n\r\n      const states = combineInitialState([one, two, three]);\r\n      expect(states.get('one')).toEqual('first');\r\n      expect(states.get('two')).toEqual('second');\r\n      expect(states.get('three')).toEqual('third');\r\n    });\r\n  });\r\n\r\n  describe('buildReducerWithHooks', () => {\r\n    it('combines the reducers with before_reduce / after_reduce', () => {\r\n      //TODO: switch this to use the reducers defined above\r\n      const base = {\r\n        DO_SOMETHING: (state) => state.set('example', `${state.get('example')} middle`),\r\n        BEFORE_REDUCE: (state) => state.set('example', `before ${state.get('example')}`),\r\n        AFTER_REDUCE: (state) => state.set('example', `${state.get('example')} after`)\r\n      }\r\n      \r\n      const state = Immutable.fromJS({example: 'hi'})\r\n      const reducer = buildReducerWithHooks([base], base)\r\n      expect(reducer.DO_SOMETHING(state).get('example')).toEqual('before hi middle after');\r\n    });\r\n\r\n    it('combines the reducers in the correct order', () => {\r\n      const base = {\r\n        DO_SOMETHING: (state) => state.set('example', `${state.get('example')}`),\r\n        BEFORE_REDUCE: (state) => state.set('example', `firstBefore ${state.get('example')}`),\r\n        AFTER_REDUCE: (state) => state.set('example', `${state.get('example')} firstAfter`)\r\n      }\r\n\r\n      const second = {\r\n        BEFORE_REDUCE: (state) => state.set('example', `secondBefore ${state.get('example')}`),\r\n        AFTER_REDUCE: (state) => state.set('example', `${state.get('example')} secondAfter`)\r\n      }\r\n\r\n       const third = {\r\n        BEFORE_REDUCE: (state) => state.set('example', `thirdBefore ${state.get('example')}`),\r\n        AFTER_REDUCE: (state) => state.set('example', `${state.get('example')} thirdAfter`)\r\n      }\r\n\r\n      const state = Immutable.fromJS({example: 'hi'})\r\n      const reducer = buildReducerWithHooks([base, second, third], base)\r\n        expect(reducer.DO_SOMETHING(state).get('example'))\r\n           //the before filters should be last first\r\n          .toEqual('thirdBefore secondBefore firstBefore hi firstAfter secondAfter thirdAfter');\r\n    });\r\n  });\r\n});\r\n"
-  },
-  {
-    "__docId__": 111,
-    "kind": "variable",
-    "static": true,
-    "variation": null,
-    "name": "setup",
-    "memberof": "lib/reducers/__tests__/griddleReducerTest.js",
-    "longname": "lib/reducers/__tests__/griddleReducerTest.js~setup",
-    "access": null,
-    "export": false,
-    "importPath": "griddle-overhaul-core/lib/reducers/__tests__/griddleReducerTest.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 13,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 112,
-    "kind": "file",
-    "static": true,
-    "variation": null,
-    "name": "lib/reducers/__tests__/localReducerTest.js",
-    "memberof": null,
-    "longname": "lib/reducers/__tests__/localReducerTest.js",
-    "access": null,
-    "description": null,
-    "lineNumber": 1,
-    "content": "import Immutable from 'immutable';\r\nimport * as Helpers from '../../helpers/local-helpers';\r\nimport LocalReducer, {\r\n  GRIDDLE_LOADED_DATA,\r\n  AFTER_REDUCE,\r\n  GRIDDLE_SET_PAGE_SIZE,\r\n  GRIDDLE_GET_PAGE,\r\n  GRIDDLE_NEXT_PAGE,\r\n  GRIDDLE_PREVIOUS_PAGE,\r\n  GRIDDLE_FILTERED,\r\n  GRIDDLE_FILTERED_BY_COLUMN,\r\n  GRIDDLE_SORT\r\n} from '../local-reducer';\r\n\r\nimport extend from 'lodash.assign';\r\n\r\nconst initialState = {renderProperties: {columnProperties: null}, columnFilters: []};\r\n//TODO: Import the testHelpers instead of using this directly\r\nconst getMethod = (options) => {\r\n  if(!options.method) {\r\n    throw \"Need a method to call\"\r\n  }\r\n\r\n  const combined = extend({state: Immutable.fromJS(initialState), payload: {}, helpers: {}, method: null}, options);\r\n  const { state, payload, helpers, method } = combined;\r\n  return method.call(this, state, payload, helpers);\r\n}\r\n\r\nconst defaultData = [\r\n  {one: \"one\", two: \"two\", three: \"three\"},\r\n  {one: \"un\", two: \"du\", three: \"trois\"},\r\n  {one: \"uno\", two: \"dos\", three: \"tres\"},\r\n  {one: \"ichi\", two: \"ni\", three: \"san\"},\r\n];\r\n\r\ndescribe('localDataReducer', () => {\r\n  describe('load data', () => {\r\n    const loadData = (options) => {\r\n      return getMethod(extend(options, {method: GRIDDLE_LOADED_DATA}));\r\n    }\r\n\r\n    it('sets the data', () => {\r\n      const helpers = extend(Helpers, { addKeyToRows:  (state) => {return state} });\r\n      const state = loadData({ helpers, payload: { data: defaultData }});\r\n\r\n      expect(state.get('data').toJSON()).toEqual(defaultData);\r\n    });\r\n\r\n    it('sets all columns', () => {\r\n      const helpers = extend(Helpers, { addKeyToRows:  (state) => {return state} });\r\n      const state = loadData({ helpers, payload: { data: defaultData }});\r\n      expect(state.get('allColumns')).toEqual(['one', 'two', 'three'])\r\n    });\r\n\r\n    it('sets max page', () => {\r\n      const helpers = extend(Helpers, {\r\n        addKeyToRows: (state) => {return state},\r\n        getPageCount: (state) => { return 3}\r\n      });\r\n\r\n      const state = loadData({ helpers, payload: { data: defaultData }});\r\n\r\n      expect(state.getIn(['pageProperties', 'maxPage'])).toEqual(3);\r\n    });\r\n  });\r\n\r\n  describe('after reduce', () => {\r\n    const afterReduce = (options) => {\r\n      return getMethod(extend(options, {method: AFTER_REDUCE}));\r\n    }\r\n\r\n    const defaultHelpers = extend(Helpers, {\r\n      getDataSet: (state) => { return state; },\r\n      getVisibleData: (state) => { return state; },\r\n      hasNext: (state) => { return true; },\r\n      hasPrevious: (state) => { return true; },\r\n      getDataSetSize: (state) => { return state.count(); }\r\n    });\r\n\r\n    it('sets visible data', () => {\r\n      const visibleData = [{ one: \"one\", two: \"two\", three: \"three\" }];\r\n      const helpers = extend({}, defaultHelpers, {\r\n        getVisibleData: (state) => { return visibleData; },\r\n      });\r\n\r\n      const state = afterReduce({ helpers });\r\n      expect(state.get('visibleData')).toEqual(visibleData);\r\n    });\r\n\r\n    it('sets has next', () => {\r\n      const helpers = extend({}, defaultHelpers, {\r\n        hasNext: (state) => { return true; },\r\n      });\r\n\r\n      const state = afterReduce({ helpers });\r\n      expect(state.get('hasNext')).toEqual(true);\r\n    });\r\n\r\n    it('sets has previous', () => {\r\n      const helpers = extend({}, defaultHelpers, {\r\n        hasPrevious: (state) => { return true; },\r\n      });\r\n\r\n      const state = afterReduce({ helpers });\r\n      expect(state.get('hasPrevious')).toEqual(true);\r\n    });\r\n\r\n    it('sets max page', () => {\r\n      const helpers = extend({}, defaultHelpers, {\r\n        getPageCount: (state) => { return 3}\r\n      });\r\n\r\n      const state = afterReduce({ helpers });\r\n      expect(state.getIn(['pageProperties', 'maxPage'])).toEqual(3);\r\n    });\r\n  });\r\n\r\n  describe('set page size', () => {\r\n    const setPageSize  = (options) => {\r\n      return getMethod(extend(options, { method: GRIDDLE_SET_PAGE_SIZE }));\r\n    }\r\n\r\n    const defaultHelpers = extend(Helpers, {\r\n      getPageCount: (state) => { return 3; }\r\n    });\r\n\r\n\r\n    it('sets the page size', () => {\r\n      const state = setPageSize({ helpers: defaultHelpers,\r\n        state: Immutable.fromJS({ data: defaultData }),\r\n        payload: { pageSize: 10 }\r\n      });\r\n\r\n      expect(state.getIn(['pageProperties', 'maxPage'])).toEqual(3);\r\n      expect(state.getIn(['pageProperties', 'pageSize'])).toEqual(10);\r\n    });\r\n  });\r\n\r\n  describe('paging', () => {\r\n    const reducer = (options, method) => {\r\n      return getMethod(extend(options, { method }));\r\n    }\r\n\r\n    const defaultPage = [\r\n      {one: 'one', two: 'two', three: 'three'},\r\n      {one: 'uno', two: 'dos', three: 'tres'},\r\n      {one: 'ichi', two: 'ni', three: 'san'}\r\n    ];\r\n\r\n    const defaultHelpers = extend(Helpers,\r\n      { getPage: (state, pageNumber) => state.set('data', defaultPage[pageNumber]) });\r\n\r\n    it('gets a page of data', () => {\r\n      const state = reducer({ helpers: defaultHelpers,\r\n        state: Immutable.fromJS({}),\r\n        payload: { pageNumber: 2 }\r\n      }, GRIDDLE_GET_PAGE);\r\n\r\n      expect(state.get('data')).toEqual(defaultPage[2]);\r\n    });\r\n\r\n    it('gets next page', () => {\r\n      const state = reducer({ helpers: defaultHelpers,\r\n        state: Immutable.fromJS({ pageProperties: { currentPage: 0, maxPage: 2 } }),\r\n      }, GRIDDLE_NEXT_PAGE);\r\n\r\n      expect(state.get('data')).toEqual(defaultPage[1]);\r\n    });\r\n\r\n    it('gets last page when calling next page on last page', () => {\r\n      const state = reducer({ helpers: defaultHelpers,\r\n        state: Immutable.fromJS({ pageProperties: { currentPage: 2, maxPage: 2 } }),\r\n      }, GRIDDLE_NEXT_PAGE);\r\n\r\n      expect(state.get('data')).toEqual(defaultPage[2]);\r\n    });\r\n\r\n    it('gets previous page', () => {\r\n      const state = reducer({ helpers: defaultHelpers,\r\n        state: Immutable.fromJS({ pageProperties: { currentPage: 1 } }),\r\n      }, GRIDDLE_PREVIOUS_PAGE);\r\n\r\n      expect(state.get('data')).toEqual(defaultPage[0]);\r\n    });\r\n\r\n    it('gets first page when calling previous on first page', () => {\r\n      const state = reducer({ helpers: defaultHelpers,\r\n        state: Immutable.fromJS({ pageProperties: { currentPage: 0 } }),\r\n      }, GRIDDLE_PREVIOUS_PAGE);\r\n\r\n      expect(state.get('data')).toEqual(defaultPage[0]);\r\n    });\r\n  });\r\n\r\n  describe('filtering', () => {\r\n    const reducer = (options, method) => {\r\n      return getMethod(extend(options, { method }));\r\n    }\r\n\r\n    it('sets the filter', () => {\r\n      const state = reducer({ payload: { filter: 'test' }}, GRIDDLE_FILTERED);\r\n      expect(state.get('filter')).toEqual('test');\r\n    });\r\n\r\n    it('sets the first page when filtering', () => {\r\n      const state = reducer({ payload: { filter: 'test'}}, GRIDDLE_FILTERED);\r\n      expect(state.getIn(['pageProperties', 'currentPage'])).toEqual(1);\r\n    })\r\n\r\n    it('sets column filter', () => {\r\n      const state = reducer({ payload: { filter: 'test', column: 'someColumn'}}, GRIDDLE_FILTERED_BY_COLUMN);\r\n      expect(state.get('columnFilters').toJSON()).toEqual([{filter: 'test', column: 'someColumn'}]);\r\n\r\n      const state2 = reducer({ payload: { filter: 'test2', column: 'someColumn2'}, state}, GRIDDLE_FILTERED_BY_COLUMN);\r\n      expect(state2.get('columnFilters').toJSON()).toEqual([\r\n        {filter: 'test', column: 'someColumn'},\r\n        {filter: 'test2', column: 'someColumn2'}\r\n      ]);\r\n    })\r\n\r\n    it('removes column filter when given empty filter for column', () => {\r\n      const state = reducer({ payload: { filter: 'test', column: 'someColumn'}}, GRIDDLE_FILTERED_BY_COLUMN);\r\n      const state2 = reducer({ payload: { filter: '', column: 'someColumn'}, state}, GRIDDLE_FILTERED_BY_COLUMN);\r\n\r\n      expect(state2.get('columnFilters').size).toEqual(0);\r\n    })\r\n\r\n    it('sets first page when filtering by column', () => {\r\n      const state = reducer({ payload: { filter: 'test', column: 'someColumn'}}, GRIDDLE_FILTERED_BY_COLUMN);\r\n      expect(state.getIn(['pageProperties', 'currentPage'])).toEqual(1);\r\n    })\r\n  });\r\n\r\n  describe('sorting', () => {\r\n    const reducer = (options, method) => {\r\n      return getMethod(extend(options, { method }));\r\n    }\r\n\r\n    it('returns the state when no sort columns are present', () => {\r\n      const state = reducer({}, GRIDDLE_SORT);\r\n\r\n      expect(state.toJSON()).toEqual(initialState);\r\n    });\r\n\r\n    it('calls sortDataByColumns when sort column present', () => {\r\n      let count = 0;\r\n\r\n      const helpers = extend(Helpers,\r\n        { sortDataByColumns: (state, pageNumber) => new Immutable.Map({count: count++ }) });\r\n      const payload = { sortColumns: ['one'] };\r\n      const state = reducer({ helpers, payload }, GRIDDLE_SORT)\r\n\r\n      //the sortByColumns method should increment the count -- this is a cheezy shouldHaveBeenCalled\r\n      expect(count).toEqual(1);\r\n    });\r\n  });\r\n});\r\n"
-  },
-  {
-    "__docId__": 113,
-    "kind": "variable",
-    "static": true,
-    "variation": null,
-    "name": "initialState",
-    "memberof": "lib/reducers/__tests__/localReducerTest.js",
-    "longname": "lib/reducers/__tests__/localReducerTest.js~initialState",
-    "access": null,
-    "export": false,
-    "importPath": "griddle-overhaul-core/lib/reducers/__tests__/localReducerTest.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 17,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 114,
-    "kind": "variable",
-    "static": true,
-    "variation": null,
-    "name": "getMethod",
-    "memberof": "lib/reducers/__tests__/localReducerTest.js",
-    "longname": "lib/reducers/__tests__/localReducerTest.js~getMethod",
-    "access": null,
-    "export": false,
-    "importPath": "griddle-overhaul-core/lib/reducers/__tests__/localReducerTest.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 19,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 115,
-    "kind": "variable",
-    "static": true,
-    "variation": null,
-    "name": "defaultData",
-    "memberof": "lib/reducers/__tests__/localReducerTest.js",
-    "longname": "lib/reducers/__tests__/localReducerTest.js~defaultData",
-    "access": null,
-    "export": false,
-    "importPath": "griddle-overhaul-core/lib/reducers/__tests__/localReducerTest.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 29,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 116,
-    "kind": "file",
-    "static": true,
-    "variation": null,
-    "name": "lib/reducers/__tests__/testUtils.js",
-    "memberof": null,
-    "longname": "lib/reducers/__tests__/testUtils.js",
-    "access": null,
-    "description": null,
-    "lineNumber": 1,
-    "content": "import Immutable from 'immutable';\r\nimport extend from 'lodash.assign';\r\n\r\nexport function getMethod(options) {\r\n  if(!options.method) {\r\n    throw \"Need a method to call\"\r\n  }\r\n\r\n  const combined = extend({state: Immutable.fromJS({}), payload: {}, helpers: {}, method: null}, options);\r\n  const { state, payload, helpers, method } = combined;\r\n  return method.call(this, state, payload, helpers);\r\n}\r\n\r\nexport function getReducer(options, method) {\r\n  return getMethod(extend(options, { method }));\r\n}\r\n\r\n"
-  },
-  {
-    "__docId__": 117,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "getMethod",
-    "memberof": "lib/reducers/__tests__/testUtils.js",
-    "longname": "lib/reducers/__tests__/testUtils.js~getMethod",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/__tests__/testUtils.js",
-    "importStyle": "{getMethod}",
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
-    "params": [
-      {
-        "name": "options",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 118,
-    "kind": "function",
-    "static": true,
-    "variation": null,
-    "name": "getReducer",
-    "memberof": "lib/reducers/__tests__/testUtils.js",
-    "longname": "lib/reducers/__tests__/testUtils.js~getReducer",
-    "access": null,
-    "export": true,
-    "importPath": "griddle-overhaul-core/lib/reducers/__tests__/testUtils.js",
-    "importStyle": "{getReducer}",
-    "description": null,
-    "lineNumber": 14,
-    "undocument": true,
-    "params": [
-      {
-        "name": "options",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "method",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "generator": false
-  },
-  {
-    "__docId__": 120,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3168,7 +1923,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 121,
+    "__docId__": 80,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3181,7 +1936,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 122,
+    "__docId__": 81,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3194,7 +1949,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 123,
+    "__docId__": 82,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3207,7 +1962,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 124,
+    "__docId__": 83,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3220,7 +1975,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 125,
+    "__docId__": 84,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3233,7 +1988,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 126,
+    "__docId__": 85,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3246,7 +2001,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 127,
+    "__docId__": 86,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3259,7 +2014,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 128,
+    "__docId__": 87,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3272,7 +2027,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 129,
+    "__docId__": 88,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3285,7 +2040,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 130,
+    "__docId__": 89,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3298,7 +2053,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 131,
+    "__docId__": 90,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3311,7 +2066,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 132,
+    "__docId__": 91,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3324,7 +2079,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 133,
+    "__docId__": 92,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3337,7 +2092,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 134,
+    "__docId__": 93,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3350,7 +2105,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 135,
+    "__docId__": 94,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3363,7 +2118,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 136,
+    "__docId__": 95,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3376,7 +2131,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 137,
+    "__docId__": 96,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3389,7 +2144,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 138,
+    "__docId__": 97,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3402,7 +2157,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 139,
+    "__docId__": 98,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3415,7 +2170,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 140,
+    "__docId__": 99,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3428,7 +2183,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 141,
+    "__docId__": 100,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3441,7 +2196,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 142,
+    "__docId__": 101,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3454,7 +2209,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 143,
+    "__docId__": 102,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3467,7 +2222,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 144,
+    "__docId__": 103,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3480,7 +2235,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 145,
+    "__docId__": 104,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3493,7 +2248,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 146,
+    "__docId__": 105,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3506,7 +2261,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 147,
+    "__docId__": 106,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3519,7 +2274,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 148,
+    "__docId__": 107,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3532,7 +2287,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 149,
+    "__docId__": 108,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3545,7 +2300,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 150,
+    "__docId__": 109,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3558,7 +2313,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 151,
+    "__docId__": 110,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3571,7 +2326,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 152,
+    "__docId__": 111,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3584,7 +2339,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 153,
+    "__docId__": 112,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3597,7 +2352,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 154,
+    "__docId__": 113,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3610,7 +2365,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 155,
+    "__docId__": 114,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3623,7 +2378,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 156,
+    "__docId__": 115,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3636,7 +2391,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 157,
+    "__docId__": 116,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3649,7 +2404,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 158,
+    "__docId__": 117,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3662,7 +2417,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 159,
+    "__docId__": 118,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3675,7 +2430,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 160,
+    "__docId__": 119,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3688,7 +2443,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 161,
+    "__docId__": 120,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3701,7 +2456,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 162,
+    "__docId__": 121,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3714,7 +2469,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 163,
+    "__docId__": 122,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3727,7 +2482,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 164,
+    "__docId__": 123,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3740,7 +2495,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 165,
+    "__docId__": 124,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3753,7 +2508,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 166,
+    "__docId__": 125,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3766,7 +2521,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 168,
+    "__docId__": 127,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3779,7 +2534,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 169,
+    "__docId__": 128,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3792,7 +2547,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 170,
+    "__docId__": 129,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3805,7 +2560,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 171,
+    "__docId__": 130,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3818,7 +2573,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 172,
+    "__docId__": 131,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3831,7 +2586,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 173,
+    "__docId__": 132,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3844,7 +2599,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 174,
+    "__docId__": 133,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -3857,7 +2612,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 175,
+    "__docId__": 134,
     "kind": "external",
     "static": true,
     "variation": null,

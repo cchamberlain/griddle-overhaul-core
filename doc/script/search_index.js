@@ -1,23 +1,5 @@
 window.esdocSearchIndex = [
   [
-    "griddle-overhaul-core/lib/reducers/data-reducer.js~after_reduce",
-    "function/index.html#static-function-AFTER_REDUCE",
-    "<span>AFTER_REDUCE</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/data-reducer.js</span>",
-    "function"
-  ],
-  [
-    "griddle-overhaul-core/lib/reducers/local-reducer.js~after_reduce",
-    "function/index.html#static-function-AFTER_REDUCE",
-    "<span>AFTER_REDUCE</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/local-reducer.js</span>",
-    "function"
-  ],
-  [
-    "griddle-overhaul-core/lib/reducers/data-reducer.js~before_reduce",
-    "function/index.html#static-function-BEFORE_REDUCE",
-    "<span>BEFORE_REDUCE</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/data-reducer.js</span>",
-    "function"
-  ],
-  [
     "griddle-overhaul-core/lib/constants/action-types.js~griddle_filter",
     "variable/index.html#static-variable-GRIDDLE_FILTER",
     "<span>GRIDDLE_FILTER</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/constants/action-types.js</span>",
@@ -30,12 +12,6 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "griddle-overhaul-core/lib/reducers/local-reducer.js~griddle_filtered",
-    "function/index.html#static-function-GRIDDLE_FILTERED",
-    "<span>GRIDDLE_FILTERED</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/local-reducer.js</span>",
-    "function"
-  ],
-  [
     "griddle-overhaul-core/lib/constants/action-types.js~griddle_filtered_by_additional_column",
     "variable/index.html#static-variable-GRIDDLE_FILTERED_BY_ADDITIONAL_COLUMN",
     "<span>GRIDDLE_FILTERED_BY_ADDITIONAL_COLUMN</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/constants/action-types.js</span>",
@@ -46,12 +22,6 @@ window.esdocSearchIndex = [
     "variable/index.html#static-variable-GRIDDLE_FILTERED_BY_COLUMN",
     "<span>GRIDDLE_FILTERED_BY_COLUMN</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/constants/action-types.js</span>",
     "variable"
-  ],
-  [
-    "griddle-overhaul-core/lib/reducers/local-reducer.js~griddle_filtered_by_column",
-    "function/index.html#static-function-GRIDDLE_FILTERED_BY_COLUMN",
-    "<span>GRIDDLE_FILTERED_BY_COLUMN</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/local-reducer.js</span>",
-    "function"
   ],
   [
     "griddle-overhaul-core/lib/constants/action-types.js~griddle_filter_by_additional_column",
@@ -78,12 +48,6 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "griddle-overhaul-core/lib/reducers/local-reducer.js~griddle_get_page",
-    "function/index.html#static-function-GRIDDLE_GET_PAGE",
-    "<span>GRIDDLE_GET_PAGE</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/local-reducer.js</span>",
-    "function"
-  ],
-  [
     "griddle-overhaul-core/lib/constants/action-types.js~griddle_initialize",
     "variable/index.html#static-variable-GRIDDLE_INITIALIZE",
     "<span>GRIDDLE_INITIALIZE</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/constants/action-types.js</span>",
@@ -96,28 +60,10 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "griddle-overhaul-core/lib/reducers/data-reducer.js~griddle_initialized",
-    "function/index.html#static-function-GRIDDLE_INITIALIZED",
-    "<span>GRIDDLE_INITIALIZED</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/data-reducer.js</span>",
-    "function"
-  ],
-  [
     "griddle-overhaul-core/lib/constants/action-types.js~griddle_loaded_data",
     "variable/index.html#static-variable-GRIDDLE_LOADED_DATA",
     "<span>GRIDDLE_LOADED_DATA</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/constants/action-types.js</span>",
     "variable"
-  ],
-  [
-    "griddle-overhaul-core/lib/reducers/data-reducer.js~griddle_loaded_data",
-    "function/index.html#static-function-GRIDDLE_LOADED_DATA",
-    "<span>GRIDDLE_LOADED_DATA</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/data-reducer.js</span>",
-    "function"
-  ],
-  [
-    "griddle-overhaul-core/lib/reducers/local-reducer.js~griddle_loaded_data",
-    "function/index.html#static-function-GRIDDLE_LOADED_DATA",
-    "<span>GRIDDLE_LOADED_DATA</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/local-reducer.js</span>",
-    "function"
   ],
   [
     "griddle-overhaul-core/lib/constants/action-types.js~griddle_load_data",
@@ -132,12 +78,6 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "griddle-overhaul-core/lib/reducers/local-reducer.js~griddle_next_page",
-    "function/index.html#static-function-GRIDDLE_NEXT_PAGE",
-    "<span>GRIDDLE_NEXT_PAGE</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/local-reducer.js</span>",
-    "function"
-  ],
-  [
     "griddle-overhaul-core/lib/constants/action-types.js~griddle_page_loaded",
     "variable/index.html#static-variable-GRIDDLE_PAGE_LOADED",
     "<span>GRIDDLE_PAGE_LOADED</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/constants/action-types.js</span>",
@@ -148,12 +88,6 @@ window.esdocSearchIndex = [
     "variable/index.html#static-variable-GRIDDLE_PREVIOUS_PAGE",
     "<span>GRIDDLE_PREVIOUS_PAGE</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/constants/action-types.js</span>",
     "variable"
-  ],
-  [
-    "griddle-overhaul-core/lib/reducers/local-reducer.js~griddle_previous_page",
-    "function/index.html#static-function-GRIDDLE_PREVIOUS_PAGE",
-    "<span>GRIDDLE_PREVIOUS_PAGE</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/local-reducer.js</span>",
-    "function"
   ],
   [
     "griddle-overhaul-core/lib/constants/action-types.js~griddle_removed",
@@ -180,22 +114,10 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "griddle-overhaul-core/lib/reducers/local-reducer.js~griddle_set_page_size",
-    "function/index.html#static-function-GRIDDLE_SET_PAGE_SIZE",
-    "<span>GRIDDLE_SET_PAGE_SIZE</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/local-reducer.js</span>",
-    "function"
-  ],
-  [
     "griddle-overhaul-core/lib/constants/action-types.js~griddle_sort",
     "variable/index.html#static-variable-GRIDDLE_SORT",
     "<span>GRIDDLE_SORT</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/constants/action-types.js</span>",
     "variable"
-  ],
-  [
-    "griddle-overhaul-core/lib/reducers/local-reducer.js~griddle_sort",
-    "function/index.html#static-function-GRIDDLE_SORT",
-    "<span>GRIDDLE_SORT</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/local-reducer.js</span>",
-    "function"
   ],
   [
     "griddle-overhaul-core/lib/constants/action-types.js~griddle_sorted",
@@ -222,12 +144,6 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "griddle-overhaul-core/lib/reducers/data-reducer.js~griddle_toggle_column",
-    "function/index.html#static-function-GRIDDLE_TOGGLE_COLUMN",
-    "<span>GRIDDLE_TOGGLE_COLUMN</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/data-reducer.js</span>",
-    "function"
-  ],
-  [
     "griddle-overhaul-core/lib/helpers/data-helpers.js~addkeytorows",
     "function/index.html#static-function-addKeyToRows",
     "<span>addKeyToRows</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/helpers/data-helpers.js</span>",
@@ -238,30 +154,6 @@ window.esdocSearchIndex = [
     "variable/index.html#static-variable-addSortColumn",
     "<span>addSortColumn</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/actions/local-actions.js</span>",
     "variable"
-  ],
-  [
-    "griddle-overhaul-core/lib/reducers/griddle-reducer.js~buildgriddlereducer",
-    "function/index.html#static-function-buildGriddleReducer",
-    "<span>buildGriddleReducer</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/griddle-reducer.js</span>",
-    "function"
-  ],
-  [
-    "griddle-overhaul-core/lib/reducers/griddle-reducer.js~buildreducerwithhooks",
-    "function/index.html#static-function-buildReducerWithHooks",
-    "<span>buildReducerWithHooks</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/griddle-reducer.js</span>",
-    "function"
-  ],
-  [
-    "griddle-overhaul-core/lib/reducers/griddle-reducer.js~combineandoverridereducers",
-    "function/index.html#static-function-combineAndOverrideReducers",
-    "<span>combineAndOverrideReducers</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/griddle-reducer.js</span>",
-    "function"
-  ],
-  [
-    "griddle-overhaul-core/lib/reducers/griddle-reducer.js~combineinitialstate",
-    "function/index.html#static-function-combineInitialState",
-    "<span>combineInitialState</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/griddle-reducer.js</span>",
-    "function"
   ],
   [
     "griddle-overhaul-core/lib/helpers/local-helpers.js~datesort",
@@ -300,12 +192,6 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
-    "griddle-overhaul-core/lib/reducers/griddle-reducer.js~getafterreducers",
-    "function/index.html#static-function-getAfterReducers",
-    "<span>getAfterReducers</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/griddle-reducer.js</span>",
-    "function"
-  ],
-  [
     "griddle-overhaul-core/lib/helpers/data-helpers.js~getallpossiblecolumns",
     "function/index.html#static-function-getAllPossibleColumns",
     "<span>getAllPossibleColumns</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/helpers/data-helpers.js</span>",
@@ -315,12 +201,6 @@ window.esdocSearchIndex = [
     "griddle-overhaul-core/lib/helpers/__tests__/stateutils.js~getbasicstate",
     "function/index.html#static-function-getBasicState",
     "<span>getBasicState</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/helpers/__tests__/stateUtils.js</span>",
-    "function"
-  ],
-  [
-    "griddle-overhaul-core/lib/reducers/griddle-reducer.js~getbeforereducers",
-    "function/index.html#static-function-getBeforeReducers",
-    "<span>getBeforeReducers</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/griddle-reducer.js</span>",
     "function"
   ],
   [
@@ -354,12 +234,6 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
-    "griddle-overhaul-core/lib/reducers/__tests__/testutils.js~getmethod",
-    "function/index.html#static-function-getMethod",
-    "<span>getMethod</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/__tests__/testUtils.js</span>",
-    "function"
-  ],
-  [
     "griddle-overhaul-core/lib/helpers/local-helpers.js~getpage",
     "function/index.html#static-function-getPage",
     "<span>getPage</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/helpers/local-helpers.js</span>",
@@ -375,18 +249,6 @@ window.esdocSearchIndex = [
     "griddle-overhaul-core/lib/helpers/data-helpers.js~getpageproperties",
     "function/index.html#static-function-getPageProperties",
     "<span>getPageProperties</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/helpers/data-helpers.js</span>",
-    "function"
-  ],
-  [
-    "griddle-overhaul-core/lib/reducers/__tests__/testutils.js~getreducer",
-    "function/index.html#static-function-getReducer",
-    "<span>getReducer</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/__tests__/testUtils.js</span>",
-    "function"
-  ],
-  [
-    "griddle-overhaul-core/lib/reducers/griddle-reducer.js~getreducersbywordending",
-    "function/index.html#static-function-getReducersByWordEnding",
-    "<span>getReducersByWordEnding</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/griddle-reducer.js</span>",
     "function"
   ],
   [
@@ -513,12 +375,6 @@ window.esdocSearchIndex = [
     "griddle-overhaul-core/lib/helpers/data-helpers.js~updatevisibledata",
     "function/index.html#static-function-updateVisibleData",
     "<span>updateVisibleData</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/helpers/data-helpers.js</span>",
-    "function"
-  ],
-  [
-    "griddle-overhaul-core/lib/reducers/griddle-reducer.js~wrapreducer",
-    "function/index.html#static-function-wrapReducer",
-    "<span>wrapReducer</span> <span class=\"search-result-import-path\">griddle-overhaul-core/lib/reducers/griddle-reducer.js</span>",
     "function"
   ],
   [
@@ -900,6 +756,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "lib/index.js",
+    "file/lib/index.js.html",
+    "lib/index.js",
+    "file"
+  ],
+  [
     "lib/initialstates/data-state.js",
     "file/lib/initialStates/data-state.js.html",
     "lib/initialStates/data-state.js",
@@ -915,60 +777,6 @@ window.esdocSearchIndex = [
     "lib/initialstates/local-state.js",
     "file/lib/initialStates/local-state.js.html",
     "lib/initialStates/local-state.js",
-    "file"
-  ],
-  [
-    "lib/module.js",
-    "file/lib/module.js.html",
-    "lib/module.js",
-    "file"
-  ],
-  [
-    "lib/reducers/__tests__/datareducertest.js",
-    "file/lib/reducers/__tests__/dataReducerTest.js.html",
-    "lib/reducers/__tests__/dataReducerTest.js",
-    "file"
-  ],
-  [
-    "lib/reducers/__tests__/griddlereducertest.js",
-    "file/lib/reducers/__tests__/griddleReducerTest.js.html",
-    "lib/reducers/__tests__/griddleReducerTest.js",
-    "file"
-  ],
-  [
-    "lib/reducers/__tests__/localreducertest.js",
-    "file/lib/reducers/__tests__/localReducerTest.js.html",
-    "lib/reducers/__tests__/localReducerTest.js",
-    "file"
-  ],
-  [
-    "lib/reducers/__tests__/testutils.js",
-    "file/lib/reducers/__tests__/testUtils.js.html",
-    "lib/reducers/__tests__/testUtils.js",
-    "file"
-  ],
-  [
-    "lib/reducers/data-reducer.js",
-    "file/lib/reducers/data-reducer.js.html",
-    "lib/reducers/data-reducer.js",
-    "file"
-  ],
-  [
-    "lib/reducers/griddle-reducer.js",
-    "file/lib/reducers/griddle-reducer.js.html",
-    "lib/reducers/griddle-reducer.js",
-    "file"
-  ],
-  [
-    "lib/reducers/index.js",
-    "file/lib/reducers/index.js.html",
-    "lib/reducers/index.js",
-    "file"
-  ],
-  [
-    "lib/reducers/local-reducer.js",
-    "file/lib/reducers/local-reducer.js.html",
-    "lib/reducers/local-reducer.js",
     "file"
   ]
 ]

@@ -1,34 +1,8 @@
 {
   "coverage": "0%",
-  "expectCount": 87,
+  "expectCount": 63,
   "actualCount": 0,
   "files": {
-    "lib/reducers/local-reducer.js": {
-      "expectCount": 9,
-      "actualCount": 0,
-      "undocumentLines": [
-        38,
-        116,
-        100,
-        78,
-        15,
-        83,
-        92,
-        59,
-        125
-      ]
-    },
-    "lib/reducers/data-reducer.js": {
-      "expectCount": 5,
-      "actualCount": 0,
-      "undocumentLines": [
-        13,
-        9,
-        17,
-        21,
-        26
-      ]
-    },
     "lib/constants/action-types.js": {
       "expectCount": 24,
       "actualCount": 0,
@@ -94,20 +68,6 @@
         14
       ]
     },
-    "lib/reducers/griddle-reducer.js": {
-      "expectCount": 8,
-      "actualCount": 0,
-      "undocumentLines": [
-        126,
-        109,
-        20,
-        97,
-        61,
-        57,
-        32,
-        66
-      ]
-    },
     "lib/helpers/local-helpers.js": {
       "expectCount": 15,
       "actualCount": 0,
@@ -134,14 +94,6 @@
       "actualCount": 0,
       "undocumentLines": [
         3
-      ]
-    },
-    "lib/reducers/__tests__/testUtils.js": {
-      "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        4,
-        14
       ]
     }
   }
